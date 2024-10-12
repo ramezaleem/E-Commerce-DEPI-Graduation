@@ -1,0 +1,80 @@
+<header>
+  <div class="head-of-header">
+    <div class="container d-flex justify-content-between align-items-center ">
+      <div class="mid-text">
+        <p class="text-white mt-3 ">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! <a
+            class="text-white fw-bold" href="#shop">ShopNow</a></p>
+      </div>
+      <div class="final-text d-flex justify-content-center  align-items-center gap-2 ">
+        <label for="language" class="text-white">language </label>
+        <select class="rounded p-1" name="language" id="language">
+          <option value="english">english</option>
+          <option value="arabic">arabic</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="nav-container  border-bottom p-2">
+    <nav class="navbar navbar-expand-lg ">
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-3" [routerLink]="['/home']">Exclusive</a>
+
+        <div class="fa-solid fa-bars fs-2 d-lg-none " data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+        </div>
+
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+          aria-labelledby="offcanvasWithBothOptionsLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><a class="navbar-brand fw-bold fs-3" [routerLink]="['/home']"><div class="dropdown ">
+              <i class="fa-regular fa-user fs-3 "></i>
+              <div class="dropdown-content">
+                <a href="#" class="fs-5 d-flex justify-content-center align-items-center gap-2 ">
+                  <!-- <i class="fa-regular fa-user"></i>
+                  <a href="">Manage My Account</a> -->
+                </a>
+                <a href="#" class="fs-5">Link 2</a>
+                <a href="#" class="fs-5">Link 3</a>
+              </div>
+            </div></a></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body ">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item px-3 ">
+                <a class="nav-link active  " aria-current="page" [routerLink]='["/home"]'>Home</a>
+              </li>
+              <li class="nav-item px-3 ">
+                <a class="nav-link " [routerLink]='["/about"]'>About</a>
+              </li>
+              <li class="nav-item px-3 ">
+                <a class="nav-link " [routerLink]='["/Contact"]'>Contact</a>
+              </li>
+              <li class="nav-item px-3 ">
+                <a class="nav-link " [routerLink]='["/SignUp"]'>Sign Up</a>
+              </li>
+            </ul>
+            <form class="d-lg-flex " role="search">
+              <div class="input">
+                <input class="searchInp" type="text" name="search" id="search" placeholder="What are you looking for?">
+                <i class="fa-solid fa-search"></i>
+              </div>
+              <div class="icons d-lg-flex justify-content-center align-items-center gap-3 ms-2 ">
+                <i class="fa-regular fa-heart fs-5"></i>
+                <i class="fa-solid fa-cart-shopping text-danger fs-5"></i>
+                <div class="dropdown ">
+                  <i class="fa-regular fa-user fs-5 "></i>
+                  <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
