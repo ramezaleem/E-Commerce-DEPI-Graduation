@@ -3,13 +3,14 @@
     <div class="container d-flex justify-content-between align-items-center ">
       <div class="mid-text">
         <p class="text-white mt-3 ">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! <a
-            class="text-white fw-bold" href="#shop">ShopNow</a></p>
+        class="text-white fw-bold" href="#shop">ShopNow</a></p>
       </div>
       <div class="final-text d-flex justify-content-center  align-items-center gap-2 ">
-        <label for="language" class="text-white">language </label>
-        <select class="rounded p-1" name="language" id="language">
-          <option value="english">english</option>
-          <option value="arabic">arabic</option>
+        <select class="form-select form-select-sm" aria-label="Small select example">
+          <option value="en" selected>English</option>
+          <option value="ar">العربية</option>
+          <option value="fr">Français</option>
+          <option value="gr">Deutsch</option>
         </select>
       </div>
     </div>
@@ -26,17 +27,38 @@
         <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
           aria-labelledby="offcanvasWithBothOptionsLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><a class="navbar-brand fw-bold fs-3"
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><a class="navbar-brand fw-bold "
                 [routerLink]="['/home']">
                 <div class="dropdown ">
-                  <i class="fa-regular fa-user fs-3 "></i>
+                  <i class="fa-regular fa-circle-user fs-2 "></i>
                   <div class="dropdown-content">
-                    <a href="#" class="fs-5 d-flex justify-content-center align-items-center gap-2 ">
-                      <!-- <i class="fa-regular fa-user"></i>
-                  <a href="">Manage My Account</a> -->
-                    </a>
-                    <a href="#" class="fs-5">Link 2</a>
-                    <a href="#" class="fs-5">Link 3</a>
+                    <div class="links ">
+                      <a href="#user" class="w-100 d-flex justify-content-between align-items-center gap-5">
+                        <i class="fa-regular fa-user fs-4 "></i>
+                        Manage My Account</a>
+                    </div>
+                    <div class="links ">
+                      <a href="#" class="w-100 d-flex justify-content-between align-items-center gap-5">
+                        <i class="fa-solid fa-truck-fast fs-4"></i>
+                        My Order</a>
+                    </div>
+                    <div class="links ">
+                      <a href="#" class="w-100 d-flex justify-content-between align-items-center gap-5">
+                        <i class="fa-regular fa-circle-xmark fs-4 "></i>
+                        My Cancellations</a>
+                    </div>
+                    <div class="links ">
+                      <a href="#" class="w-100 d-flex justify-content-between align-items-center gap-5">
+                        <i class="fa-regular fa-user fs-4 "></i>
+                        My Reviews</a>
+                    </div>
+                    <div class="links ">
+                      <a href="#" class="w-100 d-flex justify-content-between align-items-center gap-5">
+                        <i class="fa-solid fa-arrow-right-from-bracket fa-flip-horizontal fs-4"></i>
+                        Logout</a>
+                    </div>
+
+
                   </div>
                 </div>
               </a></h5>
@@ -66,11 +88,33 @@
                 <i class="fa-regular fa-heart fs-5"></i>
                 <i class="fa-solid fa-cart-shopping text-danger fs-5"></i>
                 <div class="dropdown ">
-                  <i class="fa-regular fa-user fs-5 "></i>
+                  <div class="hover-user"><i class="fa-regular fa-user fs-5 "></i></div>
                   <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+                    <div class="links ">
+                      <a href="#user" class="w-100 d-flex justify-content-between align-items-center gap-5">
+                        <i class="fa-regular fa-user fs-4 "></i>
+                        Manage My Account</a>
+                    </div>
+                    <div class="links ">
+                      <a href="#" class="w-100 d-flex justify-content-between align-items-center gap-5">
+                        <i class="fa-solid fa-truck-fast fs-4"></i>
+                        My Order</a>
+                    </div>
+                    <div class="links ">
+                      <a href="#" class="w-100 d-flex justify-content-between align-items-center gap-5">
+                        <i class="fa-regular fa-circle-xmark fs-4 "></i>
+                        My Cancellations</a>
+                    </div>
+                    <div class="links ">
+                      <a href="#" class="w-100 d-flex justify-content-between align-items-center gap-5">
+                        <i class="fa-regular fa-user fs-4 "></i>
+                        My Reviews</a>
+                    </div>
+                    <div class="links ">
+                      <a href="#" class="w-100 d-flex justify-content-between align-items-center gap-5">
+                        <i class="fa-solid fa-arrow-right-from-bracket fa-flip-horizontal fs-4"></i>
+                        Logout</a>
+                    </div>
                   </div>
                 </div>
               </div>

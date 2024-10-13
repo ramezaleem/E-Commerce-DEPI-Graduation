@@ -5,6 +5,11 @@ header .head-of-header{
 header .head-of-header .mid-text p{
 font-size: 12px;
 }
+.form-select:focus {
+  border-color: #000000;
+  outline: 0;
+  box-shadow:none;
+}
 .input{
   position: relative;
   width: 250px;
@@ -50,52 +55,56 @@ a.active{
   position: relative;
   display: inline-block;
 }
+.hover-user{
+  padding: 8px 12px;
+  background: rgb(220 53 69);
+  border-radius: 50%;
+  transition: all .3s linear;
+  color: white;
+  cursor: pointer;
+}
 
 .dropdown-content {
   display: none;
   position: absolute;
-  right: 0;
-  top: 22px;
-  padding: 20px;
-  // background-color: transparent;
-  box-shadow: 0 4px 4px 0 red;
-  // filter: drop-shadow(0 4px 4px 0 red);
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  right: 20px;
+  padding: 10px;
+  top: 40px;
+  background: #fff;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.3);
+  min-width: 250px;
   z-index: 1;
-  border-radius: 20px;
+  border-radius: 10px;
 }
+
 .offcanvas-title .dropdown-content {
   display: none;
   position: absolute;
-  left: 0;
-  top: 22px;
-  padding: 20px;
-  background-color: #FFF;
-  // box-shadow: 0 4px 4px 0 red;
-  // filter: drop-shadow(0 4px 4px 0 red);
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  left: 5px;
+  top: 31px;
+  background: #fff;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.3);
+  min-width: 250px;
   z-index: 1;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
-.dropdown-content a {
+.dropdown-content a,.links {
   color: black;
-  padding: 12px 16px;
+  padding: 5px 3px;
   text-decoration: none;
   display: block;
+  font-size: 14px;
 }
-// .offcanvas-body form{
-
-// }
-
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+  border-bottom:2px solid #000;
+transition: all .1s linear;}
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-
+.btn-close:focus{
+  box-shadow: none;
+}
 @media (max-width:991px) {
   header .head-of-header .mid-text p,
   .final-text{
