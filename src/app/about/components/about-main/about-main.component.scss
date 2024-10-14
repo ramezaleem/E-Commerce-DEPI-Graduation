@@ -1,0 +1,20 @@
+ a{
+  text-decoration: none;
+
+ }
+ .about-main-container{
+  margin: 10rem 0;
+ }
+ .card{
+  background: #fff;
+}
+ .card:hover{
+  background: #dc4535;
+  transition: all .3s linear;
+  cursor: pointer;
+  color: #fff;
+}
+
+.card p{
+  font-size: .9rem;
+}

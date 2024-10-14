@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="about-mid-container">
+    <div class="row w-100 ">
+      <div class="col-auto m-auto mb-5" *ngFor="let employee of employees" >
+          <img class="" [src]="employee.img" alt="employeeImg" width="320">
+          <div class="pt-4">
+            <h2 class=""> {{employee.name}} </h2>
+            <p class="fw-semibold">{{employee.jobTitle}}</p>
+          </div>
+          <div class="icons d-flex gap-3 ">
+            <a class="text-dark fs-5"  routerLink="/https://www.x.com"><i class="fa-brands fa-twitter" ></i></a>
+            <a class="text-dark fs-5" routerLink="/https://www.instagram.com"><i class="fa-brands fa-instagram" ></i></a>
+            <a class="text-dark fs-5" routerLink="/https://www.linkedin.com"><i class="fa-brands fa-linkedin" ></i></a>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

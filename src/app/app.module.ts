@@ -13,6 +13,12 @@ import { HomeBestSellingComponent } from './components/home/Components/home-best
 import { HomeExploreProductsComponent } from './components/home/Components/home-explore-products/home-explore-products.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { ProductCardComponent } from './shared/components/product-card/product-card.component';
+import { AboutComponent } from './about/about.component';
+import { AboutHeroComponent } from './about/components/about-hero/about-hero.component';
+import { AboutMainComponent } from './about/components/about-main/about-main.component';
+import { AboutMidComponent } from './about/components/about-mid/about-mid.component';
+import { AboutFootComponent } from './about/components/about-foot/about-foot.component';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +32,12 @@ import { ProductCardComponent } from './shared/components/product-card/product-c
     HomeExploreProductsComponent,
     FooterComponent,
     ProductCardComponent,
+    AboutComponent,
+    AboutHeroComponent,
+    AboutMainComponent,
+    AboutMidComponent,
+    AboutFootComponent
+
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],
