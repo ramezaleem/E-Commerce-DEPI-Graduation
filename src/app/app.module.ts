@@ -13,8 +13,11 @@ import { HomeBestSellingComponent } from './components/home/Components/home-best
 import { HomeExploreProductsComponent } from './components/home/Components/home-explore-products/home-explore-products.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { ProductCardComponent } from './shared/components/product-card/product-card.component';
+<<<<<<< HEAD
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+=======
+>>>>>>> 8f09947b2837e1f50a9caebfb8545d765a2a26a5
 
 @NgModule({
   declarations: [
@@ -28,8 +31,11 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     HomeExploreProductsComponent,
     FooterComponent,
     ProductCardComponent,
+<<<<<<< HEAD
     LoginComponent,
     SignUpComponent,
+=======
+>>>>>>> 8f09947b2837e1f50a9caebfb8545d765a2a26a5
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],

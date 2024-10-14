@@ -1,5 +1,56 @@
+<<<<<<< HEAD
 .footer {
     width: 100%;
     position: absolute;
     bottom: calc(100vh - 1340px);
 }
+=======
+footer{
+  min-height: 450px;
+  background: #000;
+}
+.inp{
+  width: 190px;
+  position: relative;
+}
+.inp input
+{
+  width: 100%;
+  outline: none;
+  border: 2px solid #fff;
+}
+
+.inp input::placeholder{
+  color: #fff;
+}
+
+.inp i
+{
+  position: absolute;
+  right: 10px;
+  top: 13px;
+cursor: pointer;
+}
+.adress{
+  width: 90%;
+}
+.email{
+  font-size: .9rem;
+}
+@media (max-width:1400px) {
+  .adress{
+    width: 100%;
+  }
+}
+@media (max-width:992px){
+  .footer-container{
+    padding-top: 50px;
+  }
+}
+@media (max-width:768px){
+ .row .section:not(.last-section){
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fff;
+ }
+}
+>>>>>>> 8f09947b2837e1f50a9caebfb8545d765a2a26a5

@@ -5,6 +5,14 @@ header .head-of-header{
 header .head-of-header .mid-text p{
 font-size: 12px;
 }
+<<<<<<< HEAD
+=======
+.form-select:focus {
+  border-color: #000000;
+  outline: 0;
+  box-shadow:none;
+}
+>>>>>>> 8f09947b2837e1f50a9caebfb8545d765a2a26a5
 .input{
   position: relative;
   width: 250px;
@@ -50,10 +58,22 @@ a.active{
   position: relative;
   display: inline-block;
 }
+<<<<<<< HEAD
+=======
+.hover-user{
+  padding: 8px 12px;
+  background: rgb(220 53 69);
+  border-radius: 50%;
+  transition: all .3s linear;
+  color: white;
+  cursor: pointer;
+}
+>>>>>>> 8f09947b2837e1f50a9caebfb8545d765a2a26a5
 
 .dropdown-content {
   display: none;
   position: absolute;
+<<<<<<< HEAD
   right: 0;
   top: 22px;
   padding: 20px;
@@ -96,6 +116,46 @@ a.active{
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
+=======
+  right: 20px;
+  padding: 10px;
+  top: 40px;
+  background: #fff;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.3);
+  min-width: 250px;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.offcanvas-title .dropdown-content {
+  display: none;
+  position: absolute;
+  left: 5px;
+  top: 31px;
+  background: #fff;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.3);
+  min-width: 250px;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.dropdown-content a,.links {
+  color: black;
+  padding: 5px 3px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+.dropdown-content a:hover {
+  border-bottom:2px solid #000;
+transition: all .1s linear;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.btn-close:focus{
+  box-shadow: none;
+}
+>>>>>>> 8f09947b2837e1f50a9caebfb8545d765a2a26a5
 @media (max-width:991px) {
   header .head-of-header .mid-text p,
   .final-text{
