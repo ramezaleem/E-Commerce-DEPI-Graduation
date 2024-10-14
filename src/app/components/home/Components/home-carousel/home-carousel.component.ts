@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import { Component } from '@angular/core';
-=======
 import {
   Component,
   ElementRef,
@@ -8,17 +5,10 @@ import {
   ViewChild,
   ViewChildren,
 } from '@angular/core';
->>>>>>> 8f09947b2837e1f50a9caebfb8545d765a2a26a5
 
 @Component({
   selector: 'app-home-carousel',
   templateUrl: './home-carousel.component.html',
-<<<<<<< HEAD
-  styleUrl: './home-carousel.component.scss'
-})
-export class HomeCarouselComponent {
-
-=======
   styleUrl: './home-carousel.component.scss',
 })
 export class HomeCarouselComponent {
@@ -31,5 +21,4 @@ export class HomeCarouselComponent {
     'https://img.freepik.com/premium-photo/mockup-photo-mobile-phone_34048-1746.jpg?ga=GA1.1.508687790.1726598164&semt=ais_hybrid';
   heroImg5: string =
     'https://www.optionstheedge.com/sites/default/files/field/featured-image/2020/iphone_12.jpg';
->>>>>>> 8f09947b2837e1f50a9caebfb8545d765a2a26a5
 }
