@@ -6,8 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./product-card.component.scss'],
 })
 export class ProductCardComponent implements OnInit {
-  @Input() products: any[] = []; // Accept product data from parent component
-  @Input() showOverlay: boolean = false; // New property to control overlay visibility
+  @Input() products: any[] = [];
+  @Input() showOverlay: boolean = false;
 
   currentIndex: number = 0;
   itemsPerPage: number = 3;
@@ -19,8 +19,8 @@ export class ProductCardComponent implements OnInit {
     this.updateTranslateX();
   }
 
-  getChunks(arr: any[], chunkSize: number) {
-    const result = [];
+  getChunks(arr: any[], chunkSize: number): any[][] {
+    const result: any[][] = [];
     for (let i = 0; i < arr.length; i += chunkSize) {
       result.push(arr.slice(i, i + chunkSize));
     }
@@ -28,21 +28,31 @@ export class ProductCardComponent implements OnInit {
   }
 
   getStars(rating: number): (boolean | null)[] {
-    const stars: (boolean | null)[] = [];
-    const totalStars = 5;
-    for (let i = 0; i < totalStars; i++) {
-      if (rating >= i + 1) {
-        stars.push(true);
-      } else if (rating >= i + 0.5) {
-        stars.push(null);
-      } else {
-        stars.push(false);
-      }
-    }
-    return stars;
+    return Array.from({ length: 5 }, (_, index) => {
+      if (rating >= index + 1) return true;
+      if (rating >= index + 0.5) return null;
+      return false;
+    });
   }
 
   updateTranslateX() {
     this.translateX = -this.currentIndex * (100 / this.itemsPerPage);
+  }
+
+  nextSlide() {
+    if (
+      this.currentIndex <
+      Math.ceil(this.products.length / this.itemsPerPage) - 1
+    ) {
+      this.currentIndex++;
+      this.updateTranslateX();
+    }
+  }
+
+  prevSlide() {
+    if (this.currentIndex > 0) {
+      this.currentIndex--;
+      this.updateTranslateX();
+    }
   }
 }
