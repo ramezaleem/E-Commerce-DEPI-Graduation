@@ -70,11 +70,11 @@
         height: 40px;
         background-color: black;
         color: white;
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
-        opacity: 0;
-        transition: opacity 0.3s ease;
+        // opacity: 0;
+        // transition: opacity 0.3s ease;
         cursor: pointer;
 
         p {
@@ -84,12 +84,13 @@
 
       // Keep overlay visible when hovering over the card or overlay
       &:hover .overlay {
-        opacity: 1; // Show overlay when hovering over the card
+        // opacity: 1; // Show overlay when hovering over the card
+        display: flex;
       }
 
-      .overlay:hover {
-        opacity: 1; // Ensure overlay remains visible when hovered
-      }
+      // .overlay:hover {
+      //   opacity: 1; // Ensure overlay remains visible when hovered
+      // }
     }
 
     .card-body {
