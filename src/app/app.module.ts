@@ -14,6 +14,16 @@ import { HomeExploreProductsComponent } from './components/home/Components/home-
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { ProductCardComponent } from './shared/components/product-card/product-card.component';
 
+import { AboutComponent } from './about/about.component';
+import { AboutHeroComponent } from './about/components/about-hero/about-hero.component';
+import { AboutMainComponent } from './about/components/about-main/about-main.component';
+import { AboutMidComponent } from './about/components/about-mid/about-mid.component';
+import { AboutFootComponent } from './about/components/about-foot/about-foot.component';
+
+import { LoginComponent } from './components/login/login.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +36,17 @@ import { ProductCardComponent } from './shared/components/product-card/product-c
     HomeExploreProductsComponent,
     FooterComponent,
     ProductCardComponent,
+
+    AboutComponent,
+    AboutHeroComponent,
+    AboutMainComponent,
+    AboutMidComponent,
+    AboutFootComponent,
+
+
+    LoginComponent,
+    SignUpComponent,
+
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],

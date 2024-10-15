@@ -6,5 +6,4 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
- 
 }

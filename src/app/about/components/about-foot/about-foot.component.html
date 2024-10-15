@@ -1,0 +1,11 @@
+<div class="about-foot-container">
+  <div class=" row w-100 ">
+    <div class=" col-auto m-auto mb-5" *ngFor="let superService of superServices">
+      <div class="d-flex flex-column justify-content-center align-items-center ">
+        <img [src]="superService.img" class="mb-4" alt="image serv" >
+        <h4 class="fw-bold">{{superService.title}} </h4>
+        <p class="fw-semibold">{{superService.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>

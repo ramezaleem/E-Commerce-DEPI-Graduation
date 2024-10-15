@@ -1,4 +1,48 @@
 footer{
-  height: 450px;
+  min-height: 450px;
   background: #000;
+}
+.inp{
+  width: 190px;
+  position: relative;
+}
+.inp input
+{
+  width: 100%;
+  outline: none;
+  border: 2px solid #fff;
+}
+
+.inp input::placeholder{
+  color: #fff;
+}
+
+.inp i
+{
+  position: absolute;
+  right: 10px;
+  top: 13px;
+cursor: pointer;
+}
+.adress{
+  width: 90%;
+}
+.email{
+  font-size: .9rem;
+}
+@media (max-width:1400px) {
+  .adress{
+    width: 100%;
+  }
+}
+@media (max-width:992px){
+  .footer-container{
+    padding-top: 50px;
+  }
+}
+@media (max-width:768px){
+ .row .section:not(.last-section){
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fff;
+ }
 }

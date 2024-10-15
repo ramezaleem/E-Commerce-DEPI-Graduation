@@ -37,5 +37,10 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.4.2"
+  },
+  "description": "<<<<<<< HEAD # E-Commerce---DEPI---Graduation ======= # ECommerce",
+  "main": "src/main.ts",
+  "author": "",
+  "license": "ISC"
   }
-}
+
