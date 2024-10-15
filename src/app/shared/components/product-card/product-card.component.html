@@ -7,7 +7,7 @@
             <div class="product-card" *ngFor="let product of chunk">
               <div class="image-container">
                 <img [src]="product.image" alt="{{ product.name }} Image" class="product-image" />
-                <div class="overlay">
+                <div class="overlay" *ngIf="showOverlay">
                   <p>Add To Cart</p>
                 </div>
               </div>

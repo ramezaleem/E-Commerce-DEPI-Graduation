@@ -5,3 +5,13 @@ button {
 button:hover {
   background-color: var(--hover-primary-button-color);
 }
+
+.sec-btn {
+  background-color: var(--main-color);
+  padding: 10px 35px;
+  color: white;
+  cursor: pointer;
+}
+.sec-btn:hover {
+  background-color: var(--hover-primary-button-color);
+}

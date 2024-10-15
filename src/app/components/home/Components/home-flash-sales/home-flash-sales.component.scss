@@ -1,56 +1,103 @@
 .flash-sales {
   margin-top: 100px;
   margin-bottom: 100px;
+
+  @media (max-width: 768px) {
+    margin-top: 50px; // Reduce margin on smaller screens
+    margin-bottom: 50px;
+  }
 }
 
 p {
   font-size: var(--base-font-size);
   margin-top: var(--small-spacing);
   margin-bottom: var(--small-spacing);
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem; // Reduce font size on smaller screens
+  }
 }
 
 .product-carousel {
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    // Adjust carousel styles for smaller devices if needed
+    padding: 0 10px; // Add padding for better visibility
+  }
 }
 
 .product-list {
   display: flex;
   transition: transform 0.5s ease-in-out;
+
+  @media (max-width: 768px) {
+    flex-direction: column; // Stack items on small devices
+  }
 }
 
 button {
   background-color: var(--primary-button-color);
+
   &:hover {
     background-color: var(--hover-primary-button-color);
+  }
+
+  @media (max-width: 768px) {
+    width: 100%; // Make buttons full-width on small devices
+    font-size: 0.9rem; // Reduce button font size
   }
 }
 
 .header {
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column; // Stack header items on small screens
+    align-items: flex-start; // Align items to the start
+  }
 }
 
 .timer {
   display: flex;
   align-items: center;
   margin-left: 70px;
+
+  @media (max-width: 768px) {
+    margin-left: 0; // Remove left margin on small devices
+    flex-wrap: wrap; // Allow timer items to wrap
+  }
 }
 
 .timer-item {
   margin-right: 5px;
   text-align: center;
+
+  @media (max-width: 768px) {
+    margin-right: 10px; // Increase margin between items on small devices
+  }
 }
 
 .timer-separator {
   margin: 0 5px;
   font-size: 30px;
   color: var(--hover-primary-button-color);
+
+  @media (max-width: 768px) {
+    font-size: 24px; // Reduce font size on smaller screens
+  }
 }
 
 .icon-container {
   display: flex;
   align-items: center;
   margin-left: auto;
+
+  @media (max-width: 768px) {
+    margin-left: 0; // Remove margin on small devices
+    justify-content: flex-start; // Align icons to the start
+  }
 }
 
 .icon {
@@ -65,6 +112,11 @@ button {
   align-items: center;
   cursor: pointer;
   transition: color 0.3s;
+
+  @media (max-width: 768px) {
+    width: 30px; // Reduce icon size on small devices
+    height: 30px;
+  }
 }
 
 .icon:hover {
@@ -75,9 +127,17 @@ button {
   display: block;
   font-size: 12px;
   font-weight: bold;
+
+  @media (max-width: 768px) {
+    font-size: 10px; // Reduce font size on small devices
+  }
 }
 
 .timer-value {
   font-size: 24px;
   font-weight: bold;
+
+  @media (max-width: 768px) {
+    font-size: 18px; // Reduce font size on small devices
+  }
 }

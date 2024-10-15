@@ -21,6 +21,50 @@ export class HomeFlashSalesComponent implements OnInit, OnDestroy {
 
   @Output() navigateCarousel: EventEmitter<string> = new EventEmitter();
 
+  // Product data
+  products = [
+    {
+      id: 1,
+      name: 'Product 1',
+      image: 'assets/images/PlayStation.png',
+      discount: '-40%',
+      price: 299.99,
+      originalPrice: 499.99,
+      rating: 4.5,
+      numberOfRatings: 150,
+    },
+    {
+      id: 2,
+      name: 'Ak-900 Wired Keyboard',
+      image: 'assets/images/Wired-Keyboard.jpeg',
+      discount: '-35%',
+      price: 49.99,
+      originalPrice: 79.99,
+      rating: 5.0,
+      numberOfRatings: 200,
+    },
+    {
+      id: 3,
+      name: 'Wireless Mouse',
+      image: 'assets/images/Wired-Keyboard.jpeg',
+      discount: '-25%',
+      price: 29.99,
+      originalPrice: 39.99,
+      rating: 4.0,
+      numberOfRatings: 150,
+    },
+    {
+      id: 4,
+      name: 'Gaming Monitor',
+      image: 'assets/images/Wired-Keyboard.jpeg',
+      discount: '-15%',
+      price: 199.99,
+      originalPrice: 249.99,
+      rating: 4.8,
+      numberOfRatings: 300,
+    },
+  ];
+
   ngOnInit() {
     this.startCountdown();
   }
