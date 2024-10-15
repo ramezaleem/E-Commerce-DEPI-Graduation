@@ -1,0 +1,15 @@
+:root {
+  --main-color: #db4444; /* Adjust this value */
+  --background-color: #f4f4f4; /* Adjust this value */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--main-color);
+}
+
+a {
+  text-decoration: none;
+}

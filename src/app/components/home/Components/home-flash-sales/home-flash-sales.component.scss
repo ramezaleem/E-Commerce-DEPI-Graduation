@@ -1,0 +1,83 @@
+.flash-sales {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+p {
+  font-size: var(--base-font-size);
+  margin-top: var(--small-spacing);
+  margin-bottom: var(--small-spacing);
+}
+
+.product-carousel {
+  overflow: hidden;
+}
+
+.product-list {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+button {
+  background-color: var(--primary-button-color);
+  &:hover {
+    background-color: var(--hover-primary-button-color);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  margin-left: 70px;
+}
+
+.timer-item {
+  margin-right: 5px;
+  text-align: center;
+}
+
+.timer-separator {
+  margin: 0 5px;
+  font-size: 30px;
+  color: var(--hover-primary-button-color);
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  color: black;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.icon:hover {
+  color: var(--main-color);
+}
+
+.timer-label {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.timer-value {
+  font-size: 24px;
+  font-weight: bold;
+}

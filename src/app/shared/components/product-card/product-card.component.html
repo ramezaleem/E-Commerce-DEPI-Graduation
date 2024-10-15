@@ -1,1 +1,45 @@
-<p>product-card works!</p>
+<div class="product-carousel" *ngIf="products.length > 0">
+  <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <ng-container *ngFor="let chunk of getChunks(products, 4); let isFirst = first">
+        <div class="carousel-item" [class.active]="isFirst">
+          <div class="product-list">
+            <div class="product-card" *ngFor="let product of chunk">
+              <div class="image-container">
+                <img [src]="product.image" alt="{{ product.name }} Image" class="product-image" />
+                <div class="overlay">
+                  <p>Add To Cart</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">{{ product.name }}</h5>
+                <div class="price">
+                  <span class="current-price">${{ product.price }}</span>
+                  <span class="original-price">${{ product.originalPrice }}</span>
+                </div>
+                <div class="rating">
+                  <ng-container *ngFor="let star of getStars(product.rating)">
+                    <i class="fas fa-star" [class.filled]="star === true"></i>
+                  </ng-container>
+                  <span>({{ product.numberOfRatings }} ratings)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+
+    <!-- Arrows only if more than 4 products -->
+    <button *ngIf="products.length > 4" class="carousel-control-prev" type="button" data-bs-target="#productCarousel"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button *ngIf="products.length > 4" class="carousel-control-next" type="button" data-bs-target="#productCarousel"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>

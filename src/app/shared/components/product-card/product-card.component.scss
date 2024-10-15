@@ -1,0 +1,117 @@
+.product-carousel {
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background: none;
+    color: transparent;
+
+    &::after {
+      font-size: 2rem; // Adjust size of arrow icon
+      color: main-color; // Replace with your main color
+    }
+
+    &:hover::after {
+      color: hover-color; // Change to hover color on hover
+    }
+  }
+
+  .product-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    gap: 20px;
+  }
+
+  .product-card {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    background-color: white;
+    border: none;
+    cursor: default;
+
+    .image-container {
+      position: relative;
+      overflow: hidden;
+      height: 60%;
+
+      .product-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        background-color: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s;
+        cursor: pointer;
+
+        p {
+          margin: 0;
+        }
+      }
+
+      &:hover .overlay {
+        opacity: 1;
+      }
+    }
+
+    .card-body {
+      padding: 15px;
+
+      .card-title {
+        font-size: 1.1rem;
+        margin: 5px 0;
+      }
+
+      .price {
+        display: flex;
+        align-items: center;
+
+        .current-price {
+          color: var(--main-color);
+          font-size: 1.2rem;
+          font-weight: bold;
+          margin-right: 10px;
+        }
+
+        .original-price {
+          text-decoration: line-through;
+          color: var(--secondary-color);
+        }
+      }
+
+      .rating {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+
+        .fas {
+          margin-right: 2px;
+        }
+
+        .filled {
+          color: var(--stars-color);
+        }
+
+        .empty {
+          color: orange;
+        }
+      }
+    }
+  }
+}
