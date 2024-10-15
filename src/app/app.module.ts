@@ -22,6 +22,7 @@ import { AboutFootComponent } from './about/components/about-foot/about-foot.com
 
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { ContactComponent } from './components/Contact/Components/contact/contact.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 
     LoginComponent,
     SignUpComponent,
+    ContactComponent,
 
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
