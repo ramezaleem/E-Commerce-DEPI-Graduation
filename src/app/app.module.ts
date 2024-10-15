@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/components/header/header.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { HomeComponent } from './components/home/home.component';
 import { HomeCarouselComponent } from './components/home/Components/home-carousel/home-carousel.component';
 import { HomeFlashSalesComponent } from './components/home/Components/home-flash-sales/home-flash-sales.component';
@@ -23,7 +23,6 @@ import { AboutFootComponent } from './about/components/about-foot/about-foot.com
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ContactComponent } from './components/Contact/Components/contact/contact.component';
-
 
 @NgModule({
   declarations: [
@@ -44,13 +43,11 @@ import { ContactComponent } from './components/Contact/Components/contact/contac
     AboutMidComponent,
     AboutFootComponent,
 
-
     LoginComponent,
     SignUpComponent,
     ContactComponent,
-
   ],
-  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
