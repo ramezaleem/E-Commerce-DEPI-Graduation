@@ -25,6 +25,7 @@ import { ContactComponent } from './components/Contact/Components/contact/contac
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SecondProductComponentComponent } from './shared/components/second-product-component/second-product-component.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { AllProductsComponent } from './components/all-products/all-products.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     SignUpComponent,
     ContactComponent,
     SecondProductComponentComponent,
+    AllProductsComponent,
   ],
   imports: [
     BrowserModule,
