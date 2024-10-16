@@ -25,10 +25,23 @@
         </div>
       </div>
       <div class="icon-container">
-        <i class="fas fa-chevron-left icon left-icon" (click)="onNavigate('prev')"></i>
-        <i class="fas fa-chevron-right icon right-icon" (click)="onNavigate('next')"></i>
+        <i class="fas fa-chevron-left icon left-icon" (click)="owlFlash.prev()"></i>
+        <i class="fas fa-chevron-right icon right-icon" (click)="owlFlash.next()"></i>
       </div>
     </div>
   </div>
-  <app-product-card [products]="products" [showOverlay]="true"></app-product-card>
+  <div class="product-carousel">
+    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <owl-carousel-o [options]="customOptions" #owlFlash>
+          <ng-container *ngFor="let product of products">
+            <ng-template carouselSlide>
+              <app-product-card [product]="product" [showOverlay]="true"></app-product-card>
+              <!-- <app-second-product-component [product]="product" [showOverlay]="true"></app-second-product-component> -->
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
 </div>

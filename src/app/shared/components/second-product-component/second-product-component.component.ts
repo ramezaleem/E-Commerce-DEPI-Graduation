@@ -1,11 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-product-card',
-  templateUrl: './product-card.component.html',
-  styleUrls: ['./product-card.component.scss'],
+  selector: 'app-second-product-component',
+  templateUrl: './second-product-component.component.html',
+  styleUrl: './second-product-component.component.scss',
 })
-export class ProductCardComponent {
+export class SecondProductComponentComponent {
   @Input() product: any;
   @Input() showOverlay: boolean = false;
 
