@@ -13,6 +13,7 @@ import { HomeBestSellingComponent } from './components/home/Components/home-best
 import { HomeExploreProductsComponent } from './components/home/Components/home-explore-products/home-explore-products.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { ProductCardComponent } from './shared/components/product-card/product-card.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ProductCardComponent } from './shared/components/product-card/product-c
     HomeExploreProductsComponent,
     FooterComponent,
     ProductCardComponent,
+    CartComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],
