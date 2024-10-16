@@ -1,0 +1,51 @@
+.sub-links a{
+  display: block;
+  color: black;
+  text-decoration: none;
+  font-size:1.1rem;
+}
+.dark-hero{
+  background: #000;
+  color: #FFF;
+  position: relative;
+}
+.sub-links a:hover{
+  color: #000000c0;
+  padding-right: 7px;
+}
+.carousel-btn-left{
+  font-size:14px;
+  bottom: 10px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  position: absolute;
+}
+.mid-of-dis h1{
+    font-size: 50px;;
+}
+.carousel-btn-left i:hover{
+  color: #dc3545;
+  cursor: pointer;
+}
+
+@media (max-width:992px){
+  .parent-links{
+    display: none;
+  }
+  .parent-of-diss{
+    padding: 3rem 0;
+  }
+}
+@media (max-width:768px) {
+  .desc{
+    text-align: center;
+  }
+  .head-of-dis{
+    display: flex;
+    justify-content: center;
+  }
+}

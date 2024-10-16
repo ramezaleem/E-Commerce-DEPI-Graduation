@@ -1,0 +1,13 @@
+<div class="container ">
+  <div class="about-main-container ">
+    <div class="row gy-5">
+      <div class="col-lg-3 col-md-4 col-6" *ngFor="let serv of services">
+        <a class="card text-center p-3 lh-lg" routerLink="/products">
+          <img [src]="serv.img" class="m-auto" alt="service img" width="80">
+          <span class="fs-1 fw-bold my-1"> {{serv.count + "K"}} </span>
+          <p class=""> {{serv.title}} </p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

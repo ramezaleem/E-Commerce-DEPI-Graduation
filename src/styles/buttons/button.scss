@@ -1,0 +1,25 @@
+button {
+  background-color: var(--main-color);
+}
+
+button:hover {
+  background-color: var(--hover-primary-button-color);
+}
+
+.sec-btn {
+  background-color: var(--main-color);
+  padding: 10px 35px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .sec-btn {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+}
+
+.sec-btn:hover {
+  background-color: var(--hover-primary-button-color);
+}

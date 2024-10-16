@@ -1,0 +1,11 @@
+// fonts.scss
+
+:root {
+  --base-font-size: 16px; /* You can adjust this value */
+  --heading-font-size: 24px; /* You can adjust this value */
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  font-size: var(--base-font-size);
+}

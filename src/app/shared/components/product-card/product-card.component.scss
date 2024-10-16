@@ -1,0 +1,140 @@
+.product-carousel {
+  margin: 30px 0;
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background: none;
+    color: transparent;
+
+    &::after {
+      font-size: 2rem;
+      color: var(--main-color);
+    }
+
+    &:hover::after {
+      color: var(--hover-color);
+    }
+  }
+
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .product-card {
+    width: 100%;
+    position: relative;
+    border: none;
+    cursor: pointer;
+
+    @media (min-width: 1200px) {
+      flex: 1 1 calc(25% - 20px);
+    }
+
+    @media (min-width: 1024px) and (max-width: 1199px) {
+      flex: 1 1 calc(33.33% - 20px);
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      flex: 1 1 calc(50% - 20px);
+    }
+
+    @media (max-width: 767px) {
+      flex: 1 1 100%;
+    }
+
+    .image-container {
+      position: relative;
+      overflow: hidden;
+      height: 60%;
+
+      .product-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        @media (max-width: 767px) {
+          height: 150px;
+        }
+      }
+
+      .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        background-color: black;
+        color: white;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        // opacity: 0;
+        // transition: opacity 0.3s ease;
+        cursor: pointer;
+
+        p {
+          margin: 0;
+        }
+      }
+
+      // Keep overlay visible when hovering over the card or overlay
+      &:hover .overlay {
+        // opacity: 1; // Show overlay when hovering over the card
+        display: flex;
+      }
+
+      // .overlay:hover {
+      //   opacity: 1; // Ensure overlay remains visible when hovered
+      // }
+    }
+
+    .card-body {
+      padding: 15px;
+
+      .card-title {
+        font-size: 1.1rem;
+        margin: 5px 0;
+      }
+
+      .price {
+        display: flex;
+        align-items: center;
+
+        .current-price {
+          color: var(--main-color);
+          font-size: 1.2rem;
+          font-weight: bold;
+          margin-right: 10px;
+        }
+
+        .original-price {
+          text-decoration: line-through;
+          color: var(--secondary-color);
+        }
+      }
+
+      .rating {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+
+        .fas {
+          margin-right: 2px;
+        }
+
+        .filled {
+          color: var(--stars-color);
+        }
+
+        .empty {
+          color: orange;
+        }
+      }
+    }
+  }
+}

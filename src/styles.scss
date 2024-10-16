@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@import "styles/variables";
+@import "styles/mixins";
+@import "styles/colors";
+@import "styles/global.styles.scss";
+@import "styles/buttons/button.scss";
+@import "styles/fonts.scss";
+@import "styles/form-field.scss";
+
+.sub-title {
+  color: var(--main-color);
+  font-size: 16px;
+  margin-bottom: var(--small-spacing);
+  position: relative;
+  padding-left: 30px;
+  font-weight: bold;
+  margin-bottom: 25px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 35px;
+    background-color: red;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+  }
+}
+.header {
+  display: flex;
+  align-items: center;
+}
