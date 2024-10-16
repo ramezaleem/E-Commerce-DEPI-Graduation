@@ -102,3 +102,27 @@ input[type="text"]::after {
     height: 40px;
   }
 }
+
+@media (max-width: 992px) {
+.container{
+  flex-direction: column;
+  gap: 30px;
+  font-size: 1.5rem;
+}
+img{
+  padding: 3px;
+}
+}
+@media (max-width: 768px){
+.btn{
+  width: auto;
+margin: auto;
+}
+}
+@media (max-width: 412px) {
+  .inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
