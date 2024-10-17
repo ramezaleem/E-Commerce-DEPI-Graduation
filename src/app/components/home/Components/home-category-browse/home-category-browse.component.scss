@@ -40,7 +40,8 @@
   gap: 30px;
 }
 .categories-cards .card {
-  width: 200px;
+  width: 15%;
+  
   height: 160px;
   padding: 10px 0;
   display: flex;
@@ -95,6 +96,23 @@
   }
   .categories-cards .card p {
     font-size: 16px;
+  }
+}
+@media (max-width:992px) {
+  .categories-cards .card {
+      width: 100%;
+      height: auto;
+      padding: 10px 0;
+      margin: auto;
+      // overflow-x:scroll;
+      // scrollbar-width: none;
+    }
+        .categories-cards{
+          flex-direction: column;
+        }
+ .card p{
+    
+    margin: auto;
   }
 }
 
