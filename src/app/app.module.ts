@@ -26,6 +26,7 @@ import { ContactComponent } from './components/Contact/Components/contact/contac
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { SecondProductComponentComponent } from './shared/components/second-product-component/second-product-component.component';
+import { NewArrivalComponent } from './components/home/Components/new-arrival/new-arrival.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { SecondProductComponentComponent } from './shared/components/second-prod
     SignUpComponent,
     ContactComponent,
     SecondProductComponentComponent,
+    NewArrivalComponent,
   ],
   imports: [
     BrowserModule,

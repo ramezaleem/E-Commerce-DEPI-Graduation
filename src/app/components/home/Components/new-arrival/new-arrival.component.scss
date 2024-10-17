@@ -1,0 +1,77 @@
+.New-Arrival {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.container {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    font-size: 36px;
+    font-weight: 600;
+    position: absolute;
+  }
+}
+
+.left {
+  img {
+  }
+}
+
+.image-container {
+  position: relative;
+  display: inline-block; /* لجعل الحاوية تتناسب مع الصورة */
+}
+
+.image-container img {
+  width: 100%; /* عرض الصورة */
+  height: 600px; /* ارتفاع تلقائي */
+}
+
+.overlay {
+  position: absolute;
+  top: 87%;
+  left: 25%;
+  transform: translate(-50%, -50%); /* لتحسين المحاذاة */
+  color: white; /* لون النص */
+  padding: 10px; /* حواف للنص */
+  border-radius: 5px; /* زوايا مدورة */
+  p {
+    font-size: 14px;
+    color: #fafafa;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  a {
+    list-style: none;
+    color: #fafafa;
+  }
+}
+
+.line_one img {
+  height: 286px;
+}
+
+.line_two .overlay {
+  top: 80%;
+  left: 34%;
+}
+
+.line_two img {
+  height: 286px;
+  width: 300px;
+}
+
+.icons {
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
