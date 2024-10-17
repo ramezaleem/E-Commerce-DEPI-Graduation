@@ -42,7 +42,7 @@ export class HomeFlashSalesComponent implements OnInit, OnDestroy {
         items: 4.5,
       },
     },
-    nav: true,
+    nav: false,
   };
 
   timerVisible: boolean = true;
@@ -218,8 +218,8 @@ export class HomeFlashSalesComponent implements OnInit, OnDestroy {
   //     numberOfRatings: 320,
   //   },
   // ];
-constructor(private productServ : FlashSalesService){}
-products =this.productServ.products;
+  constructor(private productServ: FlashSalesService) {}
+  products = this.productServ.products;
   ngOnInit() {
     this.startCountdown();
   }
