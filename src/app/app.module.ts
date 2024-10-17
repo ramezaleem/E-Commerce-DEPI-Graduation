@@ -12,6 +12,7 @@ import { HomeBestSellingComponent } from './components/home/Components/home-best
 import { HomeExploreProductsComponent } from './components/home/Components/home-explore-products/home-explore-products.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { ProductCardComponent } from './shared/components/product-card/product-card.component';
+import { CartComponent } from './components/cart/cart.component';
 
 import { AboutComponent } from './about/about.component';
 import { AboutHeroComponent } from './about/components/about-hero/about-hero.component';
@@ -23,6 +24,11 @@ import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ContactComponent } from './components/Contact/Components/contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+<<<<<<< HEAD
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
+=======
+>>>>>>> 83f5c5733ba711538c5c82a71c7e508d1719bfe5
 import { SecondProductComponentComponent } from './shared/components/second-product-component/second-product-component.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { AllProductsComponent } from './components/all-products/all-products.component';
