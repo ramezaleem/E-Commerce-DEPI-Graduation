@@ -17,7 +17,7 @@ a {
   text-decoration: none;
 }
 h3 {
-  background-color: #f1f3f5;
+  background-color: #f8f9fa;
 }
 .contianer {
   margin: 100px;
@@ -28,9 +28,9 @@ h3 {
   gap: 150px;
   padding: 2rem 5rem;
   border-radius: 2px;
-  background-color: #f1f3f5;
+  background-color: #f8f9fa;
   color: #464748;
-  box-shadow: 0 4px 20px rgba(208, 204, 204, 0.867);
+  box-shadow: 0 4px 10px #d9dbdd;
 }
 .product {
   margin-top: 20px;
@@ -49,14 +49,15 @@ h3 {
   height: 30px;
 }
 .b {
-  background-color: #f1f3f5;
+  background-color: #f8f9fa;
 }
 .allconter {
   border: #464748 solid 1px;
   border-radius: 2px;
-  width: 4rem;
+  width: 4.2rem;
   background-color: #f1f3f5;
   height: 3rem;
+  z-index: 2;
 }
 .count {
   position: relative;
@@ -70,6 +71,7 @@ h3 {
   margin: -5px 0px;
   z-index: 2;
   background-color: transparent;
+  margin-right: 0.3rem;
 }
 .count[_ngcontent-ng-c3348674003] {
   position: relative;
@@ -113,7 +115,7 @@ input {
   flex-direction: column;
   border: solid 1px black;
   width: 400px;
-  height: 300px;
+  height: 370px;
   padding: 20px;
   border-radius: 2px;
 }
@@ -122,6 +124,11 @@ input {
   justify-content: space-between;
   margin-top: 30px;
   border-bottom: #464748 solid;
+}
+.total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
 }
 .details-two {
   display: flex;
@@ -224,6 +231,7 @@ input {
     width: 10px;
     height: 10px;
   }
+
   .count {
     position: relative;
     /*flex: 1 1 auto;*/
@@ -242,28 +250,21 @@ input {
     padding: 1rem 1.5rem;
   }
 }
-@media (max-width: 300px) {
-  .head-bar {
-    gap: 20px;
-    padding: 0.2rem 0.5rem;
-    margin-right: 0px;
+@media (max-width: 350px) {
+  .cont-btton {
+    margin-bottom: 14px;
   }
-  .cobon {
-    display: flex;
-    max-height: 50px;
-
-    gap: 9rem;
+  .head-bar {
+    width: 370px;
   }
   .cart-button {
-    margin-top: 50px;
-
-    display: flex;
-    gap: 9rem;
     justify-content: space-between;
   }
   .sub-botton {
-    padding: 2px 2px;
-    font-size: 0.6rem;
-    border-radius: 2px;
+    width: 150px;
+    padding: 5px;
+  }
+  .cart-total {
+    width: 370px;
   }
 }

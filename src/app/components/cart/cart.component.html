@@ -24,7 +24,7 @@
         max="30"
         readonly
       />
-      <div class="d-flex flex-column">
+      <div class="d-flex flex-column gap">
         <button class="cont-btton" (click)="increment()">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,11 @@
       <p>Shipping</p>
       <p>Free</p>
     </div>
+    <div class="total">
+      <p>total:</p>
+      <p>{{ totalPrice }}</p>
+    </div>
+
     <a class="checkout" href="#">Proceed to Checkout</a>
   </div>
 </div>
-
