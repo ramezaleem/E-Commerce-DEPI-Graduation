@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/components/header/header.component';
@@ -23,6 +22,10 @@ import { AboutFootComponent } from './about/components/about-foot/about-foot.com
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ContactComponent } from './components/Contact/Components/contact/contact.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SecondProductComponentComponent } from './shared/components/second-product-component/second-product-component.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { AllProductsComponent } from './components/all-products/all-products.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,6 @@ import { ContactComponent } from './components/Contact/Components/contact/contac
     HomeExploreProductsComponent,
     FooterComponent,
     ProductCardComponent,
-
     AboutComponent,
     AboutHeroComponent,
     AboutMainComponent,
@@ -46,8 +48,15 @@ import { ContactComponent } from './components/Contact/Components/contact/contac
     LoginComponent,
     SignUpComponent,
     ContactComponent,
+    SecondProductComponentComponent,
+    AllProductsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    CarouselModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -2,7 +2,7 @@
   <h2 class="sub-title">Today's</h2>
   <div class="timer-container">
     <div class="header">
-      <h1>Flash Sales</h1>
+      <h1>All products</h1>
       <div class="timer">
         <div class="timer-item">
           <span class="timer-label">Days</span>
@@ -24,24 +24,28 @@
           <span class="timer-value">{{ seconds }}</span>
         </div>
       </div>
-      <div class="icon-container">
+      <!-- <div class="icon-container">
         <i class="fas fa-chevron-left icon left-icon" (click)="owlFlash.prev()"></i>
         <i class="fas fa-chevron-right icon right-icon" (click)="owlFlash.next()"></i>
-      </div>
+      </div> -->
     </div>
   </div>
-  <div class="product-carousel">
+  <div class="product-carousel my-5">
     <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <owl-carousel-o [options]="customOptions" #owlFlash>
-          <ng-container *ngFor="let product of products">
-            <ng-template carouselSlide>
-              <app-product-card [product]="product" [showOverlay]="true"></app-product-card>
-              <!-- <app-second-product-component [product]="product" [showOverlay]="true"></app-second-product-component> -->
-            </ng-template>
-          </ng-container>
-        </owl-carousel-o>
+      <div class="carousel-inner my-5" >
+        <div class="row g-3  ">
+          <ng-container *ngFor="let product of allProducts">
+            <div class="col-lg-4 col-md-6 col-sm-12 my-5 ">
+              <div class="product-card d-flex flex-column justify-content-between h-100 lh-lg " >
+            <app-product-card [product]="product" [showOverlay]="true"></app-product-card>
+            <p class="category bg-success rounded text-white p-1 ms-3 " > Category : {{product.category}} </p>
+            <!-- <app-second-product-component [product]="product" [showOverlay]="true"></app-second-product-component> -->
+             </div>
+        </div>
+        </ng-container>
+        </div>
       </div>
     </div>
   </div>
 </div>
+

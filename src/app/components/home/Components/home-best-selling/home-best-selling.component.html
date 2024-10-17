@@ -5,8 +5,22 @@
     </div>
     <div class="header">
       <h1>Best Selling Products</h1>
-      <div class="sec-btn view-all">View All</div>
+      <div class="sec-btn view-all" routerLink="/allProducts">View All</div>
+
     </div>
-    <app-product-card [products]="products" [showOverlay]="false"></app-product-card>
+    <div class="product-carousel">
+      <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <owl-carousel-o [options]="customOptions" #owlFlash>
+            <ng-container *ngFor="let product of products">
+              <ng-template carouselSlide>
+                <app-product-card [product]="product" [showOverlay]="false"></app-product-card>
+                <!-- <app-second-product-component [product]="product" [showOverlay]="true"></app-second-product-component> -->
+              </ng-template>
+            </ng-container>
+          </owl-carousel-o>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
