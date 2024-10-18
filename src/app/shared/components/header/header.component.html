@@ -53,7 +53,7 @@
                         My Reviews</a>
                     </div>
                     <div class="links ">
-                      <a href="#" class="w-100 d-flex justify-content-between align-items-center gap-5">
+                      <a  class="w-100 d-flex justify-content-between align-items-center gap-5" (click)="logout()">
                         <i class="fa-solid fa-arrow-right-from-bracket fa-flip-horizontal fs-4"></i>
                         Logout</a>
                     </div>
@@ -76,7 +76,7 @@
                 <a class="nav-link " [routerLink]='["/Contact"]' [routerLinkActive]="['active']">Contact</a>
               </li>
               <li class="nav-item px-3 ">
-                <a class="nav-link " [routerLink]='["/SignUp"]' [routerLinkActive]="['active']">Sign Up</a>
+                <a class="nav-link " [routerLink]='["/auth/SignUp"]' [routerLinkActive]="['active']">Sign Up</a>
               </li>
             </ul>
             <form class="d-lg-flex " role="search">
@@ -111,7 +111,7 @@
                         My Reviews</a>
                     </div>
                     <div class="links ">
-                      <a href="#" class="w-100 d-flex justify-content-between align-items-center gap-5">
+                      <a  class="w-100 d-flex justify-content-between align-items-center gap-5" (click)="logout()">
                         <i class="fa-solid fa-arrow-right-from-bracket fa-flip-horizontal fs-4"></i>
                         Logout</a>
                     </div>

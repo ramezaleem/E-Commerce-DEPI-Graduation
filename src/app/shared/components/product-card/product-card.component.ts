@@ -1,11 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product-card',
   templateUrl: './product-card.component.html',
   styleUrls: ['./product-card.component.scss'],
 })
-export class ProductCardComponent {
+export class ProductCardComponent{
   @Input() product: any;
   @Input() showOverlay: boolean = false;
 
@@ -16,4 +17,6 @@ export class ProductCardComponent {
       return false;
     });
   }
+
+
 }

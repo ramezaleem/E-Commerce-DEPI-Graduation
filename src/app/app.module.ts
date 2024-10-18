@@ -28,6 +28,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o'; // Keep this import only on
 import { SecondProductComponentComponent } from './shared/components/second-product-component/second-product-component.component';
 import { AllProductsComponent } from './components/all-products/all-products.component';
 import { NewArrivalComponent } from './components/home/Components/new-arrival/new-arrival.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { NewArrivalComponent } from './components/home/Components/new-arrival/ne
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CarouselModule, // Ensure this is only imported once
+    CarouselModule,
+    FormsModule// Ensure this is only imported once
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,70 +1,101 @@
-<div class="d-flex  align-items-center gap-2 mb-5 pt-5">
+<div class="container">
+  <div class=" d-flex align-items-center gap-2 mb-5 pt-5">
+    <a routerLink="/home" class="text-secondary">home / </a>
+    <a routerLink="/about" class="fw-bolder"> Contact </a>
+  </div>
 
-  <a routerLink="/home" class="text-secondary">home / </a>
-  <a routerLink="/about" class="fw-bolder "> Contact </a>
-</div>
+  <div class="d-flex container">
+    <div class="col-lg-4 col-md-12 col-sm-12">
+      <div class="call border p-4">
+        <div class="call_to d-flex gap-2 flex-column">
+          <div class="line_one d-flex">
+            <img
+              style="width: 40px; height: 40px pa"
+              src="assets\images\phone-call_9946324.png"
+              alt="img"
+            />
+            <h3>Call To Us</h3>
+          </div>
+          <!-- line_one -->
+          <div class="line_two">
+            <p>
+              We are available 24/7, 7 days a week.
+              <br />
+              Phone: +8801611112222
+            </p>
+          </div>
+          <!-- line_two -->
+          <br />
+          <hr />
+          <br />
+          <div class="line_one d-flex">
+            <img
+              style="width: 40px; height: 40px"
+              src="assets\images\mail.png"
+              alt="img"
+            />
+            <h3>Write To Us</h3>
+          </div>
+          <!-- line_one -->
+          <div class="line_two">
+            <p class="p-1">
+              Fill out our form and we will contact <br />
+              you within 24 hours. <br />
+              Emails: customer&#64; exclusive.com <br />
+              Emails: support&#64; exclusive.com <br />
+            </p>
+          </div>
+          <!-- line_two -->
+        </div>
+        <!-- call_to -->
+      </div>
+      <!-- call -->
+    </div>
+    <!-- col-4 -->
 
-<div class="d-flex container">
-
-  <div class="col-lg-4 col-md-12 col-sm-12">
-    <div class="call border p-4">
-      <div class="call_to d-flex gap-2 flex-column">
-
-        <div class="line_one d-flex "><img style="width:40px; height:40px pa;" src="assets\images\phone-call_9946324.png"
-            alt="img">
-          <h3> Call To Us</h3>
-        </div> <!-- line_one -->
+    <div class="col-lg-8 col-md-12 col-sm-12">
+      <div class="send border p-3 d-flex flex-column justify-content-between">
+        <div class="line_one d-flex gap-2 inputs">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Your Name *"
+            aria-label="default input example"
+          />
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Your Email *"
+            aria-label="default input example"
+          />
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Your phone *"
+            aria-label="default input example"
+          />
+        </div>
+        <!-- line_one -->
+        <br />
         <div class="line_two">
-          <p>
-            We are available 24/7, 7 days a week.
-            <br>
-            Phone: +8801611112222
-          </p>
-        </div><!-- line_two -->
-        <br>
-        <hr>
-        <br>
-        <div class="line_one d-flex "><img style="width:40px; height:40px;" src="assets\images\mail.png" alt="img">
-          <h3>Write To Us</h3>
-        </div> <!-- line_one -->
-        <div class="line_two">
-          <p class="p-1 ">
-            Fill out our form and we will contact <br> you within 24 hours. <br>
-            Emails: customer&#64;
-            exclusive.com <br>
-            Emails: support&#64;
-            exclusive.com <br>
-          </p>
-        </div><!-- line_two -->
-      </div> <!-- call_to -->
-    </div> <!-- call -->
-  </div><!-- col-4 -->
-
-  <div class="col-lg-8 col-md-12 col-sm-12 ">
-
-    <div class="send border p-3 d-flex flex-column justify-content-between ">
-      <div class="line_one d-flex gap-2 inputs">
-
-        <input class="form-control " type="text" placeholder="Your Name *" aria-label="default input example">
-        <input class="form-control" type="text" placeholder="Your Email *" aria-label="default input example">
-        <input class="form-control" type="text" placeholder="Your phone *" aria-label="default input example">
-      </div><!-- line_one -->
-      <br>
-      <div class="line_two">
-        <input class="form-control" type="text" placeholder="Your Message" aria-label="default input example">
-        <br>
-
-      </div> <!-- line_two -->
-      <div class="line_three ml-auto">
-        <button type="button" class="btn btn-send " >Send Message</button>
-      </div> <!-- line_three -->
-      <br>
-
-    </div><!-- send -->
-
-
-  </div><!-- col-8 -->
-
-
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Your Message"
+            aria-label="default input example"
+          />
+          <br />
+        </div>
+        <!-- line_two -->
+        <div class="line_three ml-auto">
+          <button type="button" class="btn btn-send">Send Message</button>
+        </div>
+        <!-- line_three -->
+        <br />
+      </div>
+      <!-- send -->
+    </div>
+    <!-- col-8 -->
+  </div>
 
 </div>
