@@ -8,6 +8,8 @@ import {
 } from '@angular/core';
 import { CartService } from '../../../cart-service.service';
 
+import { ActivatedRoute } from '@angular/router';
+
 @Component({
   selector: 'app-product-card',
   templateUrl: './product-card.component.html',

@@ -96,6 +96,15 @@ a.active{
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
+
+.accordion-button.collapsed:focus{
+  box-shadow: none;
+}
+.button:hover{
+  background: #FFF;
+}
+
+
 @media (max-width:991px) {
   header .head-of-header .mid-text p,
   .final-text{

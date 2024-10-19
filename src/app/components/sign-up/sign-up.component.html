@@ -1,48 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign in </title>
-</head>
-
-<body>
-  <div class="con">
-    <div class="image">
-      <img
-        src="https://img.freepik.com/premium-photo/empty-black-smartphone-with-cart-bags-light-background-online-shopping-purchase-concept-mock-up-3d-rendering_670147-9890.jpg?w=826"
-        alt="not found">
+<div class="signup-container m-5">
+  <div class="row  ">
+    <div class="col-lg-7 d-none d-lg-block  ">
+      <img class="image" src="/assets/images/Side Image.png" alt="">
     </div>
-    <div class="form">
-      <div class="text mb-4">
-        <h1>
-          Create an account
-        </h1>
-        <p>
-          Enter your details below
-        </p>
-      </div>
-      <div class="container ">
-
-        <input type="text" class="form-control border-bottom-only" id="name" placeholder="Name">
-
-        <input type="email" class="form-control border-bottom-only mt-3 mb-3" id="mail" placeholder="Enter Email">
-
-        <input type="password" class="form-control border-bottom-only mb-3" id="pass" placeholder="Enter Password">
-        <div class="container ">
-          <button class="btn btn-primary btn-block mt-3 btn-lg mb-3" routerLink="/Login">Create Account</button>
-          <button class="btn google-btn btn-block  btn-lg" >
-            <i class="fab fa-google mr-2"></i><a href="https://www.gmail.com" class="text-white"> Sign Up with Google</a>
-          </button>
+    <div class=" col-lg-4 col-md-6   m-auto lh-lg">
+      <h2 class="">Create an account</h2>
+      <p class="">Enter your details below</p>
+      <form action="" #form="ngForm" class="form-group" (ngSubmit)="register(form)">
+        <div class="mt-5">
+          <input type="text" name="firstName" id="firstName" class="form-control" [class.is-invalid]="name.errors"
+            [class.is-valid]="!name.errors" placeholder="Name" required ngModel #name="ngModel" [minlength]="3">
         </div>
-      </div>
+        <div class="lh-sm " *ngIf="name.touched&&name.invalid&&name.errors">
+          <small class="text-danger " *ngIf="name.errors['required']"><span class="fs-5 ">*</span> this fieled is
+            required</small>
+          <small class="text-danger " *ngIf="name.errors['minlength']"><span class="fs-5 ">*</span> Name should contain 3
+            characters</small>
+        </div>
 
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <div class="mt-5">
+          <input type="text" name="email" id="email" class="form-control" [class.is-invalid]="email.errors"
+          [class.is-valid]="!email.errors" placeholder="Email or Phone Number" required ngModel #email="ngModel"
+          pattern='[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}'          >
+        </div>
+        <div class="lh-sm " *ngIf="email.touched&&email.invalid&&email.errors">
+          <small class="text-danger " *ngIf="email.errors['required']"><span class="fs-5">*</span> this fieled is
+            required</small>
+          <!-- <small class="text-danger" *ngIf="email.errors['email']"><span class="fs-5">*</span> invalid em -->
+            <!-- address</small> -->
+          <small class="text-danger" *ngIf="email.errors['pattern']"><span class="fs-5">*</span> invalid email or phone number
+            </small>
+        </div>
+
+        <div class="mt-5">
+          <input type="password" name="password" id="password" class="form-control" [class.is-invalid]="password.errors"
+            [class.is-valid]="!password.errors" placeholder="Password" required ngModel #password="ngModel" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+        </div>
+        <div class="lh-sm " *ngIf="password.touched&&password.invalid&&password.errors">
+          <small class="text-danger " *ngIf="password.errors['required']"><span class="fs-5">*</span> this fieled is
+            required</small>
+          <small class="text-danger" *ngIf="password.errors['pattern']"><span class="fs-5">*</span>
+            Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more</small>
+        </div>
+        <div class="mt-5 ">
+          <button type="submit" class="btn btn-danger w-100  mb-4" [disabled]="form.invalid" (click)="submit()" > Create Account</button>
+          <a href="https://www.gmail.com">
+            <button type="submit"
+              class=" btn btn-light  d-flex justify-content-center align-items-center gap-3  w-100 ">
+              <img src="assets/images/Icon-Google.png" alt="googleIcon">
+              Sign up with Google
+            </button>
+          </a>
+        </div>
+        <div class="mt-4 text-center d-flex justify-content-center align-items-center gap-3 ">
+          Already have account? <a class="login-link" routerLink="/auth/login">Log in</a>
+        </div>
+      </form>
     </div>
   </div>
-</body>
-
-</html>
+</div>

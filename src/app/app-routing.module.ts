@@ -8,16 +8,26 @@ import { ContactComponent } from './components/Contact/Components/contact/contac
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AllProductsComponent } from './components/all-products/all-products.component';
 import { CartComponent } from './components/cart/cart.component';
+import { authGuard } from './modules/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'Contact', component: ContactComponent },
-  { path: 'SignUp', component: SignUpComponent },
-  { path: 'Login', component: LoginComponent },
-  { path: 'allProducts', component: AllProductsComponent },
-  { path: 'cart', component: CartComponent },
+  { path: 'home', component: HomeComponent, canActivate: [authGuard] },
+  { path: 'about', component: AboutComponent, canActivate: [authGuard] },
+  { path: 'Contact', component: ContactComponent, canActivate: [authGuard] },
+  // { path: 'SignUp', component: SignUpComponent },
+  // { path: 'Login', component: LoginComponent },
+  {
+    path: 'allProducts',
+    component: AllProductsComponent,
+    canActivate: [authGuard],
+  },
+  { path: 'cart', component: CartComponent, canActivate: [authGuard] },
+  {
+    path: 'auth',
+    loadChildren: () =>
+      import('./modules/auth/auth/auth.module').then((m) => m.AuthModule),
+  },
 ];
 
 @NgModule({

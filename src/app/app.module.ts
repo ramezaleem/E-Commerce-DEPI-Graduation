@@ -24,9 +24,10 @@ import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ContactComponent } from './components/Contact/Components/contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'ngx-owl-carousel-o'; // Keep this import only once
 import { SecondProductComponentComponent } from './shared/components/second-product-component/second-product-component.component';
-import { CarouselModule } from 'ngx-owl-carousel-o';
 import { AllProductsComponent } from './components/all-products/all-products.component';
+import { NewArrivalComponent } from './components/home/Components/new-arrival/new-arrival.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { AllProductsComponent } from './components/all-products/all-products.com
     ContactComponent,
     SecondProductComponentComponent,
     AllProductsComponent,
+    NewArrivalComponent,
   ],
   imports: [
     BrowserModule,
