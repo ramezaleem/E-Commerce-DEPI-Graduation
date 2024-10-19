@@ -35,3 +35,17 @@ button
 
 }
 
+.password-div {
+  position: relative;
+}
+.password-div i{
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(-45%,40%);
+  font-size: 1.2rem;
+  opacity: .7;
+  color: var(--main-color);
+  cursor: pointer;
+
+}

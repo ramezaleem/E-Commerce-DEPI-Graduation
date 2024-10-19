@@ -21,10 +21,11 @@
             </small>
         </div>
 
-        <div class="mt-5">
-          <input type="password" name="password" id="password" class="form-control" [class.is-invalid]="password.errors"
+        <div class="mt-5 password-div">
+          <input [type]=" showPassword ? 'text' : 'password' " name="password" id="password" class="form-control" [class.is-invalid]="password.errors"
             [class.is-valid]="!password.errors" placeholder="Password" required ngModel #password="ngModel" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-        </div>
+            <i [class]="showPassword ? 'far fa-eye ': 'far fa-eye-slash'"  (click)="togglePasswordVisibility()"></i>
+          </div>
         <div class="lh-sm " *ngIf="password.touched&&password.invalid&&password.errors">
           <small class="text-danger " *ngIf="password.errors['required']"><span class="fs-5">*</span> this fieled is
             required</small>
@@ -40,3 +41,5 @@
     </div>
   </div>
 </div>
+
+

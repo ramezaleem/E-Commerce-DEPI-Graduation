@@ -8,6 +8,166 @@ export class AllProductsService {
 
   constructor() { }
   allProducts : IallProducts[] = [
+
+        //start mens products
+        {
+          id: 1,
+          name: 'MEN Yarn Fleece Full-Zip Jacket',
+          image: '/assets/images/mens1.jpg',
+          discount: '-17%',
+          price:58.99,
+          originalPrice: 61.99,
+          rating: 4.5,
+          numberOfRatings: 220,
+          category:'Men’s Fashion'
+        },
+        {
+          id: 2,
+          name: 'Mens Winter Leathers Jackets',
+          image: '/assets/images/mens2.jpg',
+          discount: '-17%',
+          price:48.99,
+          originalPrice: 74.99,
+          rating: 3.5,
+          numberOfRatings: 120,
+          category:'Men’s Fashion'
+        },
+        {
+          id: 3,
+          name: 'Mens Winter Leathers Jackets',
+          image: '/assets/images/mens3.jpg',
+          discount: '-17%',
+          price:48.99,
+          originalPrice: 74.99,
+          rating: 4,
+          numberOfRatings: 150,
+          category:'Men’s Fashion'
+        },
+        {
+          id: 4,
+          name: "Men's Leather Formal Wear shoes",
+          image: '/assets/images/mens4.jpg',
+          discount: '-17%',
+          price:50.99,
+          originalPrice: 67.99,
+          rating: 4,
+          numberOfRatings: 350,
+          category:'Men’s Fashion'
+        },
+        {
+          id: 5,
+          name: "Casual Men's Brown shoes",
+          image: '/assets/images/mens5.jpg',
+          discount: '-17%',
+          price:78.99,
+          originalPrice: 85.990,
+          rating: 4,
+          numberOfRatings: 399,
+          category:'Men’s Fashion'
+        },
+        {
+          id: 6,
+          name: "Casual Men's Brown shoes",
+          image: '/assets/images/mens6.jpg',
+          discount: '-17%',
+          price:99.99,
+          originalPrice: 107.15,
+          rating: 4,
+          numberOfRatings: 399,
+          category:'Men’s Fashion'
+        },
+        {
+          id: 7,
+          name: "Trekking & Running Shoes - black",
+          image: '/assets/images/mens7.jpg',
+          discount: '-17%',
+          price:58.99,
+          originalPrice: 64.99,
+          rating: 4,
+          numberOfRatings: 150,
+          category:'Men’s Fashion'
+        },
+        {
+          id: 8,
+          name: "Pure Garment Dyed Cotton Shirt",
+          image: '/assets/images/mens8.jpg',
+          discount: '-17%',
+          price:45.99,
+          originalPrice: 56.99,
+          rating: 4,
+          numberOfRatings: 150,
+          category:'Men’s Fashion'
+        },
+        {
+          id: 9,
+          name: "men's hoodies t-shirt",
+          image: '/assets/images/mens9.jpg',
+          discount: '-17%',
+          price:99.99,
+          originalPrice: 160.99,
+          rating: 5,
+          numberOfRatings: 150,
+          category:'Men’s Fashion'
+        },
+        // end mens products
+        // start womens products
+        {
+          id: 1,
+          name: "Relaxed Shirt",
+          image: '/assets/images/womens1.jpg',
+          discount: '-20%',
+          price:45.99,
+          originalPrice:62.99,
+          rating: 4,
+          numberOfRatings: 450,
+          category:'Woman’s Fashion'
+        },
+        {
+          id: 2,
+          name: "Girls pnk Embro design",
+          image: '/assets/images/womens2.jpg',
+          discount: '-20%',
+          price:61.99,
+          originalPrice:80.99,
+          rating: 5,
+          numberOfRatings: 490,
+          category:'Woman’s Fashion'
+        },
+        {
+          id: 3,
+          name: "Black Floral Wrap Midi Skirt",
+          image: '/assets/images/womens3.jpg',
+          discount: '-20%',
+          price:71.99,
+          originalPrice:120.99,
+          rating: 3.2,
+          numberOfRatings: 90,
+          category:'Woman’s Fashion'
+        },
+        {
+          id: 4,
+          name: "Womens Party Wear Shoes",
+          image: '/assets/images/womens4.jpg',
+          discount: '-20%',
+          price:56.99,
+          originalPrice:90.99,
+          rating: 4.2,
+          numberOfRatings: 280,
+          category:'Woman’s Fashion'
+        },
+        {
+          id: 5,
+          name: "girls t-shirt",
+          image: '/assets/images/womens5.jpg',
+          discount: '-20%',
+          price:36.99,
+          originalPrice:50.99,
+          rating: 4.5,
+          numberOfRatings: 680,
+          category:'Woman’s Fashion'
+        },
+        //  add if u can...
+        
     //start Home & Lifestyle prds
     {
       id: 1,
@@ -145,163 +305,7 @@ export class AllProductsService {
       category:'Electronics'
     },
     // end  Elctronics prds
-    //start mens products
-    {
-      id: 1,
-      name: 'MEN Yarn Fleece Full-Zip Jacket',
-      image: '/assets/images/mens1.jpg',
-      discount: '-17%',
-      price:58.99,
-      originalPrice: 61.99,
-      rating: 4.5,
-      numberOfRatings: 220,
-      category:'Men’s Fashion'
-    },
-    {
-      id: 2,
-      name: 'Mens Winter Leathers Jackets',
-      image: '/assets/images/mens2.jpg',
-      discount: '-17%',
-      price:48.99,
-      originalPrice: 74.99,
-      rating: 3.5,
-      numberOfRatings: 120,
-      category:'Men’s Fashion'
-    },
-    {
-      id: 3,
-      name: 'Mens Winter Leathers Jackets',
-      image: '/assets/images/mens3.jpg',
-      discount: '-17%',
-      price:48.99,
-      originalPrice: 74.99,
-      rating: 4,
-      numberOfRatings: 150,
-      category:'Men’s Fashion'
-    },
-    {
-      id: 4,
-      name: "Men's Leather Formal Wear shoes",
-      image: '/assets/images/mens4.jpg',
-      discount: '-17%',
-      price:50.99,
-      originalPrice: 67.99,
-      rating: 4,
-      numberOfRatings: 350,
-      category:'Men’s Fashion'
-    },
-    {
-      id: 5,
-      name: "Casual Men's Brown shoes",
-      image: '/assets/images/mens5.jpg',
-      discount: '-17%',
-      price:78.99,
-      originalPrice: 85.990,
-      rating: 4,
-      numberOfRatings: 399,
-      category:'Men’s Fashion'
-    },
-    {
-      id: 6,
-      name: "Casual Men's Brown shoes",
-      image: '/assets/images/mens6.jpg',
-      discount: '-17%',
-      price:99.99,
-      originalPrice: 107.15,
-      rating: 4,
-      numberOfRatings: 399,
-      category:'Men’s Fashion'
-    },
-    {
-      id: 7,
-      name: "Trekking & Running Shoes - black",
-      image: '/assets/images/mens7.jpg',
-      discount: '-17%',
-      price:58.99,
-      originalPrice: 64.99,
-      rating: 4,
-      numberOfRatings: 150,
-      category:'Men’s Fashion'
-    },
-    {
-      id: 8,
-      name: "Pure Garment Dyed Cotton Shirt",
-      image: '/assets/images/mens8.jpg',
-      discount: '-17%',
-      price:45.99,
-      originalPrice: 56.99,
-      rating: 4,
-      numberOfRatings: 150,
-      category:'Men’s Fashion'
-    },
-    {
-      id: 9,
-      name: "men's hoodies t-shirt",
-      image: '/assets/images/mens9.jpg',
-      discount: '-17%',
-      price:99.99,
-      originalPrice: 160.99,
-      rating: 5,
-      numberOfRatings: 150,
-      category:'Men’s Fashion'
-    },
-    // end mens products
-    // start womens products
-    {
-      id: 1,
-      name: "Relaxed Shirt",
-      image: '/assets/images/womens1.jpg',
-      discount: '-20%',
-      price:45.99,
-      originalPrice:62.99,
-      rating: 4,
-      numberOfRatings: 450,
-      category:'Woman’s Fashion'
-    },
-    {
-      id: 2,
-      name: "Girls pnk Embro design",
-      image: '/assets/images/womens2.jpg',
-      discount: '-20%',
-      price:61.99,
-      originalPrice:80.99,
-      rating: 5,
-      numberOfRatings: 490,
-      category:'Woman’s Fashion'
-    },
-    {
-      id: 3,
-      name: "Black Floral Wrap Midi Skirt",
-      image: '/assets/images/womens3.jpg',
-      discount: '-20%',
-      price:71.99,
-      originalPrice:120.99,
-      rating: 3.2,
-      numberOfRatings: 90,
-      category:'Woman’s Fashion'
-    },
-    {
-      id: 4,
-      name: "Womens Party Wear Shoes",
-      image: '/assets/images/womens4.jpg',
-      discount: '-20%',
-      price:56.99,
-      originalPrice:90.99,
-      rating: 4.2,
-      numberOfRatings: 280,
-      category:'Woman’s Fashion'
-    },
-    {
-      id: 5,
-      name: "girls t-shirt",
-      image: '/assets/images/womens5.jpg',
-      discount: '-20%',
-      price:36.99,
-      originalPrice:50.99,
-      rating: 4.5,
-      numberOfRatings: 680,
-      category:'Woman’s Fashion'
-    },
+
 
   ]
 }

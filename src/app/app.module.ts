@@ -53,6 +53,7 @@ import { FormsModule } from '@angular/forms';
     SecondProductComponentComponent,
     AllProductsComponent,
     NewArrivalComponent,
+    
   ],
   imports: [
     BrowserModule,
