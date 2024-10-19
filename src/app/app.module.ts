@@ -28,6 +28,7 @@ import { AllProductsComponent } from './components/all-products/all-products.com
 import { NewArrivalComponent } from './components/home/Components/new-arrival/new-arrival.component';
 import { FormsModule } from '@angular/forms';
 import { Error404Component } from './components/error404/error404.component';
+import { SecondExploreOurProductsComponent } from './components/home/Components/second-explore-our-products/second-explore-our-products.component';
 
 @NgModule({
   declarations: [
@@ -46,13 +47,13 @@ import { Error404Component } from './components/error404/error404.component';
     AboutMainComponent,
     AboutMidComponent,
     AboutFootComponent,
-
+    SecondExploreOurProductsComponent,
+     SecondProductComponentComponent,
     ContactComponent,
-    SecondProductComponentComponent,
     AllProductsComponent,
     NewArrivalComponent,
     Error404Component,
-
+    SecondProductComponentComponent
   ],
   imports: [
     BrowserModule,

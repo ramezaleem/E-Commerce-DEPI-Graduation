@@ -81,6 +81,6 @@ export class HomeBestSellingComponent {
   //     numberOfRatings: 300,
   //   },
   // ];
-  constructor(private productsServ : HomeBestSellingService){}
-  products=this.productsServ.products;
+  constructor(private productsServ: HomeBestSellingService) {}
+  products = this.productsServ.products;
 }
