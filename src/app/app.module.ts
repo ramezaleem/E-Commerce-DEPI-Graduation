@@ -27,6 +27,7 @@ import { SecondProductComponentComponent } from './shared/components/second-prod
 import { AllProductsComponent } from './components/all-products/all-products.component';
 import { NewArrivalComponent } from './components/home/Components/new-arrival/new-arrival.component';
 import { FormsModule } from '@angular/forms';
+import { Error404Component } from './components/error404/error404.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { FormsModule } from '@angular/forms';
     SecondProductComponentComponent,
     AllProductsComponent,
     NewArrivalComponent,
+    Error404Component,
 
   ],
   imports: [

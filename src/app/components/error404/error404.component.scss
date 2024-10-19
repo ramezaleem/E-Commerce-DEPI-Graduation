@@ -1,0 +1,18 @@
+h1
+{
+  font-size: 90px;
+  font-weight: 600;
+}
+
+@media (max-width:768px) {
+  h1{
+    font-size: 60px;
+  }
+
+}
+@media (max-width:578px) {
+  h1{
+    font-size:  40px; ;
+  }
+
+}

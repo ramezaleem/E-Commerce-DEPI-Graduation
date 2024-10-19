@@ -9,25 +9,17 @@ import { SignUpComponent } from './modules/auth/auth/components/sign-up/sign-up.
 import { AllProductsComponent } from './components/all-products/all-products.component';
 import { CartComponent } from './components/cart/cart.component';
 import { authGuard } from './modules/auth.guard';
+import { Error404Component } from './components/error404/error404.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, canActivate: [authGuard] },
   { path: 'about', component: AboutComponent, canActivate: [authGuard] },
   { path: 'Contact', component: ContactComponent, canActivate: [authGuard] },
-  // { path: 'SignUp', component: SignUpComponent },
-  // { path: 'Login', component: LoginComponent },
-  {
-    path: 'allProducts',
-    component: AllProductsComponent,
-    canActivate: [authGuard],
-  },
+  {path: 'allProducts',component: AllProductsComponent,canActivate: [authGuard]},
   { path: 'cart', component: CartComponent, canActivate: [authGuard] },
-  {
-    path: 'auth',
-    loadChildren: () =>
-      import('./modules/auth/auth/auth.module').then((m) => m.AuthModule),
-  },
+  { path: 'auth',loadChildren: () =>import('./modules/auth/auth/auth.module').then((m) => m.AuthModule),},
+  { path: '**', component: Error404Component },
 ];
 
 @NgModule({
