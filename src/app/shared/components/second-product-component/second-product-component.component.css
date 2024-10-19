@@ -1,0 +1,83 @@
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px;
+  height: 50px;
+  background: none;
+  color: transparent;
+}
+.carousel-control-prev::after,
+.carousel-control-next::after {
+  font-size: 2rem;
+  color: var(--main-color);
+}
+.carousel-control-prev:hover::after,
+.carousel-control-next:hover::after {
+  color: var(--hover-color);
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.product-card {
+  position: relative;
+  border: none;
+  cursor: pointer;
+  width: 270px;
+}
+
+.image-container {
+  position: relative;
+}
+.image-container .product-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+.image-container .overlay {
+  position: absolute;
+  bottom: 89px;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  opacity: 0;
+}
+.image-container .overlay p {
+  margin-bottom: 0;
+  padding: 5px 0;
+}
+.image-container .overlay:hover {
+  opacity: 1;
+}
+
+.card-body {
+  padding: 10px;
+}
+.card-body .price {
+  font-weight: bold;
+}
+.card-body .price .current-price {
+  font-size: 16px;
+  color: var(--main-color);
+}
+.card-body .price .original-price {
+  text-decoration: line-through;
+  font-size: 12px;
+  color: var(--muted-color);
+  margin-left: 5px;
+}
+.card-body .rating {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.card-body .rating i.filled {
+  color: goldenrod;
+}/*# sourceMappingURL=second-product-component.component.css.map */

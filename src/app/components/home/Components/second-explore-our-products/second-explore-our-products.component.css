@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  color: black;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.icon:hover {
+  color: var(--main-color);
+}
+
+.view-all-products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}/*# sourceMappingURL=second-explore-our-products.component.css.map */

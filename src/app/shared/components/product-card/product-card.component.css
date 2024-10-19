@@ -1,0 +1,128 @@
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px;
+  height: 50px;
+  background: none;
+  color: transparent;
+}
+.carousel-control-prev::after,
+.carousel-control-next::after {
+  font-size: 2rem;
+  color: var(--main-color);
+}
+.carousel-control-prev:hover::after,
+.carousel-control-next:hover::after {
+  color: var(--hover-color);
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.product-card {
+  position: relative;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  max-width: 270px;
+  flex: 1 1 calc(25% - 20px);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.image-container {
+  position: relative;
+  /* Hover on the image-container to show the overlay */
+}
+.image-container .image {
+  position: relative;
+  overflow: hidden;
+}
+.image-container .product-image {
+  width: 100%;
+  height: 200px;
+  transition: transform 0.3s ease-in-out;
+}
+.image-container .image-icons {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+}
+.image-container .image-icons i:hover {
+  scale: 1.1;
+  color: var(--main-color);
+}
+.image-container .product-image:hover {
+  transform: scale(1.25); /* Use transform for hover scale */
+  transition: all 0.3s linear;
+}
+.image-container .overlay {
+  position: absolute;
+  bottom: 0; /* Keep overlay at the bottom */
+  left: 0;
+  width: 100%;
+  background-color: black; /* Black background */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  color: white;
+  font-size: 16px;
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.3s ease-out; /* Smooth transition */
+  padding: 10px 0; /* Add some padding */
+  text-align: center; /* Center text */
+}
+.image-container:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.card-body {
+  padding: 10px;
+}
+.card-body .price {
+  font-weight: bold;
+}
+.card-body .price .current-price {
+  font-size: 16px;
+  color: var(--main-color);
+}
+.card-body .price .original-price {
+  text-decoration: line-through;
+  font-size: 12px;
+  color: var(--muted-color);
+  margin-left: 5px;
+}
+.card-body .rating {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.card-body .rating i.filled {
+  color: goldenrod;
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+@media (max-width: 480px) {
+  .product-card {
+    flex: 1 1 100%;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px;
+    height: 40px;
+  }
+  .carousel-control-prev::after,
+  .carousel-control-next::after {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=product-card.component.css.map */
