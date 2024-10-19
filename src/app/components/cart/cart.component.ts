@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { CartService } from '../../cart-service.service';
 import { FormsModule } from '@angular/forms';
 
@@ -47,5 +47,17 @@ export class CartComponent implements OnInit {
         return total + item.subtotal; // Apply Math.floor() to each item's total price
       }, 0)
     );
+  }
+
+  showButton = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    // Show the button when scrolled down 300px
+    this.showButton = window.pageYOffset > 300;
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
