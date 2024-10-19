@@ -14,7 +14,7 @@
           <owl-carousel-o [options]="customOptions" #owlFlash>
             <ng-container *ngFor="let product of products">
               <ng-template carouselSlide>
-                <app-product-card [product]="product" [showOverlay]="true"></app-product-card>
+                <app-product-card [product]="product" [showOverlay]="false"></app-product-card>
                 <!-- <app-second-product-component [product]="product" [showOverlay]="true"></app-second-product-component> -->
               </ng-template>
             </ng-container>

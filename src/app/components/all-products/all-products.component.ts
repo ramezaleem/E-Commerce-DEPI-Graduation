@@ -1,10 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 import { AllProductsService } from '../../services/all-products.service';
 
 @Component({
   selector: 'app-all-products',
   templateUrl: './all-products.component.html',
-  styleUrl: './all-products.component.scss'
+  styleUrl: './all-products.component.scss',
 })
 export class AllProductsComponent {
   @Input() showOverlay: boolean = false;
@@ -16,9 +16,20 @@ export class AllProductsComponent {
       return false;
     });
   }
-  constructor(private prdServ : AllProductsService){}
-  allProducts =this.prdServ.allProducts;
+  constructor(private prdServ: AllProductsService) {}
+  allProducts = this.prdServ.allProducts;
 
+  showButton = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    // Show the button when scrolled down 300px
+    this.showButton = window.pageYOffset > 300;
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
   timerVisible: boolean = true;
   countdown: any;
@@ -27,7 +38,7 @@ export class AllProductsComponent {
   hours: number = 0;
   minutes: number = 0;
   seconds: number = 0;
-ngOnInit() {
+  ngOnInit() {
     this.startCountdown();
   }
 
@@ -56,6 +67,4 @@ ngOnInit() {
   ngOnDestroy() {
     clearInterval(this.countdown);
   }
-
-
 }
