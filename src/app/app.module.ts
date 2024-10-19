@@ -20,8 +20,8 @@ import { AboutMainComponent } from './about/components/about-main/about-main.com
 import { AboutMidComponent } from './about/components/about-mid/about-mid.component';
 import { AboutFootComponent } from './about/components/about-foot/about-foot.component';
 
-import { LoginComponent } from './components/login/login.component';
-import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { LoginComponent } from './modules/auth/auth/components/login/login.component';
+import { SignUpComponent } from './modules/auth/auth/components/sign-up/sign-up.component';
 import { ContactComponent } from './components/Contact/Components/contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o'; // Keep this import only once
@@ -47,13 +47,13 @@ import { FormsModule } from '@angular/forms';
     AboutMainComponent,
     AboutMidComponent,
     AboutFootComponent,
-    LoginComponent,
-    SignUpComponent,
+    // LoginComponent,
+    // SignUpComponent,
     ContactComponent,
     SecondProductComponentComponent,
     AllProductsComponent,
     NewArrivalComponent,
-    
+
   ],
   imports: [
     BrowserModule,

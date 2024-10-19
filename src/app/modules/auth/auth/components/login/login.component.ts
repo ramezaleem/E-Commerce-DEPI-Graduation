@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GuardServService } from '../../services/guard-serv.service';
+import { GuardServService } from '../../../../../services/guard-serv.service';
 import { Route, Router } from '@angular/router';
 @Component({
   selector: 'app-login',
