@@ -45,7 +45,7 @@ export class SecondExploreOurProductsComponent {
       image: 'assets/images/ex1.png',
       discount: '-40%',
       price: 260,
-      originalPrice: 360,
+      originalPrice: null, // Set to null
       rating: 4.5,
       numberOfRatings: 150,
     },
@@ -55,7 +55,7 @@ export class SecondExploreOurProductsComponent {
       image: 'assets/images/ex2.png',
       discount: '-35%',
       price: 960,
-      originalPrice: 1160,
+      originalPrice: null, // Set to null
       rating: 5.0,
       numberOfRatings: 200,
     },
@@ -65,7 +65,7 @@ export class SecondExploreOurProductsComponent {
       image: 'assets/images/ex3.png',
       discount: '-25%',
       price: 160,
-      originalPrice: 170,
+      originalPrice: null, // Set to null
       rating: 4.0,
       numberOfRatings: 150,
     },
@@ -75,7 +75,7 @@ export class SecondExploreOurProductsComponent {
       image: 'assets/images/ex4.png',
       discount: '-15%',
       price: 360,
-      originalPrice: '370',
+      originalPrice: null, // Set to null
       rating: 4.8,
       numberOfRatings: 300,
     },
@@ -85,7 +85,7 @@ export class SecondExploreOurProductsComponent {
       image: 'assets/images/ex5.png',
       discount: '-15%',
       price: 360,
-      originalPrice: '370',
+      originalPrice: null, // Set to null
       rating: 4.8,
       numberOfRatings: 300,
     },
@@ -95,7 +95,7 @@ export class SecondExploreOurProductsComponent {
       image: 'assets/images/ex6.png',
       discount: '-15%',
       price: 360,
-      originalPrice: '370',
+      originalPrice: null, // Set to null
       rating: 4.8,
       numberOfRatings: 300,
     },
@@ -105,17 +105,17 @@ export class SecondExploreOurProductsComponent {
       image: 'assets/images/ex7.png',
       discount: '-15%',
       price: 360,
-      originalPrice: '370',
+      originalPrice: null, // Set to null
       rating: 4.8,
       numberOfRatings: 300,
     },
     {
-      id: 7,
+      id: 8,
       name: 'Quilted Satin Jacket',
       image: 'assets/images/ex6 (2).png',
       discount: '-15%',
       price: 360,
-      originalPrice: '370',
+      originalPrice: null, // Set to null
       rating: 4.8,
       numberOfRatings: 300,
     },

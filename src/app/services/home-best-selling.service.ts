@@ -2,19 +2,18 @@ import { Injectable } from '@angular/core';
 import { IprdHomeBestSelling } from '../interfaces/interface-home-best-selling';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HomeBestSellingService {
-
-  constructor() { }
-  products : IprdHomeBestSelling[]= [
+  constructor() {}
+  products: IprdHomeBestSelling[] = [
     {
       id: 1,
       name: 'The north coot',
       image: 'assets/images/north-coot.jpeg',
       discount: '-40%',
       price: 260,
-      originalPrice: 360,
+      originalPrice: '$360', // Added $
       rating: 4.5,
       numberOfRatings: 150,
     },
@@ -24,7 +23,7 @@ export class HomeBestSellingService {
       image: 'assets/images/Gucci-bag.jpeg',
       discount: '-35%',
       price: 960,
-      originalPrice: 1160,
+      originalPrice: '$1160', // Added $
       rating: 5.0,
       numberOfRatings: 200,
     },
@@ -34,7 +33,7 @@ export class HomeBestSellingService {
       image: 'assets/images/RGB-Liquid-CPU-Cooler.jpeg',
       discount: '-25%',
       price: 160,
-      originalPrice: 170,
+      originalPrice: '$170', // Added $
       rating: 4.0,
       numberOfRatings: 150,
     },
@@ -44,7 +43,7 @@ export class HomeBestSellingService {
       image: 'assets/images/BookShelf.jpeg',
       discount: '-15%',
       price: 360,
-      originalPrice: 370,
+      originalPrice: '$370', // Added $
       rating: 4.8,
       numberOfRatings: 300,
     },

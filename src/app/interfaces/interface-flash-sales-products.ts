@@ -1,10 +1,10 @@
-export interface  IprdFlashSales{
-  id:number;
-  name:string;
-  image:string;
-  discount:string;
-  price:number;
-  originalPrice:number;
-  rating:number;
-  numberOfRatings:number;
+export interface IprdFlashSales {
+  id: number;
+  name: string;
+  image: string;
+  discount: string;
+  price: number;
+  originalPrice: string;
+  rating: number;
+  numberOfRatings: number;
 }

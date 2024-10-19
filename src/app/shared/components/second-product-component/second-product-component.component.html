@@ -9,7 +9,7 @@
         <h5 class="card-title">{{ product.name }}</h5>
         <div class="price">
           <span class="current-price">${{ product.price }}</span>
-          <span class="original-price">${{ product.originalPrice }}</span>
+          <span class="original-price">{{ product.originalPrice }}</span>
         </div>
         <div class="rating">
           <ng-container *ngFor="let star of getStars(product.rating)">

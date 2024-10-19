@@ -4,7 +4,7 @@ export interface  IallProducts{
   image:string;
   discount:string;
   price:number;
-  originalPrice:number;
+  originalPrice:string;
   rating:number;
   numberOfRatings:number;
   category : string

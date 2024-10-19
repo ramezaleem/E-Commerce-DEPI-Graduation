@@ -2,19 +2,18 @@ import { Injectable } from '@angular/core';
 import { IprdFlashSales } from '../interfaces/interface-flash-sales-products';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class FlashSalesService {
-
-  constructor() { }
-  products : IprdFlashSales[] = [
+  constructor() {}
+  products: IprdFlashSales[] = [
     {
       id: 1,
       name: 'HAVIT HV-G92 Gamepad',
       image: 'assets/images/PlayStation.png',
       discount: '-40%',
       price: 299.99,
-      originalPrice: 499.99,
+      originalPrice: '$499.99', // Added $
       rating: 4.5,
       numberOfRatings: 150,
     },
@@ -24,7 +23,7 @@ export class FlashSalesService {
       image: 'assets/images/Wired-Keyboard.jpeg',
       discount: '-35%',
       price: 49.99,
-      originalPrice: 79.99,
+      originalPrice: '$79.99', // Added $
       rating: 5.0,
       numberOfRatings: 200,
     },
@@ -33,8 +32,8 @@ export class FlashSalesService {
       name: 'Ips LCD Gaming Monitor',
       image: 'assets/images/Gaming-Monitor.jpg',
       discount: '-25%',
-      price: 189.99, // Adjusted to a more realistic price
-      originalPrice: 249.99,
+      price: 189.99,
+      originalPrice: '$249.99', // Added $
       rating: 4.0,
       numberOfRatings: 150,
     },
@@ -43,8 +42,8 @@ export class FlashSalesService {
       name: 'S-Series Comfort Chair',
       image: 'assets/images/Chair.jpeg',
       discount: '-15%',
-      price: 212.49, // Adjusted to a more realistic price
-      originalPrice: 249.99,
+      price: 212.49,
+      originalPrice: '$249.99', // Added $
       rating: 4.8,
       numberOfRatings: 300,
     },
@@ -54,7 +53,7 @@ export class FlashSalesService {
       image: 'assets/images/Headset-Gaming.jpeg',
       discount: '-30%',
       price: 139.99,
-      originalPrice: 199.99,
+      originalPrice: '$199.99', // Added $
       rating: 4.7,
       numberOfRatings: 250,
     },
@@ -64,7 +63,7 @@ export class FlashSalesService {
       image: 'assets/images/Razer-Keyboard.jpeg',
       discount: '-20%',
       price: 79.99,
-      originalPrice: 99.99,
+      originalPrice: '$99.99', // Added $
       rating: 4.6,
       numberOfRatings: 180,
     },
@@ -74,7 +73,7 @@ export class FlashSalesService {
       image: 'assets/images/ASUS-Gaming-Monitor.jpeg',
       discount: '-15%',
       price: 339.99,
-      originalPrice: 399.99,
+      originalPrice: '$399.99', // Added $
       rating: 4.5,
       numberOfRatings: 210,
     },
@@ -84,7 +83,7 @@ export class FlashSalesService {
       image: 'assets/images/Gaming-Chair.jpeg',
       discount: '-25%',
       price: 249.99,
-      originalPrice: 329.99,
+      originalPrice: '$329.99', // Added $
       rating: 4.8,
       numberOfRatings: 320,
     },
