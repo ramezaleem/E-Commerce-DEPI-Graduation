@@ -12,14 +12,22 @@ import { authGuard } from './modules/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent , canActivate: [authGuard]},
-  { path: 'about', component: AboutComponent , canActivate: [authGuard]},
-  { path: 'Contact', component: ContactComponent , canActivate: [authGuard]},
+  { path: 'home', component: HomeComponent, canActivate: [authGuard] },
+  { path: 'about', component: AboutComponent, canActivate: [authGuard] },
+  { path: 'Contact', component: ContactComponent, canActivate: [authGuard] },
   // { path: 'SignUp', component: SignUpComponent },
   // { path: 'Login', component: LoginComponent },
-  { path: 'allProducts', component: AllProductsComponent , canActivate: [authGuard]},
-  { path: 'cart', component: CartComponent , canActivate: [authGuard]},
-  { path: 'auth', loadChildren: () => import('./modules/auth/auth/auth.module').then(m => m.AuthModule) },
+  {
+    path: 'allProducts',
+    component: AllProductsComponent,
+    canActivate: [authGuard],
+  },
+  { path: 'cart', component: CartComponent, canActivate: [authGuard] },
+  {
+    path: 'auth',
+    loadChildren: () =>
+      import('./modules/auth/auth/auth.module').then((m) => m.AuthModule),
+  },
 ];
 
 @NgModule({

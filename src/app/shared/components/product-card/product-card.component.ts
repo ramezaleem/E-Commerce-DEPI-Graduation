@@ -1,4 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  EventEmitter,
+  Output,
+  input,
+} from '@angular/core';
+import { CartService } from '../../../cart-service.service';
+
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -6,7 +15,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './product-card.component.html',
   styleUrls: ['./product-card.component.scss'],
 })
-export class ProductCardComponent{
+export class ProductCardComponent {
   @Input() product: any;
   @Input() showOverlay: boolean = false;
 
@@ -18,5 +27,12 @@ export class ProductCardComponent{
     });
   }
 
-
+  constructor(private cartService: CartService) {}
+  addToCart() {
+    this.cartService.addToCart({
+      image: this.product.image,
+      name: this.product.name,
+      price: Math.floor(this.product.price),
+    });
+  }
 }

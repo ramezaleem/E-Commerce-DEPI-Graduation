@@ -1,12 +1,19 @@
 <header>
   <div class="head-of-header">
-    <div class="container d-flex justify-content-between align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
       <div class="mid-text">
-        <p class="text-white mt-3 ">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! <a
-        class="text-white fw-bold" href="#shop">ShopNow</a></p>
+        <p class="text-white mt-3">
+          Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+          <a class="text-white fw-bold" href="#shop">ShopNow</a>
+        </p>
       </div>
-      <div class="final-text d-flex justify-content-center  align-items-center gap-2 ">
-        <select class="form-select form-select-sm" aria-label="Small select example">
+      <div
+        class="final-text d-flex justify-content-center align-items-center gap-2"
+      >
+        <select
+          class="form-select form-select-sm"
+          aria-label="Small select example"
+        >
           <option value="en" selected>English</option>
           <option value="ar">العربية</option>
           <option value="fr">Français</option>
@@ -15,161 +22,294 @@
       </div>
     </div>
   </div>
-  <div class="nav-container  border-bottom p-2">
-    <nav class="navbar navbar-expand-lg ">
+  <div class="nav-container border-bottom p-2">
+    <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand fw-bold fs-3" [routerLink]="['/home']">Exclusive</a>
+        <a class="navbar-brand fw-bold fs-3" [routerLink]="['/home']"
+          >Exclusive</a
+        >
 
-        <div class="fa-solid fa-bars fs-2 d-lg-none " data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
-        </div>
+        <div
+          class="fa-solid fa-bars fs-2 d-lg-none"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions"
+          aria-controls="offcanvasWithBothOptions"
+        ></div>
 
-        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
-          aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div
+          class="offcanvas offcanvas-start"
+          data-bs-scroll="true"
+          tabindex="-1"
+          id="offcanvasWithBothOptions"
+          aria-labelledby="offcanvasWithBothOptionsLabel"
+        >
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><a class="navbar-brand fw-bold "
-                [routerLink]="['/home']">
-                <div class="dropdown ">
-                  <i class="fa-regular fa-circle-user fs-2 "></i>
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+              <a class="navbar-brand fw-bold" [routerLink]="['/home']">
+                <div class="dropdown">
+                  <i class="fa-regular fa-circle-user fs-2"></i>
                   <div class="dropdown-content">
-                    <div class="links ">
-                      <a href="#user" class="w-100 d-flex justify-content-between align-items-center gap-5">
-                        <i class="fa-regular fa-user fs-4 "></i>
-                        Manage My Account</a>
+                    <div class="links">
+                      <a
+                        href="#user"
+                        class="w-100 d-flex justify-content-between align-items-center gap-5"
+                      >
+                        <i class="fa-regular fa-user fs-4"></i>
+                        Manage My Account</a
+                      >
                     </div>
-                    <div class="links ">
-                      <a href="#" class="w-100 d-flex justify-content-between align-items-center gap-5">
+                    <div class="links">
+                      <a
+                        href="#"
+                        class="w-100 d-flex justify-content-between align-items-center gap-5"
+                      >
                         <i class="fa-solid fa-truck-fast fs-4"></i>
-                        My Order</a>
+                        My Order</a
+                      >
                     </div>
-                    <div class="links ">
-                      <a href="#" class="w-100 d-flex justify-content-between align-items-center gap-5">
-                        <i class="fa-regular fa-circle-xmark fs-4 "></i>
-                        My Cancellations</a>
+                    <div class="links">
+                      <a
+                        href="#"
+                        class="w-100 d-flex justify-content-between align-items-center gap-5"
+                      >
+                        <i class="fa-regular fa-circle-xmark fs-4"></i>
+                        My Cancellations</a
+                      >
                     </div>
-                    <div class="links ">
-                      <a href="#" class="w-100 d-flex justify-content-between align-items-center gap-5">
-                        <i class="fa-regular fa-user fs-4 "></i>
-                        My Reviews</a>
+                    <div class="links">
+                      <a
+                        href="#"
+                        class="w-100 d-flex justify-content-between align-items-center gap-5"
+                      >
+                        <i class="fa-regular fa-user fs-4"></i>
+                        My Reviews</a
+                      >
                     </div>
-                    <div class="links ">
-                      <a  class="w-100 d-flex justify-content-between align-items-center gap-5" (click)="logout()">
-                        <i class="fa-solid fa-arrow-right-from-bracket fa-flip-horizontal fs-4"></i>
-                        Logout</a>
+                    <div class="links">
+                      <a
+                        class="w-100 d-flex justify-content-between align-items-center gap-5"
+                        (click)="logout()"
+                      >
+                        <i
+                          class="fa-solid fa-arrow-right-from-bracket fa-flip-horizontal fs-4"
+                        ></i>
+                        Logout</a
+                      >
                     </div>
-
-
                   </div>
                 </div>
-              </a></h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </a>
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
           </div>
-          <div class="offcanvas-body ">
+          <div class="offcanvas-body">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-              <li class="nav-item px-3 ">
-                <a class="nav-link active  " aria-current="page" [routerLink]='["/home"]' [routerLinkActive]="['active']">Home</a>
+              <li class="nav-item px-3">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  [routerLink]="['/home']"
+                  [routerLinkActive]="['active']"
+                  >Home</a
+                >
               </li>
-              <li class="nav-item px-3 ">
-                <a class="nav-link " [routerLink]='["/about"]' [routerLinkActive]="['active']">About</a>
+              <li class="nav-item px-3">
+                <a
+                  class="nav-link"
+                  [routerLink]="['/about']"
+                  [routerLinkActive]="['active']"
+                  >About</a
+                >
               </li>
-              <li class="nav-item px-3 ">
-                <a class="nav-link " [routerLink]='["/Contact"]' [routerLinkActive]="['active']">Contact</a>
+              <li class="nav-item px-3">
+                <a
+                  class="nav-link"
+                  [routerLink]="['/Contact']"
+                  [routerLinkActive]="['active']"
+                  >Contact</a
+                >
               </li>
-              <li class="nav-item px-3 ">
-                <a class="nav-link " [routerLink]='["/auth/SignUp"]' [routerLinkActive]="['active']">Sign Up</a>
+              <li class="nav-item px-3">
+                <a
+                  class="nav-link"
+                  [routerLink]="['/auth/SignUp']"
+                  [routerLinkActive]="['active']"
+                  >Sign Up</a
+                >
               </li>
             </ul>
-            <form class="d-lg-flex " role="search">
+            <form class="d-lg-flex" role="search">
               <div class="input">
-                <input class="searchInp" type="text" name="search" id="search" placeholder="What are you looking for?">
+                <input
+                  class="searchInp"
+                  type="text"
+                  name="search"
+                  id="search"
+                  placeholder="What are you looking for?"
+                />
                 <i class="fa-solid fa-search"></i>
               </div>
-              <div class="icons d-lg-flex justify-content-center align-items-center gap-3 ms-2 ">
+              <div
+                class="icons d-lg-flex justify-content-center align-items-center gap-3 ms-2"
+              >
                 <i class="fa-regular fa-heart fs-5"></i>
-                <i class="fa-solid fa-cart-shopping text-danger fs-5"></i>
-                <div class="dropdown ">
-                  <div class="hover-user"><i class="fa-regular fa-user fs-5 "></i></div>
+                <i
+                  [routerLink]="['/cart']"
+                  class="fa-solid fa-cart-shopping text-danger fs-5"
+                ></i>
+                <div class="dropdown">
+                  <div class="hover-user">
+                    <i class="fa-regular fa-user fs-5"></i>
+                  </div>
                   <div class="dropdown-content">
-                    <div class="links ">
-                      <a href="#user" class="w-100 d-flex justify-content-between align-items-center gap-5">
-                        <i class="fa-regular fa-user fs-4 "></i>
-                        Manage My Account</a>
+                    <div class="links">
+                      <a
+                        href="#user"
+                        class="w-100 d-flex justify-content-between align-items-center gap-5"
+                      >
+                        <i class="fa-regular fa-user fs-4"></i>
+                        Manage My Account</a
+                      >
                     </div>
-                    <div class="links ">
-                      <a href="#" class="w-100 d-flex justify-content-between align-items-center gap-5">
+                    <div class="links">
+                      <a
+                        href="#"
+                        class="w-100 d-flex justify-content-between align-items-center gap-5"
+                      >
                         <i class="fa-solid fa-truck-fast fs-4"></i>
-                        My Order</a>
+                        My Order</a
+                      >
                     </div>
-                    <div class="links ">
-                      <a href="#" class="w-100 d-flex justify-content-between align-items-center gap-5">
-                        <i class="fa-regular fa-circle-xmark fs-4 "></i>
-                        My Cancellations</a>
+                    <div class="links">
+                      <a
+                        href="#"
+                        class="w-100 d-flex justify-content-between align-items-center gap-5"
+                      >
+                        <i class="fa-regular fa-circle-xmark fs-4"></i>
+                        My Cancellations</a
+                      >
                     </div>
-                    <div class="links ">
-                      <a href="#" class="w-100 d-flex justify-content-between align-items-center gap-5">
-                        <i class="fa-regular fa-user fs-4 "></i>
-                        My Reviews</a>
+                    <div class="links">
+                      <a
+                        href="#"
+                        class="w-100 d-flex justify-content-between align-items-center gap-5"
+                      >
+                        <i class="fa-regular fa-user fs-4"></i>
+                        My Reviews</a
+                      >
                     </div>
-                    <div class="links ">
-                      <a  class="w-100 d-flex justify-content-between align-items-center gap-5" (click)="logout()">
-                        <i class="fa-solid fa-arrow-right-from-bracket fa-flip-horizontal fs-4"></i>
-                        Logout</a>
+                    <div class="links">
+                      <a
+                        class="w-100 d-flex justify-content-between align-items-center gap-5"
+                        (click)="logout()"
+                      >
+                        <i
+                          class="fa-solid fa-arrow-right-from-bracket fa-flip-horizontal fs-4"
+                        ></i>
+                        Logout</a
+                      >
                     </div>
                   </div>
                 </div>
               </div>
             </form>
-            <div class="accordion accordion-flush d-lg-none mt-3" id="accordionFlushExample">
-              <div class="accordion-item" >
-                <h2 class="accordion-header ">
-                  <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            <div
+              class="accordion accordion-flush d-lg-none mt-3"
+              id="accordionFlushExample"
+            >
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
                     Categories
                   </button>
                 </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body ">
-                    <div class="sub-links ">
-                      <a routerLink="/allProducts" class=" d-flex justify-content-between align-items-center text-dark">
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <div class="sub-links">
+                      <a
+                        routerLink="/allProducts"
+                        class="d-flex justify-content-between align-items-center text-dark"
+                      >
                         <p class="">Woman’s Fashion</p>
-                        <p> <i class="fa-solid fa-angle-right"></i> </p>
+                        <p><i class="fa-solid fa-angle-right"></i></p>
                       </a>
-                      <a routerLink="/allProducts" class=" d-flex justify-content-between align-items-center text-dark">
+                      <a
+                        routerLink="/allProducts"
+                        class="d-flex justify-content-between align-items-center text-dark"
+                      >
                         <p class="">Men’s Fashion</p>
-                        <p> <i class="fa-solid fa-angle-right"></i> </p>
+                        <p><i class="fa-solid fa-angle-right"></i></p>
                       </a>
-                      <a routerLink="/allProducts" class=" d-flex justify-content-between align-items-center text-dark">
+                      <a
+                        routerLink="/allProducts"
+                        class="d-flex justify-content-between align-items-center text-dark"
+                      >
                         <p class="">Electronics</p>
-                        <p> <i class="fa-solid fa-angle-right"></i> </p>
+                        <p><i class="fa-solid fa-angle-right"></i></p>
                       </a>
-                      <a routerLink="/allProducts" class=" d-flex justify-content-between align-items-center text-dark">
+                      <a
+                        routerLink="/allProducts"
+                        class="d-flex justify-content-between align-items-center text-dark"
+                      >
                         <p class="">Home & Lifestyle</p>
-                        <p> <i class="fa-solid fa-angle-right"></i> </p>
+                        <p><i class="fa-solid fa-angle-right"></i></p>
                       </a>
-                      <a routerLink="/allProducts" class=" d-flex justify-content-between align-items-center text-dark">
+                      <a
+                        routerLink="/allProducts"
+                        class="d-flex justify-content-between align-items-center text-dark"
+                      >
                         <p class="">Medicine</p>
-                        <p> <i class="fa-solid fa-angle-right"></i> </p>
+                        <p><i class="fa-solid fa-angle-right"></i></p>
                       </a>
-                      <a routerLink="/allProducts" class=" d-flex justify-content-between align-items-center text-dark">
+                      <a
+                        routerLink="/allProducts"
+                        class="d-flex justify-content-between align-items-center text-dark"
+                      >
                         <p class="">Sports & Outdoor</p>
-                        <p> <i class="fa-solid fa-angle-right"></i> </p>
+                        <p><i class="fa-solid fa-angle-right"></i></p>
                       </a>
-                      <a routerLink="/allProducts" class=" d-flex justify-content-between align-items-center text-dark">
+                      <a
+                        routerLink="/allProducts"
+                        class="d-flex justify-content-between align-items-center text-dark"
+                      >
                         <p class="">Baby’s & Toys</p>
-                        <p> <i class="fa-solid fa-angle-right"></i> </p>
+                        <p><i class="fa-solid fa-angle-right"></i></p>
                       </a>
-                      <a routerLink="/allProducts" class=" d-flex justify-content-between align-items-center text-dark">
+                      <a
+                        routerLink="/allProducts"
+                        class="d-flex justify-content-between align-items-center text-dark"
+                      >
                         <p class="">Groceries & Pets</p>
-                        <p> <i class="fa-solid fa-angle-right"></i> </p>
+                        <p><i class="fa-solid fa-angle-right"></i></p>
                       </a>
-                      <a routerLink="/allProducts" class=" d-flex justify-content-between align-items-center text-dark">
+                      <a
+                        routerLink="/allProducts"
+                        class="d-flex justify-content-between align-items-center text-dark"
+                      >
                         <p class="">Health & Beauty</p>
-                        <p> <i class="fa-solid fa-angle-right"></i> </p>
+                        <p><i class="fa-solid fa-angle-right"></i></p>
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
-              </div>
+            </div>
           </div>
         </div>
       </div>
