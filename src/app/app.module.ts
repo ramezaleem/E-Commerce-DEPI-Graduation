@@ -19,16 +19,11 @@ import { AboutHeroComponent } from './about/components/about-hero/about-hero.com
 import { AboutMainComponent } from './about/components/about-main/about-main.component';
 import { AboutMidComponent } from './about/components/about-mid/about-mid.component';
 import { AboutFootComponent } from './about/components/about-foot/about-foot.component';
-
+import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ContactComponent } from './components/Contact/Components/contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-<<<<<<< HEAD
-import { CarouselModule } from 'ngx-owl-carousel-o';
-
-=======
->>>>>>> 83f5c5733ba711538c5c82a71c7e508d1719bfe5
 import { SecondProductComponentComponent } from './shared/components/second-product-component/second-product-component.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { AllProductsComponent } from './components/all-products/all-products.component';
@@ -50,7 +45,7 @@ import { AllProductsComponent } from './components/all-products/all-products.com
     AboutMainComponent,
     AboutMidComponent,
     AboutFootComponent,
-
+    CartComponent,
     LoginComponent,
     SignUpComponent,
     ContactComponent,
@@ -61,7 +56,8 @@ import { AllProductsComponent } from './components/all-products/all-products.com
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CarouselModule
+    CarouselModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

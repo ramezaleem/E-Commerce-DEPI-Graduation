@@ -1,37 +1,50 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CartService } from '../../cart-service.service';
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css'],
 })
-export class CartComponent {
-  count: number = 1;
-  totalPrice: string = '$500';
+export class CartComponent implements OnInit {
+  cartItems: any[] = [];
+  totalPrice: number = 0;
 
-  increment(): void {
-    this.count++;
-    this.calculateTotal();
+  constructor(private cartService: CartService) {}
+
+  ngOnInit() {
+    // Subscribe to cart items and ensure count is initialized to 1 for each product
+    this.cartService.cartItems$.subscribe((items) => {
+      this.cartItems = items.map((item) => ({
+        ...item,
+        count: item.count > 0 ? item.count : 1, // Default count to 1 if not set
+      }));
+      this.calculateTotalPrice();
+    });
   }
 
-  decrement(): void {
-    if (this.count > 1) {
-      this.count--;
-      this.calculateTotal();
+  // Increment the count of an item
+  increment(item: any): void {
+    item.count++;
+    this.calculateTotalPrice();
+  }
+
+  // Decrement the count of an item (but not below 1)
+  decrement(item: any): void {
+    if (item.count > 1) {
+      item.count--;
+      this.calculateTotalPrice();
     }
   }
 
-  calculateTotal(): void {
-    const pricePerPieceText =
-      document.querySelector('.price')?.textContent?.replace('$', '') || '0';
-    const pricePerPiece: number = parseFloat(pricePerPieceText);
-
-    if (isNaN(pricePerPiece)) {
-      alert('Please enter a valid price.');
-      return;
-    }
-
-    const totalPrice: number = this.count * pricePerPiece;
-    this.totalPrice = `$${totalPrice.toFixed(2)}`;
+  // Calculate the total price of the cart and apply Math.floor() to round down
+  calculateTotalPrice(): void {
+    this.totalPrice = Math.floor(
+      this.cartItems.reduce((total, item) => {
+        const itemTotal = item.price * item.count;
+        item.subtotal = Math.floor(itemTotal); // Store the floored subtotal for each item
+        return total + item.subtotal; // Apply Math.floor() to each item's total price
+      }, 0)
+    );
   }
 }

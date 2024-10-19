@@ -1,4 +1,12 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  EventEmitter,
+  Output,
+  input,
+} from '@angular/core';
+import { CartService } from '../../../cart-service.service';
 
 @Component({
   selector: 'app-product-card',
@@ -14,6 +22,15 @@ export class ProductCardComponent {
       if (rating >= index + 1) return true;
       if (rating >= index + 0.5) return null;
       return false;
+    });
+  }
+
+  constructor(private cartService: CartService) {}
+  addToCart() {
+    this.cartService.addToCart({
+      image: this.product.image,
+      name: this.product.name,
+      price: Math.floor(this.product.price),
     });
   }
 }

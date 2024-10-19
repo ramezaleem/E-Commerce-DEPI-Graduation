@@ -1,4 +1,5 @@
-<div class="contianer">
+<div class="container">
+  <!-- Header bar for column names -->
   <div class="head-bar">
     <h3>Product</h3>
     <h3>Price</h3>
@@ -6,82 +7,93 @@
     <h3>Subtotal</h3>
   </div>
 
-  <div class="product head-bar">
-    <div class="product-img b">
-      <img class="img b" src="" alt="product" />
-      <p class="b">the product</p>
-    </div>
-    <div class="product-price b">
-      <h3 class="price">$500</h3>
-      <!-- Price per product -->
-    </div>
-    <div class="d-flex b allconter">
-      <input
-        type="number"
-        class="count"
-        [value]="count"
-        min="1"
-        max="30"
-        readonly
-      />
-      <div class="d-flex flex-column gap">
-        <button class="cont-btton" (click)="increment()">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="14"
-            height="14"
-            fill="#000000"
-            viewBox="0 0 256 256"
-          >
-            <path
-              d="M213.66,165.66a8,8,0,0,1-11.32,0L128,91.31,53.66,165.66a8,8,0,0,1-11.32-11.32l80-80a8,8,0,0,1,11.32,0l80,80A8,8,0,0,1,213.66,165.66Z"
-            ></path>
-          </svg>
-        </button>
-        <button class="cont-btton" (click)="decrement()">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="14"
-            height="14"
-            fill="#000000"
-            viewBox="0 0 256 256"
-          >
-            <path
-              d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
-            ></path>
-          </svg>
-        </button>
+  <!-- Loop through the cart items -->
+  <div *ngFor="let item of cartItems" class="cart-item">
+    <div class="product head-bar">
+      <!-- Product image and name -->
+      <div class="product-img b">
+        <img class="img b" [src]="item.image" alt="product" />
+      </div>
+
+      <!-- Product price -->
+      <div class="product-price b">
+        <h3 class="price">${{ item.price }}</h3>
+      </div>
+
+      <!-- Quantity input and control buttons -->
+      <div class="d-flex b allconter">
+        <p class="count" [(ngModel)]="item.quantity">
+          {{ item.count }}
+        </p>
+
+        <div class="d-flex flex-column gap">
+          <button class="cont-btton" (click)="increment(item)">
+            <!-- SVG for increment -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              fill="#000000"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M213.66,165.66a8,8,0,0,1-11.32,0L128,91.31,53.66,165.66a8,8,0,0,1-11.32-11.32l80-80a8,8,0,0,1,11.32,0l80,80A8,8,0,0,1,213.66,165.66Z"
+              ></path>
+            </svg>
+          </button>
+          <button class="cont-btton" (click)="decrement(item)">
+            <!-- SVG for decrement -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              fill="#000000"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Display the total price for this item -->
+      <div class="b">
+        <h3 class="b">${{ item.price * item.count }}</h3>
+        <!-- Corrected calculation -->
       </div>
     </div>
-    <div class="b">
-      <h3 class="total">{{ totalPrice }}</h3>
-    </div>
   </div>
-
+  <!-- Cart action buttons -->
   <div class="cart-button">
     <a href="#" class="sub-botton">Return to Shop</a>
     <a href="#" class="sub-botton">Update Cart</a>
   </div>
 </div>
 
+<!-- Coupon and Cart Summary -->
 <div class="details-two">
-  <div class="cobon">
-    <input name="cobon" type="text" placeholder="Enter code" />
-    <a class="bottn" href="#">Enter Code</a>
+  <div class="coupon">
+    <input name="coupon" type="text" placeholder="Enter code" />
+    <a class="button checkout" href="#">Enter Code</a>
   </div>
+
   <div class="cart-total">
     <h2>Cart Total</h2>
     <div class="subtotal">
       <p>Subtotal:</p>
-      <p>{{ totalPrice }}</p>
+      <p>${{ totalPrice }}</p>
+      <!-- Display the total price for all items -->
     </div>
     <div class="subtotal">
-      <p>Shipping</p>
+      <p>Shipping:</p>
       <p>Free</p>
     </div>
     <div class="total">
-      <p>total:</p>
-      <p>{{ totalPrice }}</p>
+      <p>Total:</p>
+      <p>${{ totalPrice }}</p>
+      <!-- Same total price -->
     </div>
 
     <a class="checkout" href="#">Proceed to Checkout</a>

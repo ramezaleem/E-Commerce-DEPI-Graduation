@@ -1,8 +1,12 @@
 <div class="product-list">
   <div class="product-card">
     <div class="image-container">
-      <img [src]="product.image" alt="{{ product.name }} Image" class="product-image " >
-      <div class="overlay" *ngIf="showOverlay">
+      <img
+        [src]="product.image"
+        alt="{{ product.name }} Image"
+        class="product-image"
+      />
+      <div (click)="addToCart()" class="overlay" *ngIf="showOverlay">
         <p>Add To Cart</p>
       </div>
       <div class="card-body ps-3">
@@ -21,6 +25,3 @@
     </div>
   </div>
 </div>
-
-
-
