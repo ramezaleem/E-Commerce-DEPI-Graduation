@@ -5,6 +5,8 @@ import {
   ViewChild,
   ViewChildren,
 } from '@angular/core';
+import { AllProductsService } from '../../../../services/all-products.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-carousel',
@@ -21,4 +23,36 @@ export class HomeCarouselComponent {
     'https://img.freepik.com/premium-photo/mockup-photo-mobile-phone_34048-1746.jpg?ga=GA1.1.508687790.1726598164&semt=ais_hybrid';
   heroImg5: string =
     'https://www.optionstheedge.com/sites/default/files/field/featured-image/2020/iphone_12.jpg';
-}
+
+  constructor(private productServ : AllProductsService,
+              private router : Router
+  ){}
+  showproducts(category:string):any{
+  this.router.navigate(['/allProducts'])
+    this.productServ.getproducts(category);
+  }
+
+
+
+  products: any[] = [];
+  selectedCategory: string = 'all'; // Default to all products
+
+
+  ngOnInit(): void {
+    this.loadProducts();
+  }
+
+  // Method to load products based on the selected category
+  loadProducts(): void {
+    this.products = this.productServ.getproducts(this.selectedCategory);
+
+
+  }
+
+  // Optional: Change category dynamically
+  changeCategory(category: string): void {
+    this.selectedCategory = category;
+    this.loadProducts();
+    this.router.navigate(['/ownCategory'])
+  }
+  }

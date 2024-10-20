@@ -10,6 +10,8 @@ import { AllProductsComponent } from './components/all-products/all-products.com
 import { CartComponent } from './components/cart/cart.component';
 import { authGuard } from './modules/auth.guard';
 import { Error404Component } from './components/error404/error404.component';
+import { ProductCardComponent } from './shared/components/product-card/product-card.component';
+import { OwnCategoryProductsComponent } from './components/own-category-products/own-category-products.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -19,6 +21,7 @@ const routes: Routes = [
   {path: 'allProducts',component: AllProductsComponent,canActivate: [authGuard]},
   { path: 'cart', component: CartComponent, canActivate: [authGuard] },
   { path: 'auth',loadChildren: () =>import('./modules/auth/auth/auth.module').then((m) => m.AuthModule),},
+  { path: 'ownCategory', component: OwnCategoryProductsComponent },
   { path: '**', component: Error404Component },
 ];
 

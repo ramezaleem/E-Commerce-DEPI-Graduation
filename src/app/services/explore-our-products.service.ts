@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { IExploreOurProducts } from '../interfaces/interface-explore-our-products';
+import { retry } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ExploreOurProductsService {
-  constructor() {}
+  constructor( ) {}
 
   Products: IExploreOurProducts[] = [
     {
@@ -17,6 +18,7 @@ export class ExploreOurProductsService {
       originalPrice: null, // Set to null
       rating: 4.5,
       numberOfRatings: 150,
+      category:'exploreOurProducts'
     },
     {
       id: 2,
@@ -27,6 +29,7 @@ export class ExploreOurProductsService {
       originalPrice: null, // Set to null
       rating: 5.0,
       numberOfRatings: 200,
+      category:'exploreOurProducts'
     },
     {
       id: 3,
@@ -37,6 +40,7 @@ export class ExploreOurProductsService {
       originalPrice: null, // Set to null
       rating: 4.0,
       numberOfRatings: 150,
+      category:'exploreOurProducts'
     },
     {
       id: 4,
@@ -47,6 +51,7 @@ export class ExploreOurProductsService {
       originalPrice: null, // Set to null
       rating: 4.8,
       numberOfRatings: 300,
+      category:'exploreOurProducts'
     },
     {
       id: 5,
@@ -57,6 +62,7 @@ export class ExploreOurProductsService {
       originalPrice: null, // Set to null
       rating: 4.8,
       numberOfRatings: 300,
+      category:'exploreOurProducts'
     },
     {
       id: 6,
@@ -67,6 +73,7 @@ export class ExploreOurProductsService {
       originalPrice: null, // Set to null
       rating: 4.8,
       numberOfRatings: 300,
+      category:'exploreOurProducts'
     },
     {
       id: 7,
@@ -77,6 +84,7 @@ export class ExploreOurProductsService {
       originalPrice: null, // Set to null
       rating: 4.8,
       numberOfRatings: 300,
+      category:'exploreOurProducts'
     },
     {
       id: 8,
@@ -87,6 +95,10 @@ export class ExploreOurProductsService {
       originalPrice: null, // Set to null
       rating: 4.8,
       numberOfRatings: 300,
+      category:'exploreOurProducts'
     },
   ];
+  getProducts(){
+    return this.Products;
+  }
 }

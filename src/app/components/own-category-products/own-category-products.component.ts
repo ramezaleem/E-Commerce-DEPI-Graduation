@@ -1,29 +1,27 @@
 import { Component, HostListener, Input } from '@angular/core';
 import { AllProductsService } from '../../services/all-products.service';
-
 @Component({
-  selector: 'app-all-products',
-  templateUrl: './all-products.component.html',
-  styleUrl: './all-products.component.scss',
+  selector: 'app-own-category-products',
+  templateUrl: './own-category-products.component.html',
+  styleUrl: './own-category-products.component.scss'
 })
-export class AllProductsComponent {
-  @Input() showOverlay: boolean = false;
-  // category!:string;
-  getStars(rating: number): (boolean | null)[] {
-    return Array.from({ length: 5 }, (_, index) => {
-      if (rating >= index + 1) return true;
-      if (rating >= index + 0.5) return null;
-      return false;
-    });
-  }
-  constructor(private prdServ: AllProductsService) {}
-  allProducts = this.prdServ.allProducts;
-  // allProducts = this.prdServ.getproducts(this.showprds(this.category));
-  // showprds(category:string):any{
-  //   this.prdServ.getproducts(category)
+export class OwnCategoryProductsComponent {
+  // @Input() showOverlay: boolean = false;
 
+  // getStars(rating: number): (boolean | null)[] {
+  //   return Array.from({ length: 5 }, (_, index) => {
+  //     if (rating >= index + 1) return true;
+  //     if (rating >= index + 0.5) return null;
+  //     return false;
+  //   });
   // }
-// allProducts=this.showprds(this.category); //>>>>>>>>>>>>>>>>>>>>>>>>
+  constructor(private prdServ: AllProductsService) {}
+  // category!:string
+  allProducts = this.prdServ.getproducts('Woman’s Fashion');
+
+  // showCategory(category:string):any{
+  //   this.prdServ.getproducts(category);
+  // }
 
   showButton = false;
 

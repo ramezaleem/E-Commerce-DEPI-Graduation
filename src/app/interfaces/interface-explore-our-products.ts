@@ -7,4 +7,5 @@ export interface IExploreOurProducts {
   originalPrice: string | null;
   rating: number;
   numberOfRatings: number;
+  category:string;
 }

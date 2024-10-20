@@ -30,6 +30,7 @@ import { NewArrivalComponent } from './components/home/Components/new-arrival/ne
 import { FormsModule } from '@angular/forms';
 import { Error404Component } from './components/error404/error404.component';
 import { SecondExploreOurProductsComponent } from './components/home/Components/second-explore-our-products/second-explore-our-products.component';
+import { OwnCategoryProductsComponent } from './components/own-category-products/own-category-products.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { SecondExploreOurProductsComponent } from './components/home/Components/
     NewArrivalComponent,
     Error404Component,
     SecondProductComponentComponent,
+    OwnCategoryProductsComponent,
   ],
   imports: [
     BrowserModule,

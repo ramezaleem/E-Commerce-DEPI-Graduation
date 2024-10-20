@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { ExploreOurProductsService } from '../../../../services/explore-our-products.service';
+import { AllProductsService } from '../../../../services/all-products.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-second-explore-our-products',
@@ -39,6 +41,14 @@ export class SecondExploreOurProductsComponent {
     nav: false,
   };
 
-  constructor(private productServ: ExploreOurProductsService) {}
+  constructor(private productServ: ExploreOurProductsService,
+    private allServ : AllProductsService,
+    private router :Router
+  ) {}
   products = this.productServ.Products;
+
+  showProducts(){
+    this.router.navigate(['/allProducts']);
+    this.allServ.getproducts('exploreOurProducts');
+  }
 }
