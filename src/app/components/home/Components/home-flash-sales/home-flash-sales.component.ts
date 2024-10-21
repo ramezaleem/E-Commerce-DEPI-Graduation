@@ -7,6 +7,9 @@ import {
 } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { FlashSalesService } from '../../../../services/flash-sales.service';
+import { AllProductsService } from '../../../../services/all-products.service';
+import { IprdFlashSales } from '../../../../interfaces/interface-flash-sales-products';
+import { IallProducts } from '../../../../interfaces/interface-all-product';
 
 @Component({
   selector: 'app-home-flash-sales',
@@ -218,10 +221,19 @@ export class HomeFlashSalesComponent implements OnInit, OnDestroy {
   //     numberOfRatings: 320,
   //   },
   // ];
-  constructor(private productServ: FlashSalesService) {}
-  products = this.productServ.products;
+  products:IallProducts[]=[]
+  constructor(private productServ: FlashSalesService,
+    private newFlashServ : AllProductsService
+  ) {}
+  // products = this.productServ.products;
   ngOnInit() {
     this.startCountdown();
+    this.getproducts();
+
+  }
+  getproducts(){
+    this.products = this.newFlashServ.getproducts('Electronics')
+    console.log(this.products);
   }
 
   startCountdown() {

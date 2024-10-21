@@ -1,13 +1,6 @@
-<div *ngIf="timerVisible" class="container flash-sales">
+<div  class="container ">
   <h2 class="sub-title">Today's</h2>
-  <div class="timer-container">
-    <div class="header">
-      <h1>All products</h1>
-    </div>
-  </div>
-  <div class="product-carousel my-5">
-    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner my-5">
+      <h1>Medicine</h1>
         <div class="row g-3  ">
           <ng-container *ngFor="let product of allProducts">
             <div class="col-lg-4 col-md-6 col-sm-12 my-5 ">
@@ -18,9 +11,6 @@
             </div>
           </ng-container>
         </div>
-      </div>
-    </div>
-  </div>
   <button *ngIf="showButton" (click)="scrollToTop()" class="scroll-to-top">
     ↑
   </button>

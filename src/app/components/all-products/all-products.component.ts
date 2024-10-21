@@ -8,7 +8,7 @@ import { AllProductsService } from '../../services/all-products.service';
 })
 export class AllProductsComponent {
   @Input() showOverlay: boolean = false;
-  // category!:string;
+  // category:string='';
   getStars(rating: number): (boolean | null)[] {
     return Array.from({ length: 5 }, (_, index) => {
       if (rating >= index + 1) return true;
@@ -17,13 +17,8 @@ export class AllProductsComponent {
     });
   }
   constructor(private prdServ: AllProductsService) {}
-  allProducts = this.prdServ.allProducts;
-  // allProducts = this.prdServ.getproducts(this.showprds(this.category));
-  // showprds(category:string):any{
-  //   this.prdServ.getproducts(category)
-
-  // }
-// allProducts=this.showprds(this.category); //>>>>>>>>>>>>>>>>>>>>>>>>
+  allProducts = this.prdServ.allProducts
+  
 
   showButton = false;
 

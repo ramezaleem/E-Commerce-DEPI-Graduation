@@ -7,6 +7,7 @@ import {
 } from '@angular/core';
 import { AllProductsService } from '../../../../services/all-products.service';
 import { Router } from '@angular/router';
+import { IallProducts } from '../../../../interfaces/interface-all-product';
 
 @Component({
   selector: 'app-home-carousel',
@@ -27,32 +28,44 @@ export class HomeCarouselComponent {
   constructor(private productServ : AllProductsService,
               private router : Router
   ){}
-  showproducts(category:string):any{
-  this.router.navigate(['/allProducts'])
-    this.productServ.getproducts(category);
-  }
+  // showproducts(category:string):any{
+  // this.router.navigate(['/allProducts'])
+  //   this.productServ.getproducts(category);
+  // }
 
 
 
-  products: any[] = [];
+  products: IallProducts[] = [];
   selectedCategory: string = 'all'; // Default to all products
 
 
   ngOnInit(): void {
-    this.loadProducts();
+    // this.loadProducts();
   }
 
-  // Method to load products based on the selected category
-  loadProducts(): void {
-    this.products = this.productServ.getproducts(this.selectedCategory);
-
-
+  getproducts(category:string):any{
+    this.products = this.productServ.getproducts(category);
+    this.router.navigate(['/allProducts'])
+    console.log(this.products);
   }
 
-  // Optional: Change category dynamically
-  changeCategory(category: string): void {
-    this.selectedCategory = category;
-    this.loadProducts();
-    this.router.navigate(['/ownCategory'])
-  }
+  // getcategory(event:any){
+  //   let value = event.target.value
+  //   console.log(value + 'valueeeeeeeeeeeeee');
+
+  // }
+
+  // // Method to load products based on the selected category
+  // loadProducts(): void {
+  //   this.products = this.productServ.getproducts(this.selectedCategory);
+
+
+  // }
+
+  // // Optional: Change category dynamically
+  // changeCategory(category: string): void {
+  //   this.selectedCategory = category;
+  //   this.loadProducts();
+  //   this.router.navigate(['/ownCategory'])
+  // }
   }

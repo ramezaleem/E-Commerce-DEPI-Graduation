@@ -7,5 +7,5 @@ export interface  IallProducts{
   originalPrice:string |null;
   rating:number;
   numberOfRatings:number;
-  category : string
+  category? : string
 }
