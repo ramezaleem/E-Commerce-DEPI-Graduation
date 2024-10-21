@@ -33,6 +33,12 @@ import { SecondExploreOurProductsComponent } from './components/home/Components/
 import { OwnCategoryProductsComponent } from './components/own-category-products/own-category-products.component';
 import { MensFashionComponent } from './components/mens-fashion/mens-fashion.component';
 import { ElectronicsComponent } from './components/electronics/electronics.component';
+import { HomeLifeStyleComponent } from './components/home-life-style/home-life-style.component';
+import { MedicineComponent } from './components/medicine/medicine.component';
+import { SportsOutDoorComponent } from './components/sports-out-door/sports-out-door.component';
+import { BabysToysComponent } from './components/babys-toys/babys-toys.component';
+import { GroceriesPetsComponent } from './components/groceries-pets/groceries-pets.component';
+import { HealthBeautyComponent } from './components/health-beauty/health-beauty.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +67,12 @@ import { ElectronicsComponent } from './components/electronics/electronics.compo
     OwnCategoryProductsComponent,
     MensFashionComponent,
     ElectronicsComponent,
+    HomeLifeStyleComponent,
+    MedicineComponent,
+    SportsOutDoorComponent,
+    BabysToysComponent,
+    GroceriesPetsComponent,
+    HealthBeautyComponent,
   ],
   imports: [
     BrowserModule,
