@@ -10,7 +10,7 @@ import { HomeCarouselComponent } from './components/home/Components/home-carouse
 import { HomeFlashSalesComponent } from './components/home/Components/home-flash-sales/home-flash-sales.component';
 import { HomeCategoryBrowseComponent } from './components/home/Components/home-category-browse/home-category-browse.component';
 import { HomeBestSellingComponent } from './components/home/Components/home-best-selling/home-best-selling.component';
-import { HomeExploreProductsComponent } from './components/home/Components/home-explore-products/home-explore-products.component';
+// import { HomeExploreProductsComponent } from './components/home/Components/home-explore-products/home-explore-products.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { ProductCardComponent } from './shared/components/product-card/product-card.component';
 import { CartComponent } from './components/cart/cart.component';
@@ -49,7 +49,6 @@ import { HealthBeautyComponent } from './components/health-beauty/health-beauty.
     HomeFlashSalesComponent,
     HomeCategoryBrowseComponent,
     HomeBestSellingComponent,
-    HomeExploreProductsComponent,
     FooterComponent,
     ProductCardComponent,
     AboutComponent,

@@ -25,14 +25,32 @@
     width: 18px;
     height: 35px;
     background-color: red;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
   }
 }
 .header {
   display: flex;
   align-items: center;
 }
+/* Global custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(354, 70%, 54% , .8);
+  border-radius:0 0 5px 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #dc3545;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+
+
