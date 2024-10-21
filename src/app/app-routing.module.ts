@@ -13,17 +13,27 @@ import { Error404Component } from './components/error404/error404.component';
 import { ProductCardComponent } from './shared/components/product-card/product-card.component';
 import { OwnCategoryProductsComponent } from './components/own-category-products/own-category-products.component';
 import { MensFashionComponent } from './components/mens-fashion/mens-fashion.component';
+import { ElectronicsComponent } from './components/electronics/electronics.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, canActivate: [authGuard] },
   { path: 'about', component: AboutComponent, canActivate: [authGuard] },
   { path: 'Contact', component: ContactComponent, canActivate: [authGuard] },
-  {path: 'allProducts',component: AllProductsComponent,canActivate: [authGuard]},
+  {
+    path: 'allProducts',
+    component: AllProductsComponent,
+    canActivate: [authGuard],
+  },
   { path: 'cart', component: CartComponent, canActivate: [authGuard] },
-  { path: 'auth',loadChildren: () =>import('./modules/auth/auth/auth.module').then((m) => m.AuthModule),},
+  {
+    path: 'auth',
+    loadChildren: () =>
+      import('./modules/auth/auth/auth.module').then((m) => m.AuthModule),
+  },
   { path: 'ownCategory', component: OwnCategoryProductsComponent },
-  {path:'MensFashion', component:  MensFashionComponent },
+  { path: 'MensFashion', component: MensFashionComponent },
+  { path: 'Electronics', component: ElectronicsComponent },
   { path: '**', component: Error404Component },
 ];
 

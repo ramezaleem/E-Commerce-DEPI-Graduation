@@ -32,6 +32,7 @@ import { Error404Component } from './components/error404/error404.component';
 import { SecondExploreOurProductsComponent } from './components/home/Components/second-explore-our-products/second-explore-our-products.component';
 import { OwnCategoryProductsComponent } from './components/own-category-products/own-category-products.component';
 import { MensFashionComponent } from './components/mens-fashion/mens-fashion.component';
+import { ElectronicsComponent } from './components/electronics/electronics.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { MensFashionComponent } from './components/mens-fashion/mens-fashion.com
     SecondProductComponentComponent,
     OwnCategoryProductsComponent,
     MensFashionComponent,
+    ElectronicsComponent,
   ],
   imports: [
     BrowserModule,
