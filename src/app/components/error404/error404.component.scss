@@ -1,18 +1,24 @@
-h1
-{
+h1 {
   font-size: 90px;
   font-weight: 600;
 }
 
-@media (max-width:768px) {
-  h1{
+@media (max-width: 768px) {
+  h1 {
     font-size: 60px;
   }
-
 }
-@media (max-width:578px) {
-  h1{
-    font-size:  40px; ;
+@media (max-width: 578px) {
+  h1 {
+    font-size: 40px;
   }
+}
 
+.btn {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.btn:hover {
+  background-color: var(--hover-primary-button-color);
 }
