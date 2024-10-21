@@ -12,6 +12,7 @@ import { authGuard } from './modules/auth.guard';
 import { Error404Component } from './components/error404/error404.component';
 import { ProductCardComponent } from './shared/components/product-card/product-card.component';
 import { OwnCategoryProductsComponent } from './components/own-category-products/own-category-products.component';
+import { MensFashionComponent } from './components/mens-fashion/mens-fashion.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent, canActivate: [authGuard] },
   { path: 'auth',loadChildren: () =>import('./modules/auth/auth/auth.module').then((m) => m.AuthModule),},
   { path: 'ownCategory', component: OwnCategoryProductsComponent },
+  {path:'MensFashion', component:  MensFashionComponent },
   { path: '**', component: Error404Component },
 ];
 

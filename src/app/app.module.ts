@@ -31,6 +31,7 @@ import { FormsModule } from '@angular/forms';
 import { Error404Component } from './components/error404/error404.component';
 import { SecondExploreOurProductsComponent } from './components/home/Components/second-explore-our-products/second-explore-our-products.component';
 import { OwnCategoryProductsComponent } from './components/own-category-products/own-category-products.component';
+import { MensFashionComponent } from './components/mens-fashion/mens-fashion.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { OwnCategoryProductsComponent } from './components/own-category-products
     Error404Component,
     SecondProductComponentComponent,
     OwnCategoryProductsComponent,
+    MensFashionComponent,
   ],
   imports: [
     BrowserModule,
