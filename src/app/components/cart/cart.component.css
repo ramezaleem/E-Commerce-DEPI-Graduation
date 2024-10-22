@@ -101,6 +101,9 @@ h3 {
 input {
   padding: 5px 10px;
   margin-right: 10px;
+  margin-top: 3px;
+  height: 50px;
+  border-radius: 3px;
 }
 .bottn {
   min-width: 140px;
@@ -115,11 +118,14 @@ input {
   color: #fa5252;
   background-color: #f1f3f5;
 }
-.cobon {
+.coupon {
   display: flex;
-  max-height: 60px;
-  gap: 20px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   justify-content: space-between;
+  max-height: 60px;
+  gap: 8px;
 }
 .cart-total {
   display: flex;
@@ -154,6 +160,18 @@ input {
   background-color: #fa5252;
   transition: 1s;
   padding: 10px 40px;
+}
+.sp-checkout {
+  align-self: center;
+
+  color: #fff;
+  background-color: #fa5252;
+  transition: 1s;
+  padding: 10px 80px;
+}
+.sp-checkout:hover {
+  color: #fa5252;
+  background-color: #f1f3f5;
 }
 .checkout:hover {
   color: #fa5252;
@@ -194,7 +212,7 @@ input {
   }
   .enter-code {
     margin-top: 0px;
-    padding: 10px 114px;
+    padding: 8px 110px;
     margin-left: -6px;
   }
 
