@@ -1,0 +1,28 @@
+<div class="container w-100 ">
+  <div class="d-flex  align-items-center gap-2 my-5">
+    <a routerLink="/home" class="text-secondary">home /</a>
+    <a routerLink="/{{category}}" class="text-secondary ">{{category}} / </a>
+    <a  class="fw-semibold">{{name}} </a>
+  </div>
+  <div class=" parent d-md-flex justify-content-center align-items-center gap-5  ">
+    <div class="image-container" >
+      <img [src]="image" alt="{{image}}" class=" image">
+    </div>
+    <div class="  detailes  ">
+      <h4 class="fw-semibold">{{name}}</h4>
+      <div class="rating my-3">
+        <ng-container *ngFor="let star of getStars(rating)">
+          <i class="fas fa-star" [class.filled]="star === true"></i>
+        </ng-container>
+        <span class="mx-2 text-secondary ">({{ numberOfRatings }} Review) | <span class=" text-info"> in Stock</span></span>
+      </div>
+      <p class="fs-5  fw-bold">{{price | currency}} </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dolore inventore error praesentium, asperiores nisi reiciendis corporis ipsam labore laborum eos amet!</p>
+    <hr>
+  <button class="btn btn-danger " [routerLink]="['/home']"> return to home</button>
+
+    <!-- <button class="bg-success">{{category}} </button> -->
+    </div>
+  </div>
+
+</div>

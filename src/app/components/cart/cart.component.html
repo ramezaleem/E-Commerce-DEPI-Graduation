@@ -1,35 +1,35 @@
-<div class="container">
+<!-- <div class="container"> -->
   <!-- Header bar for column names -->
-  <div class="head-bar">
+  <!-- <div class="head-bar">
     <h3>Product</h3>
     <h3>Price</h3>
     <h3>Quantity</h3>
     <h3>Subtotal</h3>
-  </div>
+  </div> -->
 
   <!-- Loop through the cart items -->
-  <div *ngFor="let item of cartItems" class="cart-item">
-    <div class="product head-bar">
+  <!-- <div *ngFor="let item of cartItems" class="cart-item">
+    <div class="product head-bar"> -->
       <!-- Product image and name -->
-      <div class="product-img b">
+      <!-- <div class="product-img b">
         <img class="img b" [src]="item.image" alt="product" />
-      </div>
+      </div> -->
 
       <!-- Product price -->
-      <div class="product-price b">
+      <!-- <div class="product-price b">
         <h3 class="price">${{ item.price }}</h3>
-      </div>
+      </div> -->
 
       <!-- Quantity input and control buttons -->
-      <div class="d-flex b allconter">
-        <p class="count" >      <!--  [(ngModel)]="item.quantity"  >>> cant used with p selector  -->
-          {{ item.count }}
+      <!-- <div class="d-flex b allconter">
+        <p class="count" >       [(ngModel)]="item.quantity"  >>> cant used with p selector -->
+          <!-- {{ item.count }}
         </p>
 
-        <div class="d-flex flex-column gap">
-          <button class="cont-btton" (click)="increment(item)">
+        <div class="d-flex flex-column gap"> -->
+          <!-- <button class="cont-btton" (click)="increment(item)"> -->
             <!-- SVG for increment -->
-            <svg
+            <!-- <svg
               xmlns="http://www.w3.org/2000/svg"
               width="14"
               height="14"
@@ -41,9 +41,9 @@
               ></path>
             </svg>
           </button>
-          <button class="cont-btton"  (click)="decrement(item)">
+          <button class="cont-btton"  (click)="decrement(item)"> -->
             <!-- SVG for decrement -->
-            <svg
+            <!-- <svg
               xmlns="http://www.w3.org/2000/svg"
               width="14"
               height="14"
@@ -56,24 +56,24 @@
             </svg>
           </button>
         </div>
-      </div>
+      </div> -->
 
       <!-- Display the total price for this item -->
-      <div class="b">
-        <h3 class="b">${{ item.price * item.count }}</h3>
+      <!-- <div class="b">
+        <h3 class="b">${{ item.price * item.count }}</h3> -->
         <!-- Corrected calculation -->
-      </div>
+      <!-- </div>
     </div>
-  </div>
+  </div> -->
   <!-- Cart action buttons -->
-  <div class="cart-button">
+  <!-- <div class="cart-button">
     <a href="#" class="sub-botton">Return to Shop</a>
     <a href="#" class="sub-botton">Update Cart</a>
   </div>
-</div>
+</div> -->
 
 <!-- Coupon and Cart Summary -->
-<div class="details-two">
+<!-- <div class="details-two">
   <div class="coupon">
     <input name="coupon" type="text" placeholder="Enter code" />
     <a class="button checkout" href="#">Enter Code</a>
@@ -84,21 +84,22 @@
     <div class="subtotal">
       <p>Subtotal:</p>
       <p>${{ totalPrice }}</p>
-      <!-- Display the total price for all items -->
-    </div>
+      Display the total price for all items -->
+    <!-- </div>
     <div class="subtotal">
       <p>Shipping:</p>
       <p>Free</p>
     </div>
     <div class="total">
       <p>Total:</p>
-      <p>${{ totalPrice }}</p>
+      <p>${{ totalPrice }}</p> -->
       <!-- Same total price -->
-    </div>
+    <!-- </div>
 
     <a class="checkout" href="#">Proceed to Checkout</a>
   </div>
   <button *ngIf="showButton" (click)="scrollToTop()" class="scroll-to-top">
     ↑
   </button>
-</div>
+</div> -->
+asfas

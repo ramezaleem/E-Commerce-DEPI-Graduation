@@ -18,7 +18,7 @@ export class AllProductsComponent {
   }
   constructor(private prdServ: AllProductsService) {}
   allProducts = this.prdServ.allProducts
-  
+
 
   showButton = false;
 
@@ -65,6 +65,27 @@ export class AllProductsComponent {
     }, 1000);
   }
 
+
+
+  cartproducts:any[]=[] ;  // empty array to Recieve data
+  getproduct(event:any){
+    // console.log(event);
+    if("cart" in localStorage){
+      this.cartproducts = JSON.parse(localStorage.getItem('cart')!);
+      let isExist = this.cartproducts.find( item => item.item.id === event.item.id && item.item.category === event.item.category);
+      if(isExist){
+        alert('this product is aleardy in your cart .');
+      }else{
+        this.cartproducts.push(event);
+        localStorage.setItem('cart', JSON.stringify(this.cartproducts))
+      }
+    }
+    else{
+      this.cartproducts.push(event);
+      localStorage.setItem('cart' , JSON.stringify(this.cartproducts))
+    }
+
+  }
   ngOnDestroy() {
     clearInterval(this.countdown);
   }

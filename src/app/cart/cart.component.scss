@@ -1,0 +1,41 @@
+.fixed-width{
+  width: 15%;
+}
+.fixed-width img{
+  width:80px;
+}
+.titles{
+  position: relative;
+
+}
+.fixed-width-high{
+  width: 30%;
+  span{
+    font-size: .8rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  .fa-xmark{
+    position: absolute;
+    top: 8px;
+    right: 5px;
+    cursor: pointer;
+  }
+}
+.fixed-width-high img{
+  width:80px;
+
+
+}
+
+input[type=number]{
+  border: 1px solid #333;
+}
+
+@media (max-width:768px) {
+  .titles{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+}

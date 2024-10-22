@@ -23,7 +23,7 @@
     </div>
   </div>
   <div class="nav-container border-bottom p-2">
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg " [class.sticky]="isSticky">
       <div class="container">
         <a class="navbar-brand fw-bold fs-3" routerLink="['/home']"
           >Exclusive</a
@@ -45,7 +45,7 @@
         >
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
-              <a class="navbar-brand fw-bold" routerLink="['/home']">
+              <a class="navbar-brand fw-bold" routerLink="['/home']" >
                 <div class="dropdown">
                   <i class="fa-regular fa-circle-user fs-2"></i>
                   <div class="dropdown-content">
@@ -60,7 +60,7 @@
                     </div>
                     <div class="links">
                       <a
-                        href="#"
+                        routerLink="/Cart"
                         class="w-100 d-flex justify-content-between align-items-center gap-5"
                       >
                         <i class="fa-solid fa-truck-fast fs-4"></i>
@@ -159,8 +159,9 @@
               >
                 <i class="fa-regular fa-heart fs-5"></i>
                 <i
-                routerLink="['/cart']"
+
                   class="fa-solid fa-cart-shopping text-danger fs-5"
+                  [routerLink]="['/Cart']"
                 ></i>
                 <div class="dropdown">
                   <div class="hover-user">

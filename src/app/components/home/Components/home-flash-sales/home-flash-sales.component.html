@@ -34,9 +34,9 @@
     <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <owl-carousel-o [options]="customOptions" #owlFlash>
-          <ng-container *ngFor="let product of products">
-            <ng-template carouselSlide>
-              <app-product-card [product]="product" [showOverlay]="true"></app-product-card>
+          <ng-container *ngFor="let product of products" >
+            <ng-template carouselSlide  >
+              <app-product-card [product]="product" [showOverlay]="true" (item)="getProduct($event)" ></app-product-card>
               <!-- <app-second-product-component [product]="product" [showOverlay]="true"></app-second-product-component> -->
             </ng-template>
           </ng-container>

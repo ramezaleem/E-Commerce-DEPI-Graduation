@@ -13,7 +13,7 @@ constructor(private guardServ:GuardServService,
 submit(){
   this.guardServ.isloggedin=true;
   this.router.navigate(['/home']);
-  localStorage.setItem('isloggedin' , 'true');
+ localStorage.setItem('isloggedin' , 'true');
 
 }
   password: string = '';

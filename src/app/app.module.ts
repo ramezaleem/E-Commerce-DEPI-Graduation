@@ -13,7 +13,6 @@ import { HomeBestSellingComponent } from './components/home/Components/home-best
 // import { HomeExploreProductsComponent } from './components/home/Components/home-explore-products/home-explore-products.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { ProductCardComponent } from './shared/components/product-card/product-card.component';
-import { CartComponent } from './components/cart/cart.component';
 
 import { AboutComponent } from './about/about.component';
 import { AboutHeroComponent } from './about/components/about-hero/about-hero.component';
@@ -39,6 +38,8 @@ import { SportsOutDoorComponent } from './components/sports-out-door/sports-out-
 import { BabysToysComponent } from './components/babys-toys/babys-toys.component';
 import { GroceriesPetsComponent } from './components/groceries-pets/groceries-pets.component';
 import { HealthBeautyComponent } from './components/health-beauty/health-beauty.component';
+import { ProductDetailesComponent } from './product-detailes/product-detailes.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,8 @@ import { HealthBeautyComponent } from './components/health-beauty/health-beauty.
     BabysToysComponent,
     GroceriesPetsComponent,
     HealthBeautyComponent,
+    ProductDetailesComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
