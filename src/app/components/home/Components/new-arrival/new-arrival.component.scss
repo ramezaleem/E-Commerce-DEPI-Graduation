@@ -13,22 +13,17 @@
   display: flex;
   justify-content: space-between;
 
-  h1 {
-    font-size: 36px;
-    font-weight: 600;
-    position: absolute;
-  }
+  // h1 {
+  //   // font-size: 36px;
+  //   // font-weight: 600;
+  //   position: absolute;
+  // }
 }
 
 .left {
-
-
-  img {}
+  img {
+  }
 }
-
-
-
-
 
 .image-container {
   position: relative;
@@ -41,7 +36,6 @@
   /* عرض الصورة */
   height: 600px;
   /* ارتفاع تلقائي */
-
 }
 
 .overlay {
@@ -59,28 +53,24 @@
   /* زوايا مدورة */
   p {
     font-size: 14px;
-    color: #FAFAFA;
+    color: #fafafa;
   }
 
   h2 {
     font-size: 24px;
-
   }
 
   a {
     list-style: none;
-    color: #FAFAFA;
+    color: #fafafa;
   }
 }
 
 .line_one img {
   height: 286px;
-
-
 }
 
 .line_two .overlay {
-
   top: 80%;
   left: 34%;
 }
@@ -88,12 +78,9 @@
 .line_two img {
   height: 286px;
   width: 300px;
-
 }
 
-
 .icons {
-
   h2 {
     font-size: 20px;
     font-weight: 600;

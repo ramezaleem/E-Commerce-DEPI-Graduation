@@ -1,0 +1,18 @@
+:root {
+  --small-spacing: 8px; /* Adjust this value */
+  --main-color: #db4444; /* Adjust this value */
+  --secondary-color: gray; /* Adjust this value */
+}
+
+input,
+textarea {
+  padding: var(--small-spacing);
+  border: 1px solid var(--main-color);
+  border-radius: 4px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+}/*# sourceMappingURL=form-field.css.map */

@@ -1,0 +1,28 @@
+.sec-btn {
+  background-color: var(--main-color);
+  padding: 10px 35px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .sec-btn {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+}
+.sec-btn:hover {
+  background-color: var(--hover-primary-button-color);
+}
+
+.lg-view-all {
+  color: white;
+  background-color: var(--main-color);
+  outline: none;
+  border: none;
+  padding: 10px 45px;
+}
+
+.lg-view-all:hover {
+  background-color: var(--hover-primary-button-color);
+}/*# sourceMappingURL=button.css.map */

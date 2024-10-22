@@ -1,0 +1,143 @@
+.categories {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border-top: 1px solid rgb(193, 193, 193);
+  border-bottom: 1px solid rgb(193, 193, 193);
+}
+
+.container {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding: 0;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  color: black;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.icon:hover {
+  color: var(--main-color);
+}
+
+.categories-cards {
+  display: flex;
+  margin-top: 50px;
+  gap: 30px;
+}
+
+.categories-cards .card {
+  width: 15%;
+  height: 160px;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+  cursor: pointer;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.categories-cards .card:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.categories-cards .card svg {
+  width: 100px;
+  height: 60px;
+}
+
+.categories-cards .card p {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+/* Media Query for tablets (screen width less than 768px) */
+@media screen and (max-width: 768px) {
+  .categories {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .categories-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .categories-cards .card {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+  }
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+  .categories-cards .card p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 992px) {
+  .categories-cards .card {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    margin: auto;
+  }
+  .categories-cards {
+    flex-direction: column;
+  }
+  .card p {
+    margin: auto;
+  }
+}
+/* Media Query for mobile devices (screen width less than 480px) */
+@media screen and (max-width: 480px) {
+  .categories {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
+  .categories-cards .card {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+  .categories-cards .card svg {
+    width: 80px;
+    height: 50px;
+  }
+  .categories-cards .card p {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=home-category-browse.component.css.map */

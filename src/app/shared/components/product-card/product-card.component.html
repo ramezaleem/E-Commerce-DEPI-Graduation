@@ -1,15 +1,9 @@
-<div class="product-list mt-5">
-  <div class="product-card">
+<div class="product-list mt-5 ">
+  <div class="product-card w-100 ">
     <div class="image-container">
       <div class="image">
-        <img
-          [src]="product.image"
-          alt="{{ product.name }} Image"
-          class="product-image"
-        />
-        <div
-          class="image-icons d-flex flex-column justify-content-center gap-3"
-        >
+        <img [src]="product.image" alt="{{ product.name }} Image" class="product-image" />
+        <div class="image-icons d-flex flex-column justify-content-center gap-3">
           <i class="far fa-heart fs-5"></i>
           <i class="far fa-eye fs-5"></i>
         </div>
@@ -25,11 +19,11 @@
           </p>
         </div>
       </div>
-      <div class="card-body ps-3">
+      <div class="card-body ps-3 ">
         <h5 class="card-title">{{ product.name }}</h5>
         <div class="price">
           <span class="current-price">${{ product.price }}</span>
-          <span class="original-price">${{ product.originalPrice }}</span>
+          <span class="original-price">{{ product.originalPrice }}</span>
         </div>
         <div class="rating">
           <ng-container *ngFor="let star of getStars(product.rating)">

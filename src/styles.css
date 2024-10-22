@@ -1,0 +1,127 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --main-color: #db4444;
+  --secondary-color: gray;
+  --primary-button-color: #db4444;
+  --secondary-button-color: #00ff66;
+  --stars-color: #ffad33;
+  --hover-primary-button-color: #e07575;
+  /* Font Sizes */
+  --base-font-size: 16px;
+  --heading-font-size: 16px;
+  --small-font-size: 12px;
+  /* Spacing */
+  --spacing-unit: 16px;
+  --small-spacing: 8px;
+  --large-spacing: 24px;
+}
+
+:root {
+  --main-color: #db4444;
+  --secondary-color: gray;
+  --third-color: #00ff66;
+  --stars-color: #ffad33;
+  --hover-primary-button-color: #e07575;
+}
+
+:root {
+  --main-color: #db4444; /* Adjust this value */
+  --background-color: #f4f4f4; /* Adjust this value */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sec-btn {
+  background-color: var(--main-color);
+  padding: 10px 35px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .sec-btn {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+}
+.sec-btn:hover {
+  background-color: var(--hover-primary-button-color);
+}
+
+.lg-view-all {
+  color: white;
+  background-color: var(--main-color);
+  outline: none;
+  border: none;
+  padding: 10px 45px;
+}
+
+.lg-view-all:hover {
+  background-color: var(--hover-primary-button-color);
+}
+
+:root {
+  --base-font-size: 16px; /* You can adjust this value */
+  --heading-font-size: 24px; /* You can adjust this value */
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  font-size: var(--base-font-size);
+}
+
+:root {
+  --small-spacing: 8px; /* Adjust this value */
+  --main-color: #db4444; /* Adjust this value */
+  --secondary-color: gray; /* Adjust this value */
+}
+
+input,
+textarea {
+  padding: var(--small-spacing);
+  border: 1px solid var(--main-color);
+  border-radius: 4px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+}
+
+.sub-title {
+  color: var(--main-color);
+  font-size: 16px;
+  margin-bottom: var(--small-spacing);
+  position: relative;
+  padding-left: 30px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.sub-title::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 35px;
+  background-color: red;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}/*# sourceMappingURL=styles.css.map */

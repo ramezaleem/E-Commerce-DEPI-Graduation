@@ -1,0 +1,125 @@
+@charset "UTF-8";
+.New-Arrival {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.container {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  /* لجعل الحاوية تتناسب مع الصورة */
+}
+
+.image-container img {
+  width: 100%;
+  /* عرض الصورة */
+  height: 600px;
+  /* ارتفاع تلقائي */
+}
+
+.overlay {
+  position: absolute;
+  top: 87%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  /* لتحسين المحاذاة */
+  color: white;
+  /* لون النص */
+  padding: 10px;
+  /* حواف للنص */
+  border-radius: 5px;
+  /* زوايا مدورة */
+}
+.overlay p {
+  font-size: 14px;
+  color: #fafafa;
+}
+.overlay h2 {
+  font-size: 24px;
+}
+.overlay a {
+  list-style: none;
+  color: #fafafa;
+}
+
+.line_one img {
+  height: 286px;
+}
+
+.line_two .overlay {
+  top: 80%;
+  left: 34%;
+}
+
+.line_two img {
+  height: 286px;
+  width: 300px;
+}
+
+.icons h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 24px;
+    position: relative;
+  }
+  .container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+  .image-container img {
+    width: 100%;
+    height: auto;
+  }
+  .overlay {
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    text-align: center;
+  }
+  .line_two img {
+    width: 100%;
+    height: auto;
+  }
+  .line_one img,
+  .line_two img {
+    height: auto;
+  }
+  .icons h2 {
+    font-size: 18px;
+  }
+  .icons p {
+    font-size: 14px;
+  }
+  .col-6,
+  .col-lg-6,
+  .col-lg-5,
+  .col-md-12 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .images {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .icons {
+    flex-direction: column;
+    gap: 20px;
+  }
+}/*# sourceMappingURL=new-arrival.component.css.map */

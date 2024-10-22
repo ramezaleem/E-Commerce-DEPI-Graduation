@@ -1,0 +1,13 @@
+:root {
+  --main-color: #db4444; /* Adjust this value */
+  --background-color: #f4f4f4; /* Adjust this value */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}/*# sourceMappingURL=global.styles.css.map */

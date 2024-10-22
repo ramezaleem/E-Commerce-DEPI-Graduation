@@ -1,0 +1,74 @@
+<div class="signup-container m-5">
+  <div class="row  ">
+    <div class="col-lg-7 d-none d-lg-block  ">
+      <img class="image" src="/assets/images/Side Image.png" alt="">
+    </div>
+    <div class=" col-lg-4 col-md-6   m-auto lh-lg">
+      <h2 class="">Create an account</h2>
+      <p class="">Enter your details below</p>
+      <form action="" #form="ngForm" class="form-group" (ngSubmit)="submit()">
+        <div class="mt-5">
+          <input type="text" name="firstName" id="firstName" class="form-control" [class.is-invalid]="name.errors"
+            [class.is-valid]="!name.errors" #name="ngModel" placeholder="Name" required ngModel  [minlength]="3"  >
+        </div>
+        <div class="lh-sm " *ngIf="name.touched&&name.invalid&&name.errors">
+          <small class="text-danger " *ngIf="name.errors['required']"><span class="fs-5 ">*</span> this fieled is
+            required</small>
+          <small class="text-danger " *ngIf="name.errors['minlength']"><span class="fs-5 ">*</span> Name should contain 3
+            characters</small>
+        </div>
+
+        <div class="mt-5">
+          <input type="text" name="email" id="email" class="form-control" [class.is-invalid]="email.errors"
+          [class.is-valid]="!email.errors" placeholder="Email or Phone Number" required ngModel #email="ngModel"
+          pattern='[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}'       >
+        </div>
+        <div class="lh-sm " *ngIf="email.touched&&email.invalid&&email.errors">
+          <small class="text-danger " *ngIf="email.errors['required']"><span class="fs-5">*</span> this fieled is
+            required</small>
+
+          <small class="text-danger" *ngIf="email.errors['pattern']"><span class="fs-5">*</span> invalid email or phone number
+            </small>
+        </div>
+
+        <div class="mt-5 password-div">
+          <input [type]=" showPassword ? 'text' : 'password' " name="password" id="password" class="form-control" [class.is-invalid]="password.errors"
+            [class.is-valid]="!password.errors" placeholder="Password" required ngModel #password="ngModel" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+            <i [class]="showPassword ? 'far fa-eye ': 'far fa-eye-slash'"  (click)="togglePasswordVisibility()"></i>
+          </div>
+        <div class="lh-sm " *ngIf="password.touched&&password.invalid&&password.errors">
+          <small class="text-danger " *ngIf="password.errors['required']"><span class="fs-5">*</span> this fieled is
+            required</small>
+          <small class="text-danger" *ngIf="password.errors['pattern']"><span class="fs-5">*</span>
+            Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more</small>
+        </div>
+        <div class="mt-5 ">
+          <button type="submit" class="btn btn-danger w-100  mb-4" [disabled]="form.invalid"  > Create Account</button>
+          <a href="https://www.gmail.com">
+            <button type="submit"
+              class=" btn btn-light  d-flex justify-content-center align-items-center gap-3  w-100 ">
+              <img src="assets/images/Icon-Google.png" alt="googleIcon">
+              Sign up with Google
+            </button>
+          </a>
+        </div>
+        <div class="mt-4 text-center d-flex justify-content-center align-items-center gap-3 ">
+          Already have account? <a class="login-link" routerLink="/auth/login">Log in</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- <form (ngSubmit)="onRegister()"  >
+  <input type="text" [(ngModel)]="name" name="name" placeholder="Name" required ngModel  />
+  <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required />
+  <input type="password" [(ngModel)]="password" name="password" placeholder="Password" required />
+  <button type="submit">Register</button>
+  <p *ngIf="message">{{ message }}</p>
+</form> -->

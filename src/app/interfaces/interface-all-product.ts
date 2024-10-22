@@ -4,8 +4,8 @@ export interface  IallProducts{
   image:string;
   discount:string;
   price:number;
-  originalPrice:number;
+  originalPrice:string |null;
   rating:number;
   numberOfRatings:number;
-  category : string
+  category? : string
 }

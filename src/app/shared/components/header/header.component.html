@@ -4,7 +4,7 @@
       <div class="mid-text">
         <p class="text-white mt-3">
           Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
-          <a class="text-white fw-bold" href="#shop">ShopNow</a>
+          <a class="text-white fw-bold" [routerLink]="['/allProducts']">ShopNow</a>
         </p>
       </div>
       <div
@@ -25,7 +25,7 @@
   <div class="nav-container border-bottom p-2">
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand fw-bold fs-3" [routerLink]="['/home']"
+        <a class="navbar-brand fw-bold fs-3" routerLink="['/home']"
           >Exclusive</a
         >
 
@@ -45,7 +45,7 @@
         >
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
-              <a class="navbar-brand fw-bold" [routerLink]="['/home']">
+              <a class="navbar-brand fw-bold" routerLink="['/home']">
                 <div class="dropdown">
                   <i class="fa-regular fa-circle-user fs-2"></i>
                   <div class="dropdown-content">
@@ -159,7 +159,7 @@
               >
                 <i class="fa-regular fa-heart fs-5"></i>
                 <i
-                  [routerLink]="['/cart']"
+                routerLink="['/cart']"
                   class="fa-solid fa-cart-shopping text-danger fs-5"
                 ></i>
                 <div class="dropdown">
@@ -241,7 +241,7 @@
                   data-bs-parent="#accordionFlushExample"
                 >
                   <div class="accordion-body">
-                    <div class="sub-links">
+                    <!-- <div class="sub-links">
                       <a
                         routerLink="/allProducts"
                         class="d-flex justify-content-between align-items-center text-dark"
@@ -303,6 +303,44 @@
                         class="d-flex justify-content-between align-items-center text-dark"
                       >
                         <p class="">Health & Beauty</p>
+                        <p><i class="fa-solid fa-angle-right"></i></p>
+                      </a>
+                    </div> -->
+                    <div class="sub-links">
+                      <a routerLink="/ownCategory" class="d-flex justify-content-between align-items-center">
+                        <p>Woman’s Fashion</p>
+                        <p><i class="fa-solid fa-angle-right"></i></p>
+                      </a>
+                      <a routerLink="/MensFashion" class="d-flex justify-content-between align-items-center">
+                        <p>Men’s Fashion</p>
+                        <p><i class="fa-solid fa-angle-right"></i></p>
+                      </a>
+                      <a routerLink="/Electronics" class="d-flex justify-content-between align-items-center">
+                        <p>Electronics</p>
+                        <p><i class="fa-solid fa-angle-right"></i></p>
+                      </a>
+                      <a routerLink="/HomeLifeStyle" class="d-flex justify-content-between align-items-center">
+                        <p>Home & Lifestyle</p>
+                        <p><i class="fa-solid fa-angle-right"></i></p>
+                      </a>
+                      <a routerLink="/Medicine" class="d-flex justify-content-between align-items-center">
+                        <p>Medicine</p>
+                        <p><i class="fa-solid fa-angle-right"></i></p>
+                      </a>
+                      <a routerLink="/SportsOutDoor" class="d-flex justify-content-between align-items-center">
+                        <p>Sports & Outdoor</p>
+                        <p><i class="fa-solid fa-angle-right"></i></p>
+                      </a>
+                      <a routerLink="/BabysToys" class="d-flex justify-content-between align-items-center">
+                        <p>Baby’s & Toys</p>
+                        <p><i class="fa-solid fa-angle-right"></i></p>
+                      </a>
+                      <a routerLink="/GroceriesPets" class="d-flex justify-content-between align-items-center">
+                        <p>Groceries & Pets</p>
+                        <p><i class="fa-solid fa-angle-right"></i></p>
+                      </a>
+                      <a routerLink="/HealthBeauty" class="d-flex justify-content-between align-items-center">
+                        <p>Health & Beauty</p>
                         <p><i class="fa-solid fa-angle-right"></i></p>
                       </a>
                     </div>

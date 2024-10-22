@@ -1,4 +1,3 @@
-
 .carousel-control-prev,
 .carousel-control-next {
   width: 50px;
@@ -21,6 +20,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
+
 }
 
 .product-card {
@@ -28,57 +28,66 @@
   border: none;
   cursor: pointer;
   width: 100%;
-  max-width: 270px;
+  max-width: 300px;
   flex: 1 1 calc(25% - 20px);
 }
 
-.image-container {
-  .image{
-  position: relative;
-  overflow: hidden;
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
+.image-container {
+  position: relative;
+
+  .image {
+    position: relative;
+    overflow: hidden;
   }
+
   .product-image {
+    object-fit: covre;
     width: 100%;
-    height: 200px;
+    height: 280px;
     transition: transform 0.3s ease-in-out;
   }
-  .image-icons{
+
+  .image-icons {
     position: absolute;
     top: 3px;
     right: 10px;
   }
-  .image-icons i:hover{
+
+  .image-icons i:hover {
     scale: 1.1;
     color: var(--main-color);
   }
-  .product-image:hover {
-  scale: 125%;
-  transition: all .3s linear;
 
+  .product-image:hover {
+    transform: scale(1.25); /* Use transform for hover scale */
+    transition: all 0.3s linear;
   }
 
   .overlay {
     position: absolute;
-    bottom: 0px;
+    bottom: 0; /* Keep overlay at the bottom */
+    left: 0;
     width: 100%;
-    background-color: black;
+    background-color: black; /* Black background */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     color: white;
-    font-size: 16px;
-    opacity: 0;
+    font-size: 14px;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease-out; /* Smooth transition */
+    padding: 7px 0; /* Add some padding */
+    text-align: center; /* Center text */
+  }
 
-    p {
-      margin-bottom: 0;
-      padding: 5px 0;
-    }
-
-    &:hover {
-      opacity: 1;
-      transition: all .3s ease-out;
-    }
+  /* Hover on the image-container to show the overlay */
+  &:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
   }
 }
 
@@ -115,12 +124,14 @@
 @media (max-width: 768px) {
   .product-card {
     flex: 1 1 calc(50% - 20px);
+    max-width: 330px;
   }
 }
 
 @media (max-width: 480px) {
   .product-card {
     flex: 1 1 100%;
+
   }
 
   .carousel-control-prev,
