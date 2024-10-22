@@ -22,7 +22,8 @@
 
       <!-- Quantity input and control buttons -->
       <div class="d-flex b allconter">
-        <p class="count" [(ngModel)]="item.quantity">
+        <p class="count">
+          <!--  [(ngModel)]="item.quantity"  >>> cant used with p selector  -->
           {{ item.count }}
         </p>
 
@@ -98,4 +99,7 @@
 
     <a class="checkout" href="#">Proceed to Checkout</a>
   </div>
+  <button *ngIf="showButton" (click)="scrollToTop()" class="scroll-to-top">
+    ↑
+  </button>
 </div>

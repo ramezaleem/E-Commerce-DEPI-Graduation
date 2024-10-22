@@ -13,10 +13,15 @@
           <i class="far fa-heart fs-5"></i>
           <i class="far fa-eye fs-5"></i>
         </div>
-        <div (click)="addToCart()" class="overlay" *ngIf="showOverlay">
+        <div
+          routerLink="/cart"
+          (click)="addToCart()"
+          class="overlay"
+          *ngIf="showOverlay"
+        >
           <p>
             <i class="fa-solid fa-cart-plus pe-3"></i>
-            <a routerLink="/cart" class="text-white">Add To Cart</a>
+            <a class="text-white">Add To Cart</a>
           </p>
         </div>
       </div>

@@ -33,6 +33,7 @@ export class ProductCardComponent {
       image: this.product.image,
       name: this.product.name,
       price: Math.floor(this.product.price),
+      count: 1,
     });
   }
 }
