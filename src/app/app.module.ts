@@ -43,6 +43,7 @@ import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
+    CartComponent,
     AppComponent,
     HeaderComponent,
     HomeComponent,
