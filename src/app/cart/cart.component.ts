@@ -28,10 +28,15 @@ export class CartComponent implements OnInit {
     this.totalPrice=0;
     for(let i =0 ; i < this.cartproducts.length;i++){
       this.totalPrice += this.cartproducts[i].item.price * this.cartproducts[i].quantity;
-    } 
+    }
+  }
+  detectChange(){
+    this.getTotalPrice()
   }
   delete(index:any){
     this.cartproducts.splice(index,1);
     localStorage.setItem('cart' , JSON.stringify(this.cartproducts))
+    this.getTotalPrice()
   }
+  
 }

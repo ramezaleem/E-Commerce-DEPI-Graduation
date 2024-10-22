@@ -18,7 +18,8 @@
       </div>
       <p class="fixed-width pt-4 ">{{product.item.price | currency}}</p>
       <p class="fixed-width pt-4 ">
-        <input type="number" class="w-50 " name="quantity" id="quantity" value="01" [(ngModel)]="product.quantity" min="1" placeholder="Quantity">
+
+    <input type="number" class="w-50 " name="quantity" id="quantity" value="01" (change)="detectChange()" [(ngModel)]="product.quantity" min="1" placeholder="Quantity">
       </p>
       <p class="fixed-width pt-4 ">{{product.item.price * product.quantity}}$</p>
     </div>

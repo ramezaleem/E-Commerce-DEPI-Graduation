@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { AfterContentChecked, Component, DoCheck, HostListener, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Router } from '@angular/router';
 import { windowWhen } from 'rxjs';
 
@@ -7,8 +7,15 @@ import { windowWhen } from 'rxjs';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent {
+export class HeaderComponent implements DoCheck,AfterContentChecked {
   constructor(private router: Router) {}
+  showBadge :boolean =false;
+  ngDoCheck(): void {
+    this.getproducts();
+  }
+  ngAfterContentChecked(): void {
+    this.checkISCartEmpty();
+  }
 
   isSticky: boolean = false;
 
@@ -20,5 +27,17 @@ export class HeaderComponent {
   logout() {
     localStorage.removeItem('isloggedin');
     this.router.navigate(['/auth/SignUp']);
+  }
+  productAmount:any[]=[];
+  getproducts(){
+    if('cart' in localStorage){
+      this.productAmount = JSON.parse(localStorage.getItem("cart")!)
+    }
+  }
+  checkISCartEmpty(){
+    if(this.productAmount.length){
+      this.showBadge =true;
+    }
+    return this.showBadge;
   }
 }
