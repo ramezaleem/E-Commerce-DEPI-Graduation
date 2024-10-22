@@ -42,6 +42,7 @@ import { HealthBeautyComponent } from './components/health-beauty/health-beauty.
 
 @NgModule({
   declarations: [
+    CartComponent,
     AppComponent,
     HeaderComponent,
     HomeComponent,
