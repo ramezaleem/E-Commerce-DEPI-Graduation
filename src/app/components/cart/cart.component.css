@@ -19,19 +19,21 @@ a {
 h3 {
   background-color: #f8f9fa;
 }
-.contianer {
+.container {
   margin: 100px;
+  max-width: 1200px;
 }
 .head-bar {
   margin-top: 60px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 150px;
+  gap: 100px;
   padding: 2rem 5rem;
   border-radius: 2px;
   background-color: #f8f9fa;
   color: #464748;
   box-shadow: 0 4px 10px #d9dbdd;
+  max-width: 1200px;
 }
 .product {
   margin-top: 40px;
@@ -87,7 +89,7 @@ h3 {
   margin-top: 50px;
 
   display: flex;
-
+  max-width: 1200px;
   justify-content: space-between;
 }
 .btn {
@@ -138,7 +140,7 @@ input {
 }
 .details-two {
   display: flex;
-  margin: 100px 0px;
+  margin: 100px;
   justify-content: space-between;
 }
 .checkout {
