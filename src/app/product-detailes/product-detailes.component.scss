@@ -1,0 +1,45 @@
+a{
+  display: block;
+  color: #000;
+
+}
+
+.image-container{
+  margin-top: 50px;
+width:50%;
+}
+.image{
+width: 80%;
+object-fit: cover;
+overflow: hidden;
+}
+.detailes{
+width: 40%;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+
+  i.filled {
+    color: goldenrod;
+  }
+}
+@media (max-width:768px) {
+  .parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .image-container{
+    width:100%;
+    }
+  .detailes{
+    width:100%;
+    padding: 20px;
+    }
+
+}

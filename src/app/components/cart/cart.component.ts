@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { CartService } from '../../cart-service.service';
 import { FormsModule } from '@angular/forms';
+import { IallProducts } from '../../interfaces/interface-all-product';
 
 @Component({
   selector: 'app-cart',
@@ -11,7 +12,10 @@ export class CartComponent implements OnInit {
   cartItems: any[] = [];
   totalPrice: number = 0;
 
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService) {
+    console.log();
+
+  }
 
   ngOnInit() {
     // Subscribe to cart items and ensure count is initialized to 1 for each product
@@ -59,5 +63,11 @@ export class CartComponent implements OnInit {
 
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  
+  items:any[]=[];
+  getproductfromlocalstorage(){
+
+
   }
 }

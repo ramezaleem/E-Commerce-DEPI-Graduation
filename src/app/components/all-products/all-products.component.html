@@ -37,7 +37,8 @@
           <ng-container *ngFor="let product of allProducts">
             <div class="col-lg-3 col-md-6 col-sm-12 my-5 ">
               <div class="product-card d-flex flex-column justify-content-between h-100 lh-lg ">
-                <app-product-card [product]="product" [showOverlay]="true"> </app-product-card>
+                <app-product-card [product]="product" [showOverlay]="true" (item)="getproduct($event)" ></app-product-card>
+
                 <p class="category bg-success rounded text-white p-1   "> Category : {{product.category}} </p>
                 <!-- <app-second-product-component [product]="product" [showOverlay]="true"></app-second-product-component> -->
               </div>

@@ -7,7 +7,7 @@ import { LoginComponent } from './modules/auth/auth/components/login/login.compo
 import { ContactComponent } from './components/Contact/Components/contact/contact.component';
 import { SignUpComponent } from './modules/auth/auth/components/sign-up/sign-up.component';
 import { AllProductsComponent } from './components/all-products/all-products.component';
-import { CartComponent } from './components/cart/cart.component';
+
 import { authGuard } from './modules/auth.guard';
 import { Error404Component } from './components/error404/error404.component';
 import { ProductCardComponent } from './shared/components/product-card/product-card.component';
@@ -20,6 +20,8 @@ import { SportsOutDoorComponent } from './components/sports-out-door/sports-out-
 import { BabysToysComponent } from './components/babys-toys/babys-toys.component';
 import { GroceriesPetsComponent } from './components/groceries-pets/groceries-pets.component';
 import { HealthBeautyComponent } from './components/health-beauty/health-beauty.component';
+import { ProductDetailesComponent } from './product-detailes/product-detailes.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -31,7 +33,6 @@ const routes: Routes = [
     component: AllProductsComponent,
     canActivate: [authGuard],
   },
-  { path: 'cart', component: CartComponent, canActivate: [authGuard] },
   {
     path: 'auth',
     loadChildren: () =>
@@ -46,6 +47,9 @@ const routes: Routes = [
   { path: 'BabysToys', component: BabysToysComponent },
   { path: 'GroceriesPets', component: GroceriesPetsComponent },
   { path: 'HealthBeauty', component: HealthBeautyComponent },
+  { path: 'detailes/:category/:id/:name/:image/:price/:rating/:numberOfRatings', component: ProductDetailesComponent },
+  { path: 'Cart', component: CartComponent },
+
   { path: '**', component: Error404Component },
 ];
 

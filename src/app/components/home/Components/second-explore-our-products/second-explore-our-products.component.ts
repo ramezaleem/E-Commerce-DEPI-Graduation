@@ -2,6 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { AllProductsService } from '../../../../services/all-products.service';
 import { Router } from '@angular/router';
+import { IallProducts } from '../../../../interfaces/interface-all-product';
 
 @Component({
   selector: 'app-second-explore-our-products',
@@ -49,5 +50,25 @@ export class SecondExploreOurProductsComponent {
 
   showProducts(){
     this.router.navigate(['/BabysToys']);
+  }
+
+    cartproducts:any[]=[] ;  // empty array to Recieve data
+  getproduct(event:any){
+    // console.log(event);
+    if("cart" in localStorage){
+      this.cartproducts = JSON.parse(localStorage.getItem('cart')!);
+      let isExist = this.cartproducts.find(item=> item.item.id === event.item.id && item.item.category === event.item.category);
+      if(isExist){
+        alert('this product is aleardy in your cart .');
+      }else{
+        this.cartproducts.push(event);
+        localStorage.setItem('cart', JSON.stringify(this.cartproducts))
+      }
+    }
+    else{
+      this.cartproducts.push(event);
+      localStorage.setItem('cart' , JSON.stringify(this.cartproducts))
+    }
+
   }
 }

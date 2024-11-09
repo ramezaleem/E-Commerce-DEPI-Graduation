@@ -1,0 +1,29 @@
+<div class="container my-5">
+  <div class="d-flex  align-items-center gap-2 mb-5">
+    <a routerLink="/home" class="text-secondary">home /</a>
+    <a routerLink="/Cart" class="fw-bolder text-dark ">Cart </a>
+  </div>
+  <div class="titles d-flex justify-content-around align-items-center  rounded shadow p-3 mb-3">
+    <p class="fixed-width-high ps-3">Product</p>
+    <p class="fixed-width">Price</p>
+    <p class="fixed-width">Quantity</p>
+    <p class="fixed-width">Subtotal</p>
+  </div>
+  <ng-container *ngFor="let product of cartproducts ;let i =index" >
+    <div class=" titles d-flex justify-content-around align-items-center shadow   p-3 mb-3 w-100 ">
+      <div class="fixed-width-high d-flex justify-content-start align-items-center gap-2 ">
+        <img [src]="product.item.image" alt="{{product.item.image}}"   class=" " >
+        <span class=""> {{product.item.name}}</span>
+        <i class="fas fa-xmark bg-danger rounded-circle p-2 text-white fs-5 " (click)="delete(i)"></i>
+      </div>
+      <p class="fixed-width pt-4 ">{{product.item.price | currency}}</p>
+      <p class="fixed-width pt-4 ">
+
+    <input type="number" class="w-50 " name="quantity" id="quantity" value="01" (change)="detectChange()" [(ngModel)]="product.quantity" min="1" placeholder="Quantity">
+      </p>
+      <p class="fixed-width pt-4 ">{{product.item.price * product.quantity}}$</p>
+    </div>
+  </ng-container >
+  <span> totalPrice: {{ totalPrice |currency}}</span>
+
+</div>
