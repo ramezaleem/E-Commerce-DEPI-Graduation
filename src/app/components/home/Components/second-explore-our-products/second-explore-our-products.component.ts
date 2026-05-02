@@ -3,6 +3,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 import { AllProductsService } from '../../../../services/all-products.service';
 import { Router } from '@angular/router';
 import { IallProducts } from '../../../../interfaces/interface-all-product';
+import { CartService } from '../../../../cart-service.service';
 
 @Component({
   selector: 'app-second-explore-our-products',
@@ -22,53 +23,28 @@ export class SecondExploreOurProductsComponent {
     navText: ['', ''],
     items: 4.5,
     responsive: {
-      0: {
-        items: 1,
-      },
-      400: {
-        items: 2,
-      },
-      740: {
-        items: 3,
-      },
-      940: {
-        items: 4,
-      },
-      1200: {
-        items: 4.5,
-      },
+      0: { items: 1 },
+      400: { items: 2 },
+      740: { items: 3 },
+      940: { items: 4 },
+      1200: { items: 4.5 },
     },
     nav: false,
   };
 
   constructor(
-    private allServ : AllProductsService,
-    private router :Router
+    private allServ: AllProductsService,
+    private router: Router,
+    private cartService: CartService
   ) {}
-  products =  this.allServ.getproducts('Baby’s & Toys');;
 
+  products = this.allServ.getproducts('Baby’s & Toys');
 
-  showProducts(){
+  showProducts() {
     this.router.navigate(['/BabysToys']);
   }
 
-    cartproducts:any[]=[] ;  // empty array to Recieve data
-  getproduct(event:any){
-    // console.log(event);
-    if("cart" in localStorage){
-      this.cartproducts = JSON.parse(localStorage.getItem('cart')!);
-      let isExist = this.cartproducts.find(item=> item.item.id === event.item.id && item.item.category === event.item.category);
-      if(isExist){
-        alert('this product is aleardy in your cart .');
-      }else{
-        this.cartproducts.push(event);
-        localStorage.setItem('cart', JSON.stringify(this.cartproducts))
-      }
-    }
-    else{
-      this.cartproducts.push(event);
-      localStorage.setItem('cart' , JSON.stringify(this.cartproducts))
-    }
-
+  getproduct(event: any) {
+    this.cartService.addToCart(event.item, event.quantity);
   }
 }

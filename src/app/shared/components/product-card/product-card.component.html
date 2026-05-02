@@ -4,7 +4,7 @@
       <div class="image">
         <img [src]="product.image" alt="{{ product.name }} Image" class="product-image" />
         <div class="image-icons d-flex flex-column justify-content-center gap-3">
-          <i class="far fa-heart fs-5"></i>
+          <i [class]="isInWishlist() ? 'fa-solid fa-heart fs-5 text-danger' : 'fa-regular fa-heart fs-5'" (click)="toggleWishlist()" style="cursor: pointer;"></i>
           <i class="far fa-eye fs-5"  (click)="route()" title="ShowDetailes"></i>
         </div>
         <div  class="overlay" *ngIf="showOverlay" [class.bg]="showBtn" >

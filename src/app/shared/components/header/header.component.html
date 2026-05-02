@@ -157,14 +157,18 @@
               <div
                 class="icons d-lg-flex justify-content-center align-items-center gap-3 ms-2"
               >
-                <i class="fa-regular fa-heart fs-5"></i>
+                <i class="fa-regular fa-heart fs-5 position-relative" [routerLink]="['/wishlist']" style="cursor: pointer;">
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger fs-sm" *ngIf="showWishlistBadge">
+                    {{wishlistCount}}
+                  </span>
+                </i>
                 <i
 
                   class="fa-solid fa-cart-shopping text-danger fs-5 position-relative"
                   [routerLink]="['/Cart']"
                 >
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger fs-sm" *ngIf="checkISCartEmpty()">
-                  {{productAmount.length}}
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger fs-sm" *ngIf="showBadge">
+                  {{productAmountCount}}
                 </span></i>
                 <!-- <button type="button" class="btn btn-primary position-relative"> -->
                   <!-- Inbox -->

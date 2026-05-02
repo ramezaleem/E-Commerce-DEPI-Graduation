@@ -4,13 +4,9 @@ import {
   Input,
   EventEmitter,
   Output,
-  input,
-  ViewChild,
-  ElementRef,
 } from '@angular/core';
-import { CartService } from '../../../cart-service.service';
-
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
+import { WishlistService } from '../../../wishlist.service';
 
 @Component({
   selector: 'app-product-card',
@@ -18,12 +14,15 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./product-card.component.scss'],
 })
 export class ProductCardComponent implements OnInit {
-  constructor(private router : Router){}
-  @Input() product: any ;
+  constructor(private router: Router, private wishlistService: WishlistService) {}
+  
+  @Input() product: any;
   @Input() showOverlay: boolean = false;
-  @Output() item = new EventEmitter ();
-  quantity :number = 1;    // init value with 1 amount
-  showBtn : boolean = false ;
+  @Output() item = new EventEmitter();
+  
+  quantity: number = 1;
+  showBtn: boolean = false;
+
   getStars(rating: number): (boolean | null)[] {
     return Array.from({ length: 5 }, (_, index) => {
       if (rating >= index + 1) return true;
@@ -32,33 +31,33 @@ export class ProductCardComponent implements OnInit {
     });
   }
 
-  // constructor(private cartService: CartService) {}
-  // addToCart() {
-  //   this.cartService.addToCart({
-  //     image: this.product.image,
-  //     name: this.product.name,
-  //     price: Math.floor(this.product.price),
-  //   });
-  // }
-  add(){
+  add() {
     this.item.emit({
-      item : this.product,
-      quantity : this.quantity
-    })
+      item: this.product,
+      quantity: this.quantity
+    });
   }
-ngOnInit(): void {
-}
-route(){
-  this.router.navigate([
-    '/detailes/',
-    this.product.category,
-    this.product.id,
-    this.product.name,
-    this.product.image,
-    this.product.price,
-    this.product.rating,
-    this.product.numberOfRatings,
-    ])
-}
 
+  ngOnInit(): void {}
+
+  toggleWishlist() {
+    this.wishlistService.toggleWishlist(this.product);
+  }
+
+  isInWishlist(): boolean {
+    return this.wishlistService.isInWishlist(this.product.id, this.product.category);
+  }
+
+  route() {
+    this.router.navigate([
+      '/detailes/',
+      this.product.category,
+      this.product.id,
+      this.product.name,
+      this.product.image,
+      this.product.price,
+      this.product.rating,
+      this.product.numberOfRatings,
+    ]);
+  }
 }
