@@ -191,7 +191,8 @@
                     </div>
                     <div class="links">
                       <a
-                        href="#"
+                        [routerLink]="['/account']"
+                        [queryParams]="{ tab: 'orders' }"
                         class="w-100 d-flex justify-content-between align-items-center gap-5"
                       >
                         <i class="fa-solid fa-truck-fast fs-4"></i>
@@ -200,7 +201,8 @@
                     </div>
                     <div class="links">
                       <a
-                        href="#"
+                        [routerLink]="['/account']"
+                        [queryParams]="{ tab: 'cancellations' }"
                         class="w-100 d-flex justify-content-between align-items-center gap-5"
                       >
                         <i class="fa-regular fa-circle-xmark fs-4"></i>
@@ -209,11 +211,12 @@
                     </div>
                     <div class="links">
                       <a
-                        href="#"
+                        [routerLink]="['/account']"
+                        [queryParams]="{ tab: 'returns' }"
                         class="w-100 d-flex justify-content-between align-items-center gap-5"
                       >
-                        <i class="fa-regular fa-user fs-4"></i>
-                        My Reviews</a
+                        <i class="fa-solid fa-rotate-left fs-4"></i>
+                        My Returns</a
                       >
                     </div>
                     <div class="links">

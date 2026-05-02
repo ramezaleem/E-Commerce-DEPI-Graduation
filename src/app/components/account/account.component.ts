@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ProfileService, UserProfile } from '../../services/profile.service';
 import { OrderService, Order } from '../../services/order.service';
 import Swal from 'sweetalert2';
@@ -36,10 +37,18 @@ export class AccountComponent implements OnInit {
 
   constructor(
     private profileService: ProfileService,
-    private orderService: OrderService
+    private orderService: OrderService,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
+    // Check for tab query param
+    this.route.queryParams.subscribe(params => {
+      if (params['tab']) {
+        this.activeTab = params['tab'];
+      }
+    });
+
     this.profileService.profile$.subscribe((profile: UserProfile) => {
       this.userProfile = { ...profile };
     });
