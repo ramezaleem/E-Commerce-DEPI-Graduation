@@ -1,18 +1,19 @@
 import { Component, HostListener, Input, OnInit, OnDestroy } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { AllProductsService } from '../../services/all-products.service';
 import { CartService } from '../../cart-service.service';
 
 @Component({
   selector: 'app-all-products',
   templateUrl: './all-products.component.html',
-  styleUrl: './all-products.component.scss',
+  styleUrl: './all-products.component.css'
 })
 export class AllProductsComponent implements OnInit, OnDestroy {
   @Input() showOverlay: boolean = false;
   
-  constructor(private prdServ: AllProductsService, private cartService: CartService) {}
-  
-  allProducts = this.prdServ.allProducts;
+  filteredProducts: any[] = [];
+  allProducts: any[] = [];
+  searchQuery: string = '';
   showButton = false;
   timerVisible: boolean = true;
   countdown: any;
@@ -22,20 +23,45 @@ export class AllProductsComponent implements OnInit, OnDestroy {
   minutes: number = 0;
   seconds: number = 0;
 
+  constructor(
+    private prdServ: AllProductsService, 
+    private cartService: CartService,
+    private route: ActivatedRoute
+  ) {}
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.showButton = window.pageYOffset > 300;
+    this.showButton = window.scrollY > 300;
   }
 
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.allProducts = this.prdServ.allProducts;
+    
+    this.route.queryParams.subscribe(params => {
+      this.searchQuery = params['q'] || '';
+      this.filterProducts();
+    });
+
     this.startCountdown();
   }
 
-  startCountdown() {
+  filterProducts(): void {
+    if (this.searchQuery) {
+      const query = this.searchQuery.toLowerCase();
+      this.filteredProducts = this.allProducts.filter(p => 
+        p.name.toLowerCase().includes(query) ||
+        (p.description && p.description.toLowerCase().includes(query))
+      );
+    } else {
+      this.filteredProducts = [...this.allProducts];
+    }
+  }
+
+  startCountdown(): void {
     const endDate = new Date();
     endDate.setDate(endDate.getDate() + 14);
 
@@ -43,23 +69,26 @@ export class AllProductsComponent implements OnInit, OnDestroy {
       const now = new Date().getTime();
       const distance = endDate.getTime() - now;
 
+      if (distance < 0) {
+        clearInterval(this.countdown);
+        this.timerVisible = false;
+        return;
+      }
+
       this.days = Math.floor(distance / (1000 * 60 * 60 * 24));
       this.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       this.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       this.seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      if (distance < 0) {
-        clearInterval(this.countdown);
-        this.timerVisible = false;
-      }
     }, 1000);
   }
 
-  getproduct(event: any) {
+  getproduct(event: any): void {
     this.cartService.addToCart(event.item, event.quantity);
   }
 
-  ngOnDestroy() {
-    clearInterval(this.countdown);
+  ngOnDestroy(): void {
+    if (this.countdown) {
+      clearInterval(this.countdown);
+    }
   }
 }

@@ -41,16 +41,21 @@
   .parent-links {
     display: none;
   }
+
   .parent-of-diss {
     padding: 3rem 0;
   }
 }
+
 @media (max-width: 768px) {
   .desc {
     text-align: center;
   }
+
   .head-of-dis {
     display: flex;
     justify-content: center;
   }
-}/*# sourceMappingURL=home-carousel.component.css.map */
+}
+
+/*# sourceMappingURL=home-carousel.component.css.map */

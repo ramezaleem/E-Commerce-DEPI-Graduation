@@ -1,54 +1,55 @@
-<div *ngIf="timerVisible" class="container flash-sales">
-  <h2 class="sub-title">Today's</h2>
-  <div class="timer-container">
-    <div class="header">
-      <h1>All products</h1>
-      <div class="timer">
-        <div class="timer-item">
-          <span class="timer-label">Days</span>
-          <span class="timer-value">{{ days }}</span>
-        </div>
-        <span class="timer-separator">:</span>
-        <div class="timer-item">
-          <span class="timer-label">Hours</span>
-          <span class="timer-value">{{ hours }}</span>
-        </div>
-        <span class="timer-separator">:</span>
-        <div class="timer-item">
-          <span class="timer-label">Minutes</span>
-          <span class="timer-value">{{ minutes }}</span>
-        </div>
-        <span class="timer-separator">:</span>
-        <div class="timer-item">
-          <span class="timer-label">Seconds</span>
-          <span class="timer-value">{{ seconds }}</span>
+<div class="container py-5">
+  <div *ngIf="timerVisible" class="flash-sales">
+    <h2 class="sub-title">Today's</h2>
+    <div class="timer-container">
+      <div class="header">
+        <h1>All Products</h1>
+        <div class="timer">
+          <div class="timer-item">
+            <span class="timer-label">Days</span>
+            <span class="timer-value">{{ days }}</span>
+          </div>
+          <span class="timer-separator">:</span>
+          <div class="timer-item">
+            <span class="timer-label">Hours</span>
+            <span class="timer-value">{{ hours }}</span>
+          </div>
+          <span class="timer-separator">:</span>
+          <div class="timer-item">
+            <span class="timer-label">Minutes</span>
+            <span class="timer-value">{{ minutes }}</span>
+          </div>
+          <span class="timer-separator">:</span>
+          <div class="timer-item">
+            <span class="timer-label">Seconds</span>
+            <span class="timer-value">{{ seconds }}</span>
+          </div>
         </div>
       </div>
-      <!-- <div class="icon-container">
-        <i class="fas fa-chevron-left icon left-icon" (click)="owlFlash.prev()"></i>
-        <i class="fas fa-chevron-right icon right-icon" (click)="owlFlash.next()"></i>
-      </div> -->
     </div>
   </div>
-  <div class="product-carousel my-5">
-    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner my-5">
-        <div class="row g-5  ">
-          <ng-container *ngFor="let product of allProducts">
-            <div class="col-lg-3 col-md-6 col-sm-12 my-5 ">
-              <div class="product-card d-flex flex-column justify-content-between h-100 lh-lg ">
-                <app-product-card [product]="product" [showOverlay]="true" (item)="getproduct($event)" ></app-product-card>
 
-                <p class="category bg-success rounded text-white p-1   "> Category : {{product.category}} </p>
-                <!-- <app-second-product-component [product]="product" [showOverlay]="true"></app-second-product-component> -->
-              </div>
-            </div>
-          </ng-container>
+  <div class="product-grid my-5">
+    <div class="row g-4 justify-content-center" *ngIf="filteredProducts.length > 0; else noProducts">
+      <div class="col-lg-3 col-md-4 col-sm-6 d-flex" *ngFor="let product of filteredProducts">
+        <div class="product-wrapper w-100 d-flex flex-column gap-2">
+          <app-product-card [product]="product" [showOverlay]="true" (item)="getproduct($event)" class="h-100"></app-product-card>
+          <span class="badge bg-success py-2">Category: {{product.category}}</span>
         </div>
       </div>
     </div>
+
+    <ng-template #noProducts>
+      <div class="text-center py-5">
+        <i class="fa-solid fa-magnifying-glass fs-1 text-secondary mb-3 opacity-25"></i>
+        <h3 class="text-muted">No products found for "{{searchQuery}}"</h3>
+        <p>Try searching for something else or browse all products.</p>
+        <button class="btn btn-danger mt-3 px-4" (click)="searchQuery = ''; filterProducts()">View All Products</button>
+      </div>
+    </ng-template>
   </div>
-  <button *ngIf="showButton" (click)="scrollToTop()" class="scroll-to-top">
-    ↑
+
+  <button *ngIf="showButton" (click)="scrollToTop()" class="scroll-to-top shadow">
+    <i class="fa-solid fa-arrow-up"></i>
   </button>
 </div>

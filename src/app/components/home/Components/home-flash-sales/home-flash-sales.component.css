@@ -2,6 +2,7 @@
   margin-top: 100px;
   margin-bottom: 100px;
 }
+
 @media (max-width: 768px) {
   .flash-sales {
     margin-top: 50px;
@@ -12,6 +13,7 @@
 .product-carousel {
   overflow: hidden;
 }
+
 @media (max-width: 768px) {
   .product-carousel {
     padding: 0 10px;
@@ -22,6 +24,7 @@
   display: flex;
   align-items: center;
 }
+
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -34,6 +37,7 @@
   align-items: center;
   margin-left: 70px;
 }
+
 @media (max-width: 768px) {
   .timer {
     margin-left: 0;
@@ -45,6 +49,7 @@
   margin-right: 5px;
   text-align: center;
 }
+
 @media (max-width: 768px) {
   .timer-item {
     margin-right: 10px;
@@ -56,6 +61,7 @@
   font-size: 30px;
   color: var(--hover-primary-button-color);
 }
+
 @media (max-width: 768px) {
   .timer-separator {
     font-size: 24px;
@@ -67,6 +73,7 @@
   align-items: center;
   margin-left: auto;
 }
+
 @media (max-width: 768px) {
   .icon-container {
     margin-left: 0;
@@ -87,6 +94,7 @@
   cursor: pointer;
   transition: color 0.3s;
 }
+
 @media (max-width: 768px) {
   .icon {
     width: 30px;
@@ -103,6 +111,7 @@
   font-size: 12px;
   font-weight: bold;
 }
+
 @media (max-width: 768px) {
   .timer-label {
     font-size: 10px;
@@ -113,8 +122,11 @@
   font-size: 24px;
   font-weight: bold;
 }
+
 @media (max-width: 768px) {
   .timer-value {
     font-size: 18px;
   }
-}/*# sourceMappingURL=home-flash-sales.component.css.map */
+}
+
+/*# sourceMappingURL=home-flash-sales.component.css.map */

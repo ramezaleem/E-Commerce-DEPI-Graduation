@@ -15,6 +15,8 @@ export class HeaderComponent implements OnInit {
   showWishlistBadge: boolean = false;
   isSticky: boolean = false;
 
+  searchQuery: string = '';
+
   constructor(
     private router: Router,
     private cartService: CartService,
@@ -31,6 +33,12 @@ export class HeaderComponent implements OnInit {
       this.wishlistCount = items.length;
       this.showWishlistBadge = this.wishlistCount > 0;
     });
+  }
+
+  onSearch() {
+    if (this.searchQuery.trim()) {
+      this.router.navigate(['/allProducts'], { queryParams: { q: this.searchQuery } });
+    }
   }
 
   @HostListener('window:scroll', [])

@@ -151,8 +151,10 @@
                   name="search"
                   id="search"
                   placeholder="What are you looking for?"
+                  [(ngModel)]="searchQuery"
+                  (keyup.enter)="onSearch()"
                 />
-                <i class="fa-solid fa-search"></i>
+                <i class="fa-solid fa-search" (click)="onSearch()" style="cursor: pointer;"></i>
               </div>
               <div
                 class="icons d-lg-flex justify-content-center align-items-center gap-3 ms-2"
