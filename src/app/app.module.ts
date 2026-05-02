@@ -41,6 +41,7 @@ import { HealthBeautyComponent } from './components/health-beauty/health-beauty.
 import { ProductDetailesComponent } from './product-detailes/product-detailes.component';
 import { CartComponent } from './cart/cart.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
+import { AccountComponent } from './components/account/account.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,7 @@ import { WishlistComponent } from './wishlist/wishlist.component';
     ProductDetailesComponent,
     CartComponent,
     WishlistComponent,
+    AccountComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,337 @@
+<div class="container my-5">
+  <div class="d-flex justify-content-between align-items-center mb-5">
+    <div class="breadcrumb-nav">
+      <a routerLink="/home" class="text-secondary">Home /</a>
+      <span class="fw-bold ms-2">My Account</span>
+    </div>
+    <div class="welcome-text">
+      Welcome! <span class="text-danger">{{userProfile.firstName}} {{userProfile.lastName}}</span>
+    </div>
+  </div>
+
+  <div class="row g-5">
+    <!-- Sidebar -->
+    <div class="col-lg-3">
+      <div class="sidebar">
+        <h5 class="fw-bold mb-4">Manage My Account</h5>
+        <ul class="list-unstyled ms-3 mb-5">
+          <li class="mb-3">
+            <a href="javascript:void(0)" (click)="setTab('profile')" [class.text-danger]="activeTab === 'profile'" [class.fw-medium]="activeTab === 'profile'" class="text-dark opacity-75 text-decoration-none">My Profile</a>
+          </li>
+          <li class="mb-3">
+            <a href="javascript:void(0)" (click)="setTab('addresses')" [class.text-danger]="activeTab === 'addresses'" [class.fw-medium]="activeTab === 'addresses'" class="text-dark opacity-75 text-decoration-none">Address Book</a>
+          </li>
+          <li class="mb-3">
+            <a href="javascript:void(0)" (click)="setTab('payments')" [class.text-danger]="activeTab === 'payments'" [class.fw-medium]="activeTab === 'payments'" class="text-dark opacity-75 text-decoration-none">My Payment Options</a>
+          </li>
+        </ul>
+
+        <h5 class="fw-bold mb-4">My Orders</h5>
+        <ul class="list-unstyled ms-3 mb-5">
+          <li class="mb-3">
+            <a href="javascript:void(0)" (click)="setTab('orders')" [class.text-danger]="activeTab === 'orders'" [class.fw-medium]="activeTab === 'orders'" class="text-dark opacity-75 text-decoration-none">My Orders</a>
+          </li>
+          <li class="mb-3">
+            <a href="javascript:void(0)" (click)="setTab('returns')" [class.text-danger]="activeTab === 'returns'" [class.fw-medium]="activeTab === 'returns'" class="text-dark opacity-75 text-decoration-none">My Returns</a>
+          </li>
+          <li class="mb-3">
+            <a href="javascript:void(0)" (click)="setTab('cancellations')" [class.text-danger]="activeTab === 'cancellations'" [class.fw-medium]="activeTab === 'cancellations'" class="text-dark opacity-75 text-decoration-none">My Cancellations</a>
+          </li>
+        </ul>
+
+        <h5 class="fw-bold mb-4">My Wishlist</h5>
+        <ul class="list-unstyled ms-3">
+          <li class="mb-3"><a routerLink="/wishlist" class="text-dark opacity-75 text-decoration-none">View Wishlist</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="col-lg-9">
+      <!-- Edit Profile Section -->
+      <div *ngIf="activeTab === 'profile'" class="profile-card shadow-sm border p-4 p-md-5 rounded">
+        <h4 class="text-danger fw-bold mb-5">Edit Your Profile</h4>
+        <div *ngIf="successMessage" class="alert alert-success mb-4">{{successMessage}}</div>
+        <form (ngSubmit)="saveChanges()">
+          <div class="row mb-4">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <label class="form-label">First Name</label>
+              <input type="text" class="form-control bg-light border-0 py-2" [(ngModel)]="userProfile.firstName" name="firstName">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Last Name</label>
+              <input type="text" class="form-control bg-light border-0 py-2" [(ngModel)]="userProfile.lastName" name="lastName">
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control bg-light border-0 py-2" [(ngModel)]="userProfile.email" name="email">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Address</label>
+              <input type="text" class="form-control bg-light border-0 py-2" [(ngModel)]="userProfile.address" name="address">
+            </div>
+          </div>
+          <div class="password-section mt-5">
+            <h5 class="fw-bold mb-4">Password Changes</h5>
+            <div class="mb-3"><input type="password" class="form-control bg-light border-0 py-2" placeholder="Current Password" [(ngModel)]="userProfile.currentPassword" name="currentPassword"></div>
+            <div class="mb-3"><input type="password" class="form-control bg-light border-0 py-2" placeholder="New Password" [(ngModel)]="userProfile.newPassword" name="newPassword"></div>
+            <div class="mb-4"><input type="password" class="form-control bg-light border-0 py-2" placeholder="Confirm New Password" [(ngModel)]="userProfile.confirmPassword" name="confirmPassword"></div>
+          </div>
+          <div class="d-flex justify-content-end gap-3 mt-5">
+            <button type="button" class="btn btn-link text-dark text-decoration-none" (click)="cancel()">Cancel</button>
+            <button type="submit" class="btn btn-danger px-5 py-2">Save Changes</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Address Book Section -->
+      <div *ngIf="activeTab === 'addresses'" class="profile-card shadow-sm border p-4 p-md-5 rounded">
+        <div class="d-flex justify-content-between align-items-center mb-5">
+          <h4 class="text-danger fw-bold m-0">Address Book</h4>
+          <button class="btn btn-outline-danger btn-sm" (click)="openAddressForm()">
+            Add New Address
+          </button>
+        </div>
+
+        <!-- Add/Edit Address Form -->
+        <div *ngIf="showAddressForm" class="bg-light p-4 rounded mb-5 animate-fade-in">
+          <h6 class="fw-bold mb-3">{{isAddressEdit ? 'Edit Address' : 'New Address'}}</h6>
+          <div class="row g-3">
+            <div class="col-md-4">
+              <label class="form-label">Type</label>
+              <select class="form-select" [(ngModel)]="newAddress.type">
+                <option value="Home">Home</option>
+                <option value="Office">Office</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="col-md-8">
+              <label class="form-label">Full Address</label>
+              <input type="text" class="form-control" [(ngModel)]="newAddress.address" placeholder="e.g. 123, Cairo, Egypt">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Phone Number</label>
+              <input type="text" class="form-control" [(ngModel)]="newAddress.phone" placeholder="+20123456789">
+            </div>
+            <div class="col-12 d-flex justify-content-end mt-3 gap-3">
+              <button class="btn btn-link text-dark text-decoration-none" (click)="cancel()">Cancel</button>
+              <button class="btn btn-danger" (click)="saveAddress()">{{isAddressEdit ? 'Update Address' : 'Save Address'}}</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6" *ngFor="let addr of userProfile.addresses">
+            <div class="card bg-light border-0 p-3 position-relative">
+              <div class="d-flex justify-content-between mb-2">
+                <span class="fw-bold">{{addr.type}}</span>
+                <div class="actions">
+                  <span class="text-danger cursor-pointer me-2" (click)="openAddressForm(addr)"><i class="fa-regular fa-pen-to-square"></i></span>
+                  <span class="text-secondary cursor-pointer" (click)="deleteAddress(addr.id!)"><i class="fa-regular fa-trash-can"></i></span>
+                </div>
+              </div>
+              <p class="mb-1 small">{{addr.address}}</p>
+              <p class="mb-0 small text-secondary">{{addr.phone}}</p>
+            </div>
+          </div>
+          <div class="col-12 text-center py-5" *ngIf="!userProfile.addresses?.length">
+            <p class="text-muted">No addresses saved yet.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Payment Options Section -->
+      <div *ngIf="activeTab === 'payments'" class="profile-card shadow-sm border p-4 p-md-5 rounded">
+        <div class="d-flex justify-content-between align-items-center mb-5">
+          <h4 class="text-danger fw-bold m-0">Payment Options</h4>
+          <button class="btn btn-outline-danger btn-sm" (click)="openPaymentForm()">
+            Add New Card
+          </button>
+        </div>
+
+        <!-- Add/Edit Payment Form -->
+        <div *ngIf="showPaymentForm" class="bg-light p-4 rounded mb-5 animate-fade-in">
+          <h6 class="fw-bold mb-3">{{isPaymentEdit ? 'Edit Card' : 'New Card'}}</h6>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Card Type</label>
+              <select class="form-select" [(ngModel)]="newPayment.type">
+                <option value="Visa">Visa</option>
+                <option value="MasterCard">MasterCard</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Card Number</label>
+              <input type="text" class="form-control" [(ngModel)]="newPayment.cardNumber" placeholder="**** **** **** 1234">
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Expiry Date</label>
+              <input type="text" class="form-control" [(ngModel)]="newPayment.expiry" placeholder="MM/YY">
+            </div>
+            <div class="col-12 d-flex justify-content-end mt-3 gap-3">
+              <button class="btn btn-link text-dark text-decoration-none" (click)="cancel()">Cancel</button>
+              <button class="btn btn-danger" (click)="savePayment()">{{isPaymentEdit ? 'Update Card' : 'Save Card'}}</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6" *ngFor="let pay of userProfile.paymentOptions">
+            <div class="card bg-light border-0 p-3">
+              <div class="d-flex justify-content-between mb-2">
+                <span class="fw-bold">
+                  <i class="fa-brands fa-cc-visa me-2" *ngIf="pay.type === 'Visa'"></i>
+                  <i class="fa-brands fa-cc-mastercard me-2" *ngIf="pay.type === 'MasterCard'"></i>
+                  {{pay.type}}
+                </span>
+                <div class="actions">
+                  <span class="text-danger cursor-pointer me-2" (click)="openPaymentForm(pay)"><i class="fa-regular fa-pen-to-square"></i></span>
+                  <span class="text-secondary cursor-pointer" (click)="deletePayment(pay.id!)"><i class="fa-regular fa-trash-can"></i></span>
+                </div>
+              </div>
+              <p class="mb-1 fw-medium">{{pay.cardNumber}}</p>
+              <p class="mb-0 small text-secondary">Expiry: {{pay.expiry}}</p>
+            </div>
+          </div>
+          <div class="col-12 text-center py-5" *ngIf="!userProfile.paymentOptions?.length">
+            <p class="text-muted">No payment methods saved yet.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- My Orders Section -->
+      <div *ngIf="activeTab === 'orders'" class="profile-card shadow-sm border p-4 p-md-5 rounded">
+        <div class="d-flex justify-content-between align-items-center mb-5">
+          <h4 class="text-danger fw-bold m-0">{{selectedOrder ? 'Order Details: #' + selectedOrder.id : 'My Orders'}}</h4>
+          <button *ngIf="selectedOrder" class="btn btn-sm btn-outline-dark" (click)="selectedOrder = null">Back to List</button>
+        </div>
+
+        <div *ngIf="!selectedOrder">
+          <div class="table-responsive" *ngIf="ordersList.length > 0; else noOrders">
+            <table class="table table-hover align-middle">
+              <thead class="table-light">
+                <tr>
+                  <th>Order ID</th>
+                  <th>Date</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let order of ordersList">
+                  <td class="fw-bold">#{{order.id}}</td>
+                  <td>{{order.date}}</td>
+                  <td>{{order.total | currency}}</td>
+                  <td>
+                    <span class="badge rounded-pill" 
+                      [class.bg-success]="order.status === 'Delivered'" 
+                      [class.bg-warning]="order.status === 'Processing'"
+                      [class.bg-danger]="order.status === 'Cancelled'"
+                      [class.bg-secondary]="order.status === 'Returned'">
+                      {{order.status}}
+                    </span>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-outline-danger me-2" (click)="viewOrderDetails(order)">View</button>
+                    <button *ngIf="order.status === 'Processing'" class="btn btn-sm btn-outline-secondary" (click)="cancelMyOrder(order.id)">Cancel</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ng-template #noOrders>
+            <div class="text-center py-5">
+              <i class="fa-solid fa-box-open fs-1 text-secondary mb-3 opacity-25"></i>
+              <p class="text-muted">You haven't placed any orders yet.</p>
+            </div>
+          </ng-template>
+        </div>
+
+        <!-- Order Detail View -->
+        <div *ngIf="selectedOrder" class="animate-fade-in">
+          <div class="card border-0 bg-light p-4 mb-4">
+            <div class="row g-3">
+              <div class="col-md-4">
+                <p class="mb-1 text-secondary small">Status</p>
+                <p class="mb-0 fw-bold">{{selectedOrder.status}}</p>
+              </div>
+              <div class="col-md-4">
+                <p class="mb-1 text-secondary small">Date</p>
+                <p class="mb-0 fw-bold">{{selectedOrder.date}}</p>
+              </div>
+              <div class="col-md-4 text-md-end">
+                <p class="mb-1 text-secondary small">Total Amount</p>
+                <p class="mb-0 fw-bold text-danger fs-5">{{selectedOrder.total | currency}}</p>
+              </div>
+            </div>
+          </div>
+
+          <h6 class="fw-bold mb-3">Items in this order:</h6>
+          <div class="list-group list-group-flush mb-4">
+            <div class="list-group-item bg-transparent d-flex align-items-center py-3" *ngFor="let item of selectedOrder.items">
+              <img [src]="item.image" [alt]="item.name" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+              <div class="flex-grow-1">
+                <p class="mb-0 fw-medium">{{item.name}}</p>
+                <p class="mb-0 small text-secondary">Qty: {{item.quantity}} x {{item.price | currency}}</p>
+              </div>
+              <p class="mb-0 fw-bold">{{(item.price * item.quantity) | currency}}</p>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-end gap-3" *ngIf="selectedOrder.status === 'Delivered'">
+            <button class="btn btn-outline-danger" (click)="returnMyOrder(selectedOrder.id)">Return Items</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Returns Section -->
+      <div *ngIf="activeTab === 'returns'" class="profile-card shadow-sm border p-4 p-md-5 rounded">
+        <h4 class="text-danger fw-bold mb-5">My Returns</h4>
+        <div *ngIf="returnsList.length > 0; else noReturns">
+          <div class="card bg-light border-0 p-3 mb-3" *ngFor="let order of returnsList">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <span class="fw-bold">Order #{{order.id}}</span>
+                <p class="mb-0 small text-secondary">Returned on {{order.date}}</p>
+              </div>
+              <span class="badge bg-secondary">Returned</span>
+              <button class="btn btn-sm btn-link text-danger" (click)="viewOrderDetails(order); setTab('orders')">View Details</button>
+            </div>
+          </div>
+        </div>
+        <ng-template #noReturns>
+          <div class="text-center py-5">
+            <i class="fa-solid fa-rotate-left fs-1 text-secondary mb-3 opacity-25"></i>
+            <p class="text-muted">You have no return requests.</p>
+          </div>
+        </ng-template>
+      </div>
+
+      <!-- Cancellations Section -->
+      <div *ngIf="activeTab === 'cancellations'" class="profile-card shadow-sm border p-4 p-md-5 rounded">
+        <h4 class="text-danger fw-bold mb-5">My Cancellations</h4>
+        <div *ngIf="cancellationsList.length > 0; else noCancellations">
+          <div class="card bg-light border-0 p-3 mb-3" *ngFor="let order of cancellationsList">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <span class="fw-bold">Order #{{order.id}}</span>
+                <p class="mb-0 small text-secondary">Cancelled on {{order.date}}</p>
+              </div>
+              <span class="badge bg-danger">Cancelled</span>
+              <button class="btn btn-sm btn-link text-danger" (click)="viewOrderDetails(order); setTab('orders')">View Details</button>
+            </div>
+          </div>
+        </div>
+        <ng-template #noCancellations>
+          <div class="text-center py-5">
+            <i class="fa-solid fa-ban fs-1 text-secondary mb-3 opacity-25"></i>
+            <p class="text-muted">You have no cancelled orders.</p>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

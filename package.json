@@ -21,6 +21,7 @@
     "bootstrap": "^5.3.3",
     "ngx-owl-carousel-o": "^17.0.0",
     "rxjs": "~7.8.0",
+    "sweetalert2": "^11.26.24",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },
