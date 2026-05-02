@@ -23,6 +23,7 @@ import { HealthBeautyComponent } from './components/health-beauty/health-beauty.
 import { ProductDetailesComponent } from './product-detailes/product-detailes.component';
 import { CartComponent } from './cart/cart.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
+import { AccountComponent } from './components/account/account.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -51,6 +52,7 @@ const routes: Routes = [
   { path: 'detailes/:category/:id/:name/:image/:price/:rating/:numberOfRatings', component: ProductDetailesComponent },
   { path: 'Cart', component: CartComponent },
   { path: 'wishlist', component: WishlistComponent },
+  { path: 'account', component: AccountComponent },
 
   { path: '**', component: Error404Component },
 ];

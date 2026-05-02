@@ -1,0 +1,76 @@
+.breadcrumb-nav {
+  font-size: 14px;
+  a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    &:hover {
+      color: #DB4444 !important;
+    }
+  }
+}
+
+.welcome-text {
+  font-size: 14px;
+}
+
+.sidebar {
+  h5 {
+    font-size: 16px;
+  }
+  ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    &:hover {
+      color: #DB4444 !important;
+      opacity: 1 !important;
+    }
+  }
+}
+
+.profile-card {
+  background: #fff;
+  h4 {
+    font-size: 20px;
+  }
+}
+
+.form-label {
+  font-size: 14px;
+}
+
+.form-control {
+  font-size: 14px;
+  &:focus {
+    box-shadow: none;
+    background: #f0f0f0 !important;
+  }
+}
+
+.btn-danger {
+  background-color: #DB4444;
+  border-color: #DB4444;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: #c43b3b;
+    border-color: #c43b3b;
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 991px) {
+  .sidebar {
+    margin-bottom: 40px;
+    text-align: center;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-left: 0 !important;
+      li {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+}
