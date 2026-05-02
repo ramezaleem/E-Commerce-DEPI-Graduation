@@ -1,0 +1,26 @@
+<div class="container my-5">
+  <div class="d-flex align-items-center justify-content-between mb-5">
+    <div class="d-flex align-items-center gap-2">
+      <a routerLink="/home" class="text-secondary">home /</a>
+      <a routerLink="/wishlist" class="fw-bolder text-dark">Wishlist ({{wishlistProducts.length}})</a>
+    </div>
+  </div>
+
+  <div class="row g-4" *ngIf="wishlistProducts.length > 0; else emptyWishlist">
+    <div class="col-lg-3 col-md-6 col-sm-12" *ngFor="let product of wishlistProducts">
+      <div class="wishlist-item-wrapper position-relative">
+        <app-product-card [product]="product" [showOverlay]="true" (item)="addToCart($event)"></app-product-card>
+        <!-- Custom button to add all items to cart could be here -->
+      </div>
+    </div>
+  </div>
+
+  <ng-template #emptyWishlist>
+    <div class="text-center py-5">
+      <i class="far fa-heart fs-1 text-secondary mb-3"></i>
+      <h3>Your wishlist is empty</h3>
+      <p class="text-muted">Explore our products and add your favorites here!</p>
+      <button class="btn btn-danger mt-3" routerLink="/allProducts">Go Shopping</button>
+    </div>
+  </ng-template>
+</div>

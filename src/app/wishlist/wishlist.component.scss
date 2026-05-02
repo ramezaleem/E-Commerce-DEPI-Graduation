@@ -1,0 +1,25 @@
+.container {
+  min-height: 50vh;
+}
+
+.wishlist-item-wrapper {
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.empty-wishlist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  
+  i {
+    font-size: 5rem;
+    color: #db4444;
+    margin-bottom: 20px;
+    opacity: 0.5;
+  }
+}

@@ -40,10 +40,10 @@ import { GroceriesPetsComponent } from './components/groceries-pets/groceries-pe
 import { HealthBeautyComponent } from './components/health-beauty/health-beauty.component';
 import { ProductDetailesComponent } from './product-detailes/product-detailes.component';
 import { CartComponent } from './cart/cart.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
 
 @NgModule({
   declarations: [
-    CartComponent,
     AppComponent,
     HeaderComponent,
     HomeComponent,
@@ -59,7 +59,6 @@ import { CartComponent } from './cart/cart.component';
     AboutMidComponent,
     AboutFootComponent,
     SecondExploreOurProductsComponent,
-    SecondProductComponentComponent,
     ContactComponent,
     AllProductsComponent,
     NewArrivalComponent,
@@ -76,6 +75,7 @@ import { CartComponent } from './cart/cart.component';
     HealthBeautyComponent,
     ProductDetailesComponent,
     CartComponent,
+    WishlistComponent,
   ],
   imports: [
     BrowserModule,
